@@ -187,6 +187,6 @@ exports.default = series(
 exports.prod = series(
   prodClean, // Clean Build Folder
   parallel(prodStyles, prodScripts, prodImages, prodFonts, prodHTML), //Run All tasks in parallel
-  criticalCSS,
+  // criticalCSS,
   buildFinish
 );
