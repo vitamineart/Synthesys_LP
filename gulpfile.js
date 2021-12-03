@@ -55,7 +55,7 @@ function previewReload(done){
 
 //Development Tasks
 function devHTML(){
-  return src(`${options.paths.src.base}/**/*.html`)
+  return src(`${options.paths.src.base}/*.html`)
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
