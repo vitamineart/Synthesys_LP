@@ -17,7 +17,8 @@ module.exports = {
         'dark-surface': '#0A141D',
         'bodycopy': '#939EB4',
         'bodycopy-darker': '#616D86',
-        'footer-border': '#162635'
+        'dark-blue': '#162635',
+        'dark-green': '#062326'
       },
       fontFamily: {
         montserrat: 'Montserrat, sans-serif'
