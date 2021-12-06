@@ -108,7 +108,7 @@ function devClean(){
 
 //Production Tasks (Optimized Build for Live/Production Sites)
 function prodHTML(){
-  return src(`${options.paths.dist.base}/*.html, ${options.paths.dist.base}/css/*.css`)
+  return src(`${options.paths.dist.base}/*.html`)
   .pipe(replace('.png', '.webp'))
   .pipe(replace('.jpg', '.webp'))
   .pipe(replace('.jpeg', '.webp'))
