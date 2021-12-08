@@ -1,4 +1,4 @@
-# Synthesys_LP
+# Synthesys Landing Page
 
 Frontend Build of Landing Page for Synthesys
 
