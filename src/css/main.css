@@ -55,10 +55,6 @@ html {
   .active .faq-content {
     @apply opacity-100 mt-5 ease-out; }
 
-#subscription-plans {
-  background: url(../img/PricingPlansBg.png) repeat-x;
-  background-position: -100px 68%; }
-
 .subscription-plan-features-list {
   @apply mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15; }
   .subscription-plan-features-list li {
