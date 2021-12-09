@@ -1,0 +1,15 @@
+<!------------------------ Header Start -->
+<header class="h-20 flex items-center">
+    <div class="container flex items-center">
+        <a href="#" class="logo"><img src="img/logo.svg" alt="" width="131" height="29"></a>
+        <nav class="mx-auto flex justify-between items-center gap-16 main-nav">
+            <a href="index.html" class="@@if (context.page === 'home') {active}">Home</a>
+            <a href="audio.html" class="@@if (context.page === 'audio') {active}">Audio</a>
+            <a href="video.html" class="@@if (context.page === 'video') {active}">Video</a>
+            <a href="about.html" class="@@if (context.page === 'about') {active}">About Us</a>
+        </nav>
+        <a href="#"
+            class="inline-block login border-3 text-white border-green py-2 px-10 inline-block hover:border-bodycopy transition-colors duration-300">Login</a>
+    </div>
+</header>
+<!------------------------ Header End -->

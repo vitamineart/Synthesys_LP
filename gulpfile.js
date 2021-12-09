@@ -21,7 +21,7 @@ const fileinclude = require('gulp-file-include');
 const sass = require('gulp-sass'); //For Compiling SASS files
 const postcss = require('gulp-postcss'); //For Compiling tailwind utilities with tailwind config
 const concat = require('gulp-concat'); //For Concatinating js,css files
-const uglify = require('gulp-terser');//To Minify JS files
+const minifyJS = require('gulp-terser');//To Minify JS files
 const imagemin = require('gulp-imagemin'); //To Optimize Images
 const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
@@ -41,7 +41,8 @@ function livePreview(done){
     server: {
       baseDir: options.paths.dist.base
     },
-    port: options.config.port || 5000
+    port: options.config.port || 5000,
+    notify: false
   });
   done();
 }
@@ -136,7 +137,7 @@ function prodScripts(){
     `${options.paths.src.js}/**/*.js`
   ])
   .pipe(concat({ path: 'scripts.js'}))
-  .pipe(uglify())
+  .pipe(minifyJS())
   .pipe(dest(options.paths.build.js));
 }
 

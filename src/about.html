@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthesys Landing Page | About Us</title>
+
+    @@include('./includes/head.html')
+</head>
+<body class="bg-dark-surface text-bodycopy font-montserrat">
+    @@include('includes/header.html', {
+        'page': 'about'
+    })
+    <main>
+        <section>
+            <div class="max-w-[1070px] mx-auto">
+
+                <h1 class="text-white font-bold text-5xl leading-tight mt-20"> Synthesys... The Leading Voiceover and Video Production Platform </h1>
+
+                <p class="mt-15 leading-loose">Synthesys platform was developed by season voice and video actors together with linguistic and AI professionals who recognized the need for an on-demand TTS and TTV production platform. Their goal was simple: create a solution that offers:</p>
+
+                <ul class="check-list green my-11 ml-28">
+                    <li class="mb-5"><span>One stop shopping for both text-to-speech and text-to-video capabilities</span></li>
+                    <li class="mb-5"><span>All the tools required, no third party or additional post-production software required</span></li>
+                    <li class="mb-5"><span>Cloud access: no programs to install or update</span></li>
+                    <li class="mb-5"><span>Best-in-class assets with an extensive library of avatars and voices</span></li>
+                    <li class="mb-5"><span>Real gestures, accents, tones, and delivery styles</span></li>
+                    <li class="mb-5"><span>Affordable pricing packages for the occasional user or the global enterprise</span></li>
+                    <li class="mb-5"><span>Continuous AI improvements; keeps getting better and better</span></li>
+                </ul>
+
+                <p> Today, Syntheses Audio and Human Studio play an essential role in digital content creation worldwide, delivering improved e-training, more effective social and digital marketing, stronger branding, better entertainment, and so much more.</p>
+
+                <p class="mt-15">Look to Synthesys as your single source for the virtual experience. You’ll be glad you did.</p>
+            </div>
+        </section>
+
+        <div class="bg-black mt-30">
+            @@include('./includes/frequently-asked-questions.html', {
+                'color': 'var(--color-green-accent)'
+            })
+        </div>
+    </main>
+
+    @@include('./includes/footer.html')
+
+
+    <script>
+        const questions = document.querySelectorAll('.faq-item');
+
+            questions.forEach(function (question) {
+                question.addEventListener('click', function () {
+                    if (!this.classList.contains('active')) {
+                        const siblingsItems = this.closest('.faq-container').querySelectorAll('.faq-item');
+                        siblingsItems.forEach(function (item) {
+                            item.classList.remove('active');
+                            item.querySelector('.faq-content').style.maxHeight = null;
+                        })
+                        this.classList.add('active');
+                        this.querySelector('.faq-content').style.maxHeight = this.querySelector('.faq-content').scrollHeight + "px";
+
+                    }
+                    return;
+                })
+            })
+    </script>
+</body>
+</html>

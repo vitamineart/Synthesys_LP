@@ -1,0 +1,106 @@
+:root {
+    --color-green-accent: #00f1d7;
+    --color-blue-accent: #00CCFA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.main-nav {
+    a {
+        @apply relative text-green hover:text-bodycopy transition-colors duration-300;
+        &.active {
+            @apply text-white;
+            &::after {
+                content: '';
+                @apply bg-blue w-1 h-1 rounded-full inline-block mt-1 absolute top-full left-1/2;
+                transform: translateX(-2px);
+            }
+        }
+    }
+}
+
+.check-list {
+    &.blue {
+        li::before {
+            background-image: url(../img/icon-check-blue.svg);
+        }
+    }
+    &.green {
+        li::before {
+            background-image: url(../img/icon-check-green.svg);
+        }
+    }
+    li {
+        @apply relative pl-10 text-current;
+        &::before {
+            content: '';
+            @apply absolute left-0 top-0 w-6 h-6 inline-block mr-5 bg-no-repeat;
+        }
+    }
+
+}
+
+// Frequently Asked Questions
+.faq-status-indicator {
+    @apply relative w-5 h-5 mr-6.25 flex-grow-0 flex-shrink-0;
+    &::before, &::after {
+        content: '';
+        @apply absolute inset-0 m-auto w-5 h-0.5 inline-block align-middle bg-current transition-transform duration-300;
+    }
+    &::before { @apply w-5 h-0.5; }
+    &::after { @apply h-5 w-0.5 rotate-0 opacity-100 transition-all duration-300; }
+    .active &::after {@apply rotate-180 opacity-0}
+}
+.faq-item {
+    &.active {@apply border-current};
+    @apply border border-dark-blue pl-6 pr-7.5 py-6 transition-colors hover:border-bodycopy-darker;
+}
+.faq-question {
+    @apply cursor-pointer flex items-center;
+    & > span {@apply text-white};
+    .active & > span {
+        @apply text-current;
+    }
+}
+.faq-content {
+    @apply text-bodycopy opacity-0 max-h-0 overflow-hidden ml-11 transition-all duration-1000 ease-in-out;
+    .active & {
+        @apply opacity-100 mt-5 ease-out;
+    }
+}
+
+#subscription-plans {
+    background: url(../img/PricingPlansBg.png) repeat-x;
+    background-position: -100px 68%;
+}
+.subscription-plan-features-list {
+    @apply mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15;
+    li {
+        @apply text-left text-lg flex flex-row items-start mt-4 first:mt-0;
+        > span {@apply text-bodycopy;}
+        &::before {
+            content: '';
+            mask: url(../img/icon-check-filled.svg);
+            background-color: currentColor;
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+            margin-top: 3px;
+            flex: 0 0 20px;
+        }
+    }
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+    @apply  relative top-0 left-0 right-0 bottom-0 h-20 w-20 border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center ;
+    &::after {
+        @apply text-xl text-white;
+    }
+    &:hover {
+        &::after {
+            @apply text-black;
+        }
+    }
+}
