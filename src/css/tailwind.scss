@@ -1,14 +1,19 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @layer base {
     :root {
         --color-green-accent: #00f1d7;
         --color-blue-accent: #00CCFA;
     }
+
     .container {
         max-width: 1320px !important;
     }
 }
+
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+

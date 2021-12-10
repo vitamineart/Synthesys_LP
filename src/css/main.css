@@ -1,11 +1,9 @@
-.main-nav a {
-  @apply relative text-green hover:text-bodycopy transition-colors duration-300; }
-  .main-nav a.active {
-    @apply text-white; }
-    .main-nav a.active::after {
-      content: '';
-      @apply bg-blue w-1 h-1 rounded-full inline-block mt-1 absolute top-full left-1/2;
-      transform: translateX(-2px); }
+.main-nav a.active {
+  @apply text-white; }
+  .main-nav a.active::after {
+    content: '';
+    @apply bg-blue w-1 h-1 rounded-full inline-block mt-1 absolute top-full left-1/2;
+    transform: translateX(-2px); }
 
 .check-list.blue li::before {
   background-image: url(../img/icon-check-blue.svg); }
@@ -19,34 +17,17 @@
     content: '';
     @apply absolute left-0 top-0 w-6 h-6 inline-block mr-5 bg-no-repeat; }
 
-.faq-status-indicator {
-  @apply relative w-5 h-5 mr-6.25 flex-grow-0 flex-shrink-0; }
-  .faq-status-indicator::before, .faq-status-indicator::after {
-    content: '';
-    @apply absolute inset-0 m-auto w-5 h-0.5 inline-block align-middle bg-current transition-transform duration-300; }
-  .faq-status-indicator::before {
-    @apply w-5 h-0.5; }
-  .faq-status-indicator::after {
-    @apply h-5 w-0.5 rotate-0 opacity-100 transition-all duration-300; }
-  .active .faq-status-indicator::after {
-    @apply rotate-180 opacity-0; }
+.active .faq-status-indicator::after {
+  @apply rotate-180 opacity-0; }
 
-.faq-item {
-  @apply border border-dark-blue pl-6 pr-7.5 py-6 transition-colors hover:border-bodycopy-darker; }
-  .faq-item.active {
-    @apply border-current; }
+.faq-item.active {
+  @apply border-current; }
 
-.faq-question {
-  @apply cursor-pointer flex items-center; }
-  .faq-question > span {
-    @apply text-white; }
-  .active .faq-question > span {
-    @apply text-current; }
+.active .faq-question > span {
+  @apply text-current; }
 
-.faq-content {
-  @apply text-bodycopy opacity-0 max-h-0 overflow-hidden ml-11 transition-all duration-1000 ease-in-out; }
-  .active .faq-content {
-    @apply opacity-100 mt-5 ease-out; }
+.active .faq-content {
+  @apply opacity-100 mt-5 ease-out; }
 
 .subscription-plan-features-list {
   @apply mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15; }

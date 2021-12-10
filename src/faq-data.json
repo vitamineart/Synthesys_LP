@@ -1,0 +1,18 @@
+[
+    {
+        "faq-question": "I Am Non-Technical! Can I Use This?",
+        "faq-content": "Yes! Synthesys Studio is Newbie Friendly. No special skills, no learning curve required... We have step by step training videos that cover all aspects of the software to get you started right."
+    },
+    {
+        "faq-question": "Will this work on Mac and PC?",
+        "faq-content": "Yes! Synthesys Studio is 100% cloud based and works on any operating platform on any internet connected device. It runs inside your internet browser so you can access it on any computer with an Internet connection. Nothing to install; nothing to update."
+    },
+    {
+        "faq-question": "What languages are supported?",
+        "faq-content": "We’ve selected the very best Google and Microsoft have to offer, totaling 66+ languages ( 254 different voices). PLUS there are 15 synthetic HUMAN voices available in English language."
+    },
+    {
+        "faq-question": "How Do We Get In Touch With You?",
+        "faq-content": "We believe you will enjoy using Human Synthesys Studio, however if you face any issues, we will be here to attend to you. Send us an email to our support desk and we will get back to you ASAP! support@synthesys.io"
+    }
+]
