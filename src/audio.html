@@ -9,11 +9,11 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
-    @@include('./includes/head.html')
+    @@include('./includes/sections/head.html')
 </head>
 
 <body class="bg-dark-surface text-bodycopy font-montserrat">
-    @@include('includes/header.html', {
+    @@include('includes/sections/header.html', {
         'page': 'audio'
     })
     <main>
@@ -165,7 +165,7 @@
         </section>
 
         <!---------------- Frequently Asked Questions -->
-        @@include('./includes/frequently-asked-questions.html', {
+        @@include('./includes/sections/frequently-asked-questions.html', {
         'color': 'var(--color-blue-accent)'
         })
         <!---------------- Frequently Asked Questions End -->
@@ -231,10 +231,10 @@
     </main>
 
 
-    @@include('./includes/footer.html')
+    @@include('./includes/sections/footer.html')
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    @@include('./includes/footer-scripts.html')
+    @@include('./includes/sections/footer-scripts.html')
 </body>
 
 </html>

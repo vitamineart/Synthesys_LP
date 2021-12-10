@@ -9,11 +9,11 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
-    @@include('./includes/head.html')
+    @@include('./includes/sections/head.html')
 </head>
 
 <body class="bg-dark-surface text-bodycopy font-montserrat">
-    @@include('includes/header.html', {
+    @@include('includes/sections/header.html', {
         'page': 'video'
     })
     <main>
@@ -215,113 +215,7 @@
             </div>
         </section>
 
-        <!---------------------- reviews section start --------------------------------------->
-        <section id="reviews" class="bg-black pt-38 pb-36">
-            <div class="container">
-                <div class="flex justify-between">
-                    <div class="w-4/12">
-
-                        <div
-                            class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-16 before:border-green before:w-12 before:border-t-3">
-                            Reviews</div>
-                        <div class="text-green text-xl leading-relaxed mt-3">from our customers</div>
-
-                        <div class="reviews-nav text-green flex relative mt-22 h-20">
-
-                            <!-- Navigation buttons -->
-                            <div class="reviews-prev text-current swiper-button-prev "></div>
-                            <div class="reviews-next text-current swiper-button-next ml-5 "></div>
-                        </div>
-                    </div>
-                    <!-- Slider main container -->
-                    <div class="reviews-slider swiper flex justify-end min-h-[350px] w-7/12"
-                        style="color: var(--color-green-accent)">
-
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-
-                                <div class="reviews-item">
-                                    <div
-                                        class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0 after:bg-black">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa adipisci voluptatem
-                                        sit corporis doloribus voluptas accusantium libero! Voluptatem repudiandae minima
-                                        voluptate modi quibusdam nesciunt, consectetur deserunt ipsa laboriosam impedit?
-                                    </div>
-                                    <div class="reviews-item-meta flex justify-between items-end mt-7.5">
-                                        <div class="flex items-center px-4">
-                                            <div class="author-avatar ml-15">
-                                                <img src="img/JohnDoe.png" alt="" width="60" height="60" loading="lazy">
-                                            </div>
-                                            <div class="author ml-5">
-                                                <div class="author-name text-white text-xl">John Doe</div>
-                                                <div class="author-position text-base text-bodycopy mt-1">manager, Coca - Cola
-                                                    Co.</div>
-                                            </div>
-                                        </div>
-                                        <div class="date text-bodycopy text-sm pb-1">21 October 2021</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-
-                                <div class="reviews-item">
-                                    <div
-                                        class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0 after:bg-black">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa adipisci voluptatem
-                                        sit corporis doloribus
-                                        voluptas accusantium libero! Voluptatem repudiandae minima voluptate modi quibusdam
-                                        nesciunt, consectetur
-                                        deserunt ipsa laboriosam impedit?
-                                    </div>
-                                    <div class="reviews-item-meta flex justify-between items-end mt-7.5">
-                                        <div class="flex items-center px-4">
-                                            <div class="author-avatar ml-15">
-                                                <img src="img/JohnDoe.png" alt="" width="60" height="60" loading="lazy">
-                                            </div>
-                                            <div class="author ml-5">
-                                                <div class="author-name text-white text-xl">John Doe</div>
-                                                <div class="author-position text-base text-bodycopy mt-1">manager, Coca - Cola
-                                                    Co.</div>
-                                            </div>
-                                        </div>
-                                        <div class="date text-bodycopy text-sm pb-1">21 October 2021</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-
-                                <div class="reviews-item">
-                                    <div
-                                        class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0 after:bg-black">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa adipisci?
-                                    </div>
-                                    <div class="reviews-item-meta flex justify-between items-end mt-7.5">
-                                        <div class="flex items-center px-4">
-                                            <div class="author-avatar ml-15">
-                                                <img src="img/JohnDoe.png" alt="" width="60" height="60" loading="lazy">
-                                            </div>
-                                            <div class="author ml-5">
-                                                <div class="author-name text-white text-xl">John Doe</div>
-                                                <div class="author-position text-base text-bodycopy mt-1">manager, Coca - Cola
-                                                    Co.</div>
-                                            </div>
-                                        </div>
-                                        <div class="date text-bodycopy text-sm pb-1">21 October 2021</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!---------------------- reviews section end --------------------------------------->
+        @@include('./includes/sections/reviews.html')
 
         <section class="py-20 bg-green">
             <div class="container flex">
@@ -355,7 +249,7 @@
         </section>
 
         <!---------------- Frequently Asked Questions -->
-        @@include('./includes/frequently-asked-questions.html', {
+        @@include('./includes/sections/frequently-asked-questions.html', {
         'color': 'var(--color-green-accent)'
         })
         <!---------------- Frequently Asked Questions End -->
@@ -417,10 +311,10 @@
     </main>
 
 
-    @@include('./includes/footer.html')
+    @@include('./includes/sections/footer.html')
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    @@include('./includes/footer-scripts.html')
+    @@include('./includes/sections/footer-scripts.html')
 </body>
 
 </html>

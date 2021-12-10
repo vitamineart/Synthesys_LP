@@ -4,12 +4,10 @@
   "description": "TailwindCSS StarterKit with Gulp 4",
   "main": "gulpfile.js",
   "dependencies": {
-    "node-sass": "^5.0.0",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
+
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.5",
     "critical": "^4.0.1",
     "del": "^6.0.0",
@@ -25,7 +23,10 @@
     "gulp-sass": "^4.1.1",
     "gulp-terser": "^2.0.1",
     "gulp-webp": "^4.0.1",
-    "log-symbols": "^4.1.0"
+    "log-symbols": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^3.0.0"
   },
   "scripts": {
     "dev": "gulp",

@@ -1,10 +1,3 @@
-:root {
-  --color-green-accent: #00f1d7;
-  --color-blue-accent: #00CCFA; }
-
-html {
-  scroll-behavior: smooth; }
-
 .main-nav a {
   @apply relative text-green hover:text-bodycopy transition-colors duration-300; }
   .main-nav a.active {

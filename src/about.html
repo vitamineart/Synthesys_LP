@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthesys Landing Page | About Us</title>
 
-    @@include('./includes/head.html')
+    @@include('./includes/sections/head.html')
 </head>
 <body class="bg-dark-surface text-bodycopy font-montserrat">
-    @@include('includes/header.html', {
+    @@include('includes/sections/header.html', {
         'page': 'about'
     })
     <main>
         <section>
-            <div class="max-w-[1070px] mx-auto">
+            <div class="max-w-[1070px] mx-auto mt-6">
 
                 <h1 class="text-white font-bold text-5xl leading-tight mt-20"> Synthesys... The Leading Voiceover and Video Production Platform </h1>
 
@@ -41,13 +41,13 @@
         </section>
 
         <div class="bg-black mt-30">
-            @@include('./includes/frequently-asked-questions.html', {
+            @@include('./includes/sections/frequently-asked-questions.html', {
                 'color': 'var(--color-green-accent)'
             })
         </div>
     </main>
 
-    @@include('./includes/footer.html')
+    @@include('./includes/sections/footer.html')
 
 
     <script>

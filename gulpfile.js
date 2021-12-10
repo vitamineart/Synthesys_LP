@@ -66,7 +66,8 @@ function devHTML(){
 
 function devStyles(){
   const tailwindcss = require('tailwindcss');
-  return src(`${options.paths.src.css}/**/*.scss`).pipe(sass().on('error', sass.logError))
+  return src(`${options.paths.src.css}/**/*.scss`)
+    .pipe(sass().on('error', sass.logError))
     .pipe(dest(options.paths.src.css))
     .pipe(postcss([
       tailwindcss(options.config.tailwindjs),
@@ -94,7 +95,7 @@ function devFonts(){
 }
 
 function watchFiles(){
-  watch(`${options.paths.src.base}/**/*.html`,series(devHTML, devStyles, previewReload));
+  watch(`${options.paths.src.base}/**/*.{html,json}`,series(devHTML, devStyles, previewReload));
   watch([options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`],series(devStyles, previewReload));
   watch(`${options.paths.src.js}/**/*.js`,series(devScripts, previewReload));
   watch(`${options.paths.src.img}/**/*`,series(devImages, previewReload));
