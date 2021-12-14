@@ -11,27 +11,6 @@
     }
 }
 
-.check-list {
-    &.blue {
-        li::before {
-            background-image: url(../img/icon-check-blue.svg);
-        }
-    }
-    &.green {
-        li::before {
-            background-image: url(../img/icon-check-green.svg);
-        }
-    }
-    li {
-        @apply relative pl-10 text-current;
-        &::before {
-            content: '';
-            @apply absolute left-0 top-0 w-6 h-6 inline-block mr-5 bg-no-repeat;
-        }
-    }
-
-}
-
 // Frequently Asked Questions
 .faq-status-indicator {
     .active &::after {@apply rotate-180 opacity-0}
@@ -67,6 +46,28 @@
         }
     }
 }
+.subscription-plans-container {
+    & .subscription-price.monthly {display: block;}
+    & .subscription-price.yearly {display: none;}
+}
+.subscription-plans-container.yearly {
+    & .subscription-price.monthly {display: none;}
+    & .subscription-price.yearly {display: block;}
+
+}
+#toggle-container {
+    #text-label-monthly {@apply text-white;}
+    #text-label-yearly {@apply text-bodycopy;}
+    &.yearly {
+        #text-label-monthly {
+            @apply text-bodycopy-darker;
+        }
+        #text-label-yearly {
+            @apply text-white;
+        }
+    }
+}
+
 
 
 .swiper-button-next, .swiper-button-prev {
@@ -79,4 +80,15 @@
             @apply text-black;
         }
     }
+}
+
+
+
+
+input:checked+.toggle-bg:after {
+    transform: translateX(100%);
+}
+
+input:checked+.toggle-bg {
+    @apply bg-green;
 }

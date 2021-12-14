@@ -67,12 +67,15 @@
                         <p class="mt-8 leading-loose">With only 3 simple clicks, you can rapidly grow your business using the authority and trustworthy text-to-voiceovers your clients will appreciate. This unique ai voice generator eliminates the robotic and strange-sounding voices of the past and shifts your business into high gear with clear and natural delivery, just like a real human being!</p>
 
                         <div class="text-white font-semibold text-xl mt-12">Features Include:</div>
-                        <ul class="check-list blue mt-7">
-                            <li class="mb-7">Cloud-based application to do work from anywhere in the world</li>
-                            <li class="mb-7"> Easy to use interface with only 3 simple clicks to take you from text to attention-grabbing voiceover </li>
-                            <li class="mb-7">Use for sales videos, letters, animations, explainers, social media, TV commercials, podcasts, and more!</li>
-                            <li class="mb-7">Choose from a large library of professional voices: 35 Female, 30 Male</li>
-                            <li class="mb-7">Create and sell unlimited voiceovers for any purpose</li>
+                        <ul class="check-list text-blue mt-7 space-y-7">
+
+                            @@loop('includes/partials/checklist-li.html', [
+                                { "li-content": "Cloud-based application to do work from anywhere in the world" },
+                                { "li-content": "Cloud-based application to do work from anywhere in the world" },
+                                { "li-content": "Use for sales videos, letters, animations, explainers, social media, TV commercials, podcasts, and more!" },
+                                { "li-content": "Choose from a large library of professional voices: 35 Female, 30 Male" },
+                                { "li-content": "Create and sell unlimited voiceovers for any purpose" }
+                            ])
                         </ul>
                         <a href="#" class="text-blue ml-10 mt-8 inline-block transition-opacity hover:opacity-75">Find Out More
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" fill="none" viewBox="0 0 22 12" class="inline-block ml-3">
@@ -89,13 +92,17 @@
                         <p class="mt-8 leading-loose">Never struggle again with finding acting talent to finish your sales videos. Now you can easily create videos of your own using our revolutionary lip-synching AI video technology. You can create a unique spokesperson virtual spokesperson to deliver visual that elevates your messaging.</p>
 
                         <div class="text-white font-semibold text-xl mt-12">Features Include:</div>
-                        <ul class="check-list green mt-7">
-                            <li class="mb-7">AI text to Video generator with 74 real Humatars: 38 Female, 36 Male</li>
-                            <li class="mb-7">Over 66 languages to choose from a total voicebank of 254 unique styles</li>
-                            <li class="mb-7">Full customization completely created on a cloud-based application</li>
-                            <li class="mb-7">Easy to use interface for editing and rendering</li>
-                            <li class="mb-7">High resolution output</li>
-                            <li class="mb-7">Perfect for explainer videos, eLearning, social media, product descriptions, and more!</li>
+                        <ul class="check-list text-green mt-7 space-y-7">
+
+                            @@loop('includes/partials/checklist-li.html', [
+                                {"li-content": "AI text to Video generator with 74 real Humatars: 38 Female, 36 Male"},
+                                {"li-content": "Over 66 languages to choose from a total voicebank of 254 unique styles"},
+                                {"li-content": "Full customization completely created on a cloud-based application"},
+                                {"li-content": "Easy to use interface for editing and rendering"},
+                                {"li-content": "High resolution output"},
+                                {"li-content": "Perfect for explainer videos, eLearning, social media, product descriptions, and more!"},
+                            ])
+
                         </ul>
                         <a href="#" class="text-green ml-10 mt-8 inline-block transition-opacity hover:opacity-75">Find Out More
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" fill="none" viewBox="0 0 22 12"
@@ -213,17 +220,36 @@
                 <div class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-center before:block before:mb-16 before:border-green before:w-12 before:border-t-3">Choose the synthesys subscription</div>
                 <div class="text-green text-center text-xl leading-relaxed mt-5">Best for Your Production Needs</div>
 
-                <!---------------- subscription plans grid -->
 
-                <div class="subscription-plans-container grid grid-cols-3  md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-15 mt-22">
+                <div class="flex justify-center items-center mt-20">
+
+                    <label for="prices-toggle" class="flex items-center cursor-pointer" id="toggle-container">
+                        <div class="text-sm" id="text-label-monthly">Monthly</div>
+                        <div class="relative mx-4">
+                            <input type="checkbox" id="prices-toggle" class="sr-only">
+                            <div class="toggle-bg bg-blue h-7 w-13 rounded-full after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition duration-500 after:shadow-lg"></div>
+                        </div>
+                        <div class="text-sm" id="text-label-yearly">Yearly</div>
+                    </label>
+
+
+                </div>
+
+                <!---------------- subscription plans grid  -->
+
+                <div class="subscription-plans-container grid grid-cols-3  md:gap-6 lg:gap-8 xl:gap-10 2xl:gap-15 mt-14">
                     <!--------- subscription plan start -->
                     <div class="subscription-plan flex flex-col items-center pt-10 pb-12 bg-[#0D1924] border-t-[5px] border-t-current text-green">
                         <div class="h-24 flex flex-col justify-end">
-                            <img src="img/human-studio-synthesys.svg" alt="" width="92" height="82">
+                            <img src="img/human-studio-synthesys.svg" alt="" width="92" height="82" loading="lazy">
                         </div>
                         <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center font-bold text-xl leading-normal text-white mt-7">Human Studio Synthesys</header>
-                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10">
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
                             $19
+                            <small class="text-bodycopy font-normal text-base block">per month</small>
+                        </div>
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
+                            $12
                             <small class="text-bodycopy font-normal text-base block">per month</small>
                         </div>
 
@@ -239,11 +265,15 @@
                     <!---------- subscription plan start -->
                     <div class="subscription-plan flex flex-col items-center pt-10 pb-12 bg-[#0D1924] border-t-[5px] border-t-current text-blue">
                         <div class="h-24 flex flex-col justify-end">
-                            <img src="img/audio-synthesys.svg" alt="" width="79" height="63">
+                            <img src="img/audio-synthesys.svg" alt="" width="79" height="63" loading="lazy">
                         </div>
                         <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center font-bold text-xl leading-normal text-white mt-7">Audio Synthesys</header>
-                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10">
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
                             $29
+                            <small class="text-bodycopy font-normal text-base block">per month</small>
+                        </div>
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
+                            $22
                             <small class="text-bodycopy font-normal text-base block">per month</small>
                         </div>
                         <ul class="subscription-plan-features-list">
@@ -257,11 +287,15 @@
                     <!---------- subscription plan start -->
                     <div class="subscription-plan flex flex-col items-center pt-10 pb-12 bg-[#0D1924] border-t-[5px] border-t-current text-white">
                         <div class="h-24 flex flex-col justify-end">
-                            <img src="img/audio-human-studio.svg" alt="" width="98" height="88">
+                            <img src="img/audio-human-studio.svg" alt="" width="98" height="88" loading="lazy">
                         </div>
                         <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center font-bold text-xl leading-normal text-white mt-7">Audio and Human Studio Synthesys</header>
-                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10">
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
                             $39
+                            <small class="text-bodycopy font-normal text-base block">per month</small>
+                        </div>
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
+                            $32
                             <small class="text-bodycopy font-normal text-base block">per month</small>
                         </div>
                         <ul class="subscription-plan-features-list">
@@ -274,7 +308,7 @@
 
                 </div>
 
-                <!--------------- subscription plans grid end -->
+                <!--------------- subscription plans grid  end -->
 
 
             </div>
@@ -294,5 +328,14 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     @@include('./includes/sections/footer-scripts.html')
+
+    <script>
+        const toggle = document.querySelector('#prices-toggle');
+        const pricesContainer = document.querySelector('.subscription-plans-container');
+        toggle.addEventListener('click', function () {
+            pricesContainer.classList.toggle('yearly');
+            this.closest('#toggle-container').classList.toggle('yearly');
+        })
+    </script>
 </body>
 </html>
