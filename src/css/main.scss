@@ -71,7 +71,6 @@
 
 
 .swiper-button-next, .swiper-button-prev {
-    @apply  relative top-0 left-0 right-0 bottom-0 h-20 w-20 border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center ;
     &::after {
         @apply text-xl text-white;
     }

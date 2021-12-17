@@ -27,6 +27,8 @@ const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 const critical = require('critical').stream;
 const minifyInline = require('gulp-minify-inline');
+const svgSprite = require('gulp-svg-sprite');
+const plumber = require('gulp-plumber');
 
 
 
@@ -64,6 +66,40 @@ function devHTML(){
     .pipe(dest(options.paths.dist.base));
 }
 
+//svg sprite task
+function devSvgSprites(){
+  return src(`${options.paths.src.img}/icons/*.svg`)
+    .pipe(plumber())
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: '../sprite.svg'
+        }
+      },
+      shape: {
+        transform: [
+          {
+            svgo: {
+              plugins: [
+                { removeNonInheritableGroupAttrs: true },
+                { collapseGroups: true },
+                {
+                  removeAttrs: {
+                    attrs: 'class|data-name|fill:none|fill:currentColor'
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }))
+    .pipe(plumber.stop())
+    .pipe(dest(`${options.paths.dist.img}/icons/`));
+}
+
+
+
 function devStyles(){
   const tailwindcss = require('tailwindcss');
   return src(`${options.paths.src.css}/**/*.scss`)
@@ -88,7 +124,7 @@ function devScripts(){
 }
 
 function devImages(){
-  return src(`${options.paths.src.img}/**/*`).pipe(dest(options.paths.dist.img));
+  return src(`${options.paths.src.img}/*`).pipe(dest(options.paths.dist.img));
 }
 function devFonts(){
   return src(`${options.paths.src.fonts}/*`).pipe(dest(options.paths.dist.fonts));
@@ -114,7 +150,7 @@ function prodHTML(){
   .pipe(replace('.png', '.webp'))
   .pipe(replace('.jpg', '.webp'))
   .pipe(replace('.jpeg', '.webp'))
-  .pipe(minifyInline())
+  // .pipe(minifyInline())
   .pipe(dest(options.paths.build.base));
 }
 
@@ -143,7 +179,7 @@ function prodScripts(){
 }
 
 function prodImages(){
-  return src(options.paths.src.img + '/**/*')
+  return src(options.paths.dist.img + '/**/*')
   .pipe(webp())
   .pipe(dest(options.paths.build.img));
 }
@@ -181,7 +217,7 @@ function criticalCSS () {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devFonts, devHTML), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, devSvgSprites, devFonts, devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

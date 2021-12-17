@@ -1,15 +1,16 @@
 <!------------------------ Header Start -->
 <header class="h-20 flex items-center">
-    <div class="container flex items-center">
-        <a href="#" class="logo"><img src="img/logo.svg" alt="" width="131" height="29"></a>
+    <div class="container flex items-center min-h-[46px]">
+        <a href="#" class="logo" style="height: 29px;">
+            <img src="img/Logo.svg" alt="" width="131" height="29">
+        </a>
         <nav class="mx-auto grid grid-flow-col content-center items-center gap-16 main-nav">
             <a href="index.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'home') {active}">Home</a>
             <a href="audio.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'audio') {active}">AI Audio</a>
             <a href="video.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'video') {active}">AI Video</a>
             <a href="about.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'about') {active}">About Us</a>
         </nav>
-        <a href="#"
-            class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
+        <a href="#" class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
     </div>
 </header>
 <!------------------------ Header End -->

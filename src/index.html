@@ -15,7 +15,7 @@
 <body class="bg-dark-surface text-bodycopy font-montserrat">
     @@include('includes/sections/header.html', {
         'page': 'home'
-    });
+    })
 
     <main>
         <section class="container flex justify-between items-center mt-16 mb-24">
@@ -39,13 +39,13 @@
                         <p class="mt-8">Using clear, natural voiceovers brings trust and authority to your digital message, creating a relatable and emotional connection between your customers and your brand. With the power of Synthesys ai voice generator, you can make the jump from plain old text to dynamic and engaging digital content.</p>
                         <div class="mt-14 text-white text-xl">
                             Choose <a href="#tts-section" class="text-blue inline-block mx-2 hover:opacity-75 transition-opacity">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 15.996 23.267" class="text-current inline-block">
-                                    <path id="Icon_awesome-microphone" data-name="Icon awesome-microphone" d="M8,16a4.362,4.362,0,0,0,4.362-4.362V4.362a4.362,4.362,0,0,0-8.725,0v7.271A4.362,4.362,0,0,0,8,16Zm7.271-7.271h-.727a.727.727,0,0,0-.727.727v2.181a5.823,5.823,0,0,1-6.4,5.788,5.993,5.993,0,0,1-5.235-6.047V9.452a.727.727,0,0,0-.727-.727H.727A.727.727,0,0,0,0,9.452v1.825a8.248,8.248,0,0,0,6.907,8.256v1.552H4.362a.727.727,0,0,0-.727.727v.727a.727.727,0,0,0,.727.727h7.271a.727.727,0,0,0,.727-.727v-.727a.727.727,0,0,0-.727-.727H9.089V19.551A8.006,8.006,0,0,0,16,11.633V9.452A.727.727,0,0,0,15.269,8.725Z" fill="currentColor" />
+                                <svg class="w-4 h-6 inline-block fill-current">
+                                    <use xlink:href="img/icons/sprite.svg#icon-microphone"></use>
                                 </svg>
 
                                 <span class="border-current border-b border-dotted">AI Voiceover</span></a> or <a href="#ttv-section" class="text-green transition-opacity hover:opacity-75 inline-block mx-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 35 35" class="text-current inline-block">
-                                    <path fill="currentColor" d="M17.5 0C7.84 0 0 7.84 0 17.5S7.84 35 17.5 35 35 27.16 35 17.5 27.16 0 17.5 0zM14 25.375V9.625L24.5 17.5 14 25.375z" class="icon-play" />
+                                <svg class="w-7 h-7 inline-block fill-current">
+                                    <use xlink:href="img/icons/sprite.svg#icon-play"></use>
                                 </svg>
                                 <span class="border-current border-b border-dotted">AI Video</span></a> Productions... or Both
                         </div>
@@ -58,7 +58,7 @@
             <div class="container">
                 <div id="tts-section" class="flex items-center">
                     <div class="w-[53%] pr-10">
-                        <img src="img/TTS.png" alt="" width="700" height="546">
+                        <img src="img/TTS.png" alt="" width="700" height="546" loading="lazy">
                     </div>
                     <div class="w-[47%]">
                         <div
@@ -77,10 +77,10 @@
                                 { "li-content": "Create and sell unlimited voiceovers for any purpose" }
                             ])
                         </ul>
-                        <a href="#" class="text-blue ml-10 mt-8 inline-block transition-opacity hover:opacity-75">Find Out More
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" fill="none" viewBox="0 0 22 12" class="inline-block ml-3">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 1.061l5 5m0 0l-5 5m5-5h-13m-7 0h3" class="arrow-right" />
-                        </svg>
+                        <a href="#" class="group text-blue ml-10 mt-8 inline-block transition-opacity hover:opacity-75 duration-500">Find Out More
+                            <svg class="w-5 h-3 inline-block ml-3 group-hover:translate-x-5 transition-transform duration-300 ease-out">
+                                <use xlink:href="img/icons/sprite.svg#icon-arrow-right"></use>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -104,24 +104,24 @@
                             ])
 
                         </ul>
-                        <a href="#" class="text-green ml-10 mt-8 inline-block transition-opacity hover:opacity-75">Find Out More
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" fill="none" viewBox="0 0 22 12"
-                                class="inline-block ml-3">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M15.75 1.061l5 5m0 0l-5 5m5-5h-13m-7 0h3" class="arrow-right" />
+                        <a href="#" class="group text-green ml-10 mt-8 inline-block transition-opacity hover:opacity-75">Find Out More
+                            <svg class="w-5 h-3 inline-block ml-3 group-hover:translate-x-5 transition-transform duration-300 ease-out">
+                                <use xlink:href="img/icons/sprite.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
 
                     </div>
                     <div class="w-[47%] pr-10">
-                        <img src="img/TTV.png" alt="" width="652" height="583">
+                        <img src="img/TTV.png" alt="" width="652" height="583" loading="lazy">
                     </div>
 
                 </div>
             </div>
         </section>
 
-        @@include('./includes/sections/reviews.html')
+        @@include('./includes/sections/reviews.html', {
+            'color': 'green'
+        })
 
         <section class="py-38">
             <div class="container">
@@ -133,62 +133,23 @@
                     </div>
                     <div class="w-7/12">
                         <ul class="grid grid-cols-2 gap-6">
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Explainer Videos</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-gaming.svg" alt="">
-                                <span>Gaming</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-voicemail.svg" alt="">
-                                <span>Voice mail and On-Hold messages</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Spotify and TV Commercials</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-audio-confirmation.svg" alt="">
-                                <span>Audio Website Confirmations</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Training videos</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Audio Instructions</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Video Marketing Ads</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Cartoons and Animations</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Video Sales Letters</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Podcasts</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Social Media Stories</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Presentations</span>
-                            </li>
-                            <li class="">
-                                <img class="mr-6 inline-block" src="img/icon-explainer-videos.svg" alt="">
-                                <span>Audiobooks</span>
-                            </li>
+                            @@loop('includes/partials/good-digital-content-li.html', [
+                                {"text": "Explainer Videos", "icon": "explainer-videos"},
+                                {"text": "Gaming", "icon": "gaming"},
+                                {"text": "Voice mail and On-Hold messages", "icon": "voicemail"},
+                                {"text": "Spotify and TV Commercials", "icon": "spotify-tv"},
+                                {"text": "Audio Website Confirmations", "icon": "audio-confirmation"},
+                                {"text": "Training videos", "icon": "training-videos"},
+                                {"text": "Audio Instructions", "icon": "audio-instructions"},
+                                {"text": "Video Marketing Ads", "icon": "video-marketing-ads"},
+                                {"text": "Cartoons and Animations", "icon": "cartoons"},
+                                {"text": "Video Sales Letters", "icon": "video-sales"},
+                                {"text": "Podcacts", "icon": "podcasts"},
+                                {"text": "Social Media Stories", "icon": "social-stories"},
+                                {"text": "Presentations", "icon": "presentations"},
+                                {"text": "Audiobooks", "icon": "audiobooks"},
+                            ])
+
                         </ul>
                         <p class="text-xl text-white mt-12.5">Much, much more...</p>
 
@@ -201,11 +162,11 @@
         <section class="py-20 bg-green">
             <div class="container flex">
                 <div class="w-3/12 pr-12">
-                    <img src="img/need-developer-tools.svg" width="90" height="82" alt="">
+                    <img src="img/developer-tools.svg" alt="" width="90" height="82">
                     <div class="text-black uppercase text-xl font-bold mt-5">need developer tools?</div>
                 </div>
                 <div class="w-px bg-white h-40 mx-auto relative">
-                    <div class="absolute top-1/2 -mt-3 -ml-1 bg-black w-2.5 h-5" style="clip-path: polygon(0 0, 0% 100%, 100% 50%);"></div>
+                    <div class="absolute top-1/2 bg-black w-2.5 h-5" style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-2px, -12px, 0);"></div>
                 </div>
                 <div class="w-7/12">
                     <header class="text-2xl text-black font-bold tracking-wider mt-6">Synthesys API</header>
@@ -241,7 +202,9 @@
                     <!--------- subscription plan start -->
                     <div class="subscription-plan flex flex-col items-center pt-10 pb-12 bg-[#0D1924] border-t-[5px] border-t-current text-green">
                         <div class="h-24 flex flex-col justify-end">
-                            <img src="img/human-studio-synthesys.svg" alt="" width="92" height="82" loading="lazy">
+                            <svg class="w-24 h-20">
+                                <use xlink:href="img/icons/sprite.svg#human-studio-synthesys"></use>
+                            </svg>
                         </div>
                         <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center font-bold text-xl leading-normal text-white mt-7">Human Studio Synthesys</header>
                         <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
@@ -265,7 +228,9 @@
                     <!---------- subscription plan start -->
                     <div class="subscription-plan flex flex-col items-center pt-10 pb-12 bg-[#0D1924] border-t-[5px] border-t-current text-blue">
                         <div class="h-24 flex flex-col justify-end">
-                            <img src="img/audio-synthesys.svg" alt="" width="79" height="63" loading="lazy">
+                            <svg class="w-24 h-20">
+                                <use xlink:href="img/icons/sprite.svg#audio-synthesys"></use>
+                            </svg>
                         </div>
                         <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center font-bold text-xl leading-normal text-white mt-7">Audio Synthesys</header>
                         <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
@@ -287,7 +252,9 @@
                     <!---------- subscription plan start -->
                     <div class="subscription-plan flex flex-col items-center pt-10 pb-12 bg-[#0D1924] border-t-[5px] border-t-current text-white">
                         <div class="h-24 flex flex-col justify-end">
-                            <img src="img/audio-human-studio.svg" alt="" width="98" height="88" loading="lazy">
+                            <svg class="w-24 h-20">
+                                <use xlink:href="img/icons/sprite.svg#audio-human-studio"></use>
+                            </svg>
                         </div>
                         <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center font-bold text-xl leading-normal text-white mt-7">Audio and Human Studio Synthesys</header>
                         <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
@@ -318,7 +285,7 @@
 
 
         @@include('./includes/sections/frequently-asked-questions.html', {
-            'color': 'var(--color-green-accent)'
+            'color': 'green'
         })
 
     </main>

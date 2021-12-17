@@ -20,16 +20,17 @@
 <body class="bg-dark-surface text-bodycopy font-montserrat">
     <!------------------------ Header Start -->
 <header class="h-20 flex items-center">
-    <div class="container flex items-center">
-        <a href="#" class="logo"><img src="img/logo.svg" alt="" width="131" height="29"></a>
+    <div class="container flex items-center min-h-[46px]">
+        <a href="#" class="logo" style="height: 29px;">
+            <img src="img/Logo.svg" alt="" width="131" height="29">
+        </a>
         <nav class="mx-auto grid grid-flow-col content-center items-center gap-16 main-nav">
             <a href="index.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 ">Home</a>
             <a href="audio.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 active">AI Audio</a>
             <a href="video.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 ">AI Video</a>
             <a href="about.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 ">About Us</a>
         </nav>
-        <a href="#"
-            class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
+        <a href="#" class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
     </div>
 </header>
 <!------------------------ Header End -->
@@ -39,26 +40,18 @@
             <div class="w-[53%] pr-12">
 
                 <div class="rounded-full w-25 h-25 border border-dark-blue grid place-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-                        <g id="Group_195" data-name="Group 195" transform="translate(-420 -1060)">
-                            <path id="Icon_awesome-microphone" data-name="Icon awesome-microphone"
-                                d="M12.5,25.005a6.82,6.82,0,0,0,6.82-6.82V6.82a6.82,6.82,0,1,0-13.639,0V18.186A6.82,6.82,0,0,0,12.5,25.005ZM23.869,13.639H22.732A1.136,1.136,0,0,0,21.6,14.776v3.41a9.1,9.1,0,0,1-10,9.049A9.369,9.369,0,0,1,3.41,17.781v-3a1.136,1.136,0,0,0-1.137-1.137H1.137A1.136,1.136,0,0,0,0,14.776v2.853A12.894,12.894,0,0,0,10.8,30.536v2.426H6.82A1.136,1.136,0,0,0,5.683,34.1v1.137A1.136,1.136,0,0,0,6.82,36.371H18.186a1.136,1.136,0,0,0,1.137-1.137V34.1a1.136,1.136,0,0,0-1.137-1.137H14.208v-2.4a12.515,12.515,0,0,0,10.8-12.377v-3.41A1.136,1.136,0,0,0,23.869,13.639Z"
-                                transform="translate(457.495 1091.356)" fill="#fff" />
-                            <g id="Ellipse_2987" data-name="Ellipse 2987" transform="translate(420 1060)" fill="none" stroke="#00ccfa"
-                                stroke-width="2" opacity="0.25">
-                                <circle cx="50" cy="50" r="50" stroke="none" />
-                                <circle cx="50" cy="50" r="49" fill="none" />
-                            </g>
-                        </g>
+                    <svg class="fill-white w-9 h-9">
+                        <use xlink:href="img/icons/sprite.svg#icon-microphone"></use>
                     </svg>
-
                 </div>
                 <h1 class="text-5xl leading-tight text-white font-bold mt-7">Listen to the FUTURE of AI Text-to-Speech</h1>
                 <div class="text-blue text-xl mt-8 leading-relaxed">Convert Your Text into an Effective, Realistic Audio Message. . . with Synthesys</div>
                 <div class="flex items-center mt-14">
                     <a href="#" class="border-blue border-3 inline-block uppercase py-4 px-11  text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Create Your Free Sample</a>
                     <a href="#" class="text-blue inline-flex ml-16 transition-opacity hover:opacity-75">
-                        <img src="img/icon-audiowave.svg" width="21" height="23" alt="">
+                        <svg class="w-6 h-6 fill-current">
+                            <use xlink:href="img/icons/sprite.svg#icon-audiowave"></use>
+                        </svg>
                         <span class="text-current border-b border-dotted border-blue ml-3">Hear Our Voices</span>
                     </a>
                 </div>
@@ -67,7 +60,7 @@
         </section>
         <div class="container">
             <div class="flex items-center border-t border-dashed border-bodycopy pt-28 pb-28">
-               <img src="img/audio-image.svg" width="176" height="148" alt="">
+               <img src="img/audio-image.svg" width="176" height="148" alt="" loading="lazy">
                <div class="w-9/12 ml-auto max-w-5xl pl-6 leading-9">
                     Synthesys is the next generation text-to-speech realistic technology that generates a life-like human voice reading your text. Easy-to-use, Synthesys offers a wide range of male and female voices, tones, languages, and reading speeds, allowing you to produce enthusiast radio commercials, friendly greetings, documentary-style messages, tutorials, podcasts . . . anywhere you need text to voiceovers for your digital content.
                </div>
@@ -80,17 +73,16 @@
                 <div class="grid gap-15 grid-cols-3 mt-20">
                     <div class="col">
                         <div class="flex items-center justify-between">
-                            <div class="rounded-full border border-dark-blue w-32 h-32 grid place-items-center relative  text-blue">
-                                <img src="img/text-to-voiceover-step1.svg" alt="" width="55" height="55" loading="lazy">
+                            <div class="rounded-full border border-dark-blue w-32 h-32 grid place-items-center relative text-blue">
+                                <svg class="w-14 h-14" style="transform: translate3d(2px, 2px, 0);">
+                                    <use xlink:href="img/icons/sprite.svg#text-to-voiceover-step1"></use>
+                                </svg>
                                 <div class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4"><span class="text-black font-semibold text-[22px]">1</span></div>
                             </div>
 
                             <div class="flex-1 pl-12 ml-auto hidden lg:block">
-                                <svg class="w-full mt-10 scale-y-[-100%]" xmlns="http://www.w3.org/2000/svg" width="201.762" height="25.477" viewBox="0 0 201.762 25.477">
-                                    <g transform="translate(0.451 1)" opacity="0.25">
-                                        <path d="M2660,1380s39.583-20,100-20,100,20,100,20" transform="translate(-2660 -1360)" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="2 4" />
-                                        <path d="M10,0V10H0" transform="matrix(0.921, -0.391, 0.391, 0.921, 186.888, 14.351)" fill="none" stroke="#fff" stroke-width="2" />
-                                    </g>
+                                <svg class="w-full h-7" style="transform: translate3d(0, 20px, 0) scaleY(-1);">
+                                    <use xlink:href="img/icons/sprite.svg#round-arrow-long"></use>
                                 </svg>
                             </div>
                         </div>
@@ -103,18 +95,14 @@
                     <div class="col">
                         <div class="flex justify-between items-center">
                             <div class="rounded-full border border-dark-blue w-32 h-32 grid place-items-center relative  text-blue">
-                                <img src="img/text-to-voiceover-step2.svg" alt="" width="40" height="53" loading="lazy">
+                                <svg class="w-10 h-14" style="transform: translate3d(1px, 1px, 0);">
+                                    <use xlink:href="img/icons/sprite.svg#text-to-voiceover-step2"></use>
+                                </svg>
                                 <div class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4"><span class="text-black font-semibold text-[22px]">2</span></div>
                             </div>
                             <div class="flex-1 pl-12 ml-auto hidden lg:block">
-                                <svg class="w-full -mt-10" xmlns="http://www.w3.org/2000/svg" width="201.762" height="25.477"
-                                    viewBox="0 0 201.762 25.477">
-                                    <g transform="translate(0.451 1)" opacity="0.25">
-                                        <path d="M2660,1380s39.583-20,100-20,100,20,100,20" transform="translate(-2660 -1360)" fill="none" stroke="#fff"
-                                            stroke-width="2" stroke-dasharray="2 4" />
-                                        <path d="M10,0V10H0" transform="matrix(0.921, -0.391, 0.391, 0.921, 186.888, 14.351)" fill="none" stroke="#fff"
-                                            stroke-width="2" />
-                                    </g>
+                                <svg class="w-full h-7" style="transform: translate3d(0, -20px, 0);">
+                                    <use xlink:href="img/icons/sprite.svg#round-arrow-long"></use>
                                 </svg>
                             </div>
                         </div>
@@ -125,7 +113,9 @@
                     </div>
                     <div class="col">
                         <div class="rounded-full border border-dark-blue w-32 h-32 grid place-items-center relative  text-blue">
-                            <img src="img/text-to-voiceover-step3.svg" alt="" width="40" height="47" loading="lazy">
+                            <svg class="w-11 h-14">
+                                <use xlink:href="img/icons/sprite.svg#text-to-voiceover-step3"></use>
+                            </svg>
                             <div class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4"><span class="text-black font-semibold text-[22px]">3</span></div>
                         </div>
 
@@ -137,14 +127,152 @@
             </div>
         </section>
 
+        <!--------------- Meet Your All-Star Cast Start -->
+        <section class="py-20 bg-blue">
+            <div class="container">
+                <div class="flex">
+                    <div class="w-3/12 pr-12">
+                       <img src="img/allstar-cast.svg" alt="" width="94" height="82" loading="lazy">
+                        <div class="text-black uppercase text-xl font-bold mt-5">Meet Your All-Star Cast</div>
+                    </div>
+                    <div class="w-px bg-white h-40 mx-auto relative">
+                        <div class="absolute top-1/2 bg-black w-2.5 h-5"
+                            style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-3px, -12px, 0);"></div>
+                    </div>
+                    <div class="w-7/12">
+                        <!-- <header class="text-2xl text-black font-bold tracking-wider mt-6">Synthesys API</header> -->
+                        <p class="mt-7.5 leading-loose text-bodycopy-darker">row of 6 – 9 avatars, each with player button. Use these samples to showcase different uses. Podcasts, E-learning, Marketing, Documentary, Audio Book, On Hold, Animation, Smart Building, Explainer Video</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 md:gap-4 xl:gap-6 2xl:gap-10 mt-20">
+
+                    <div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        Video Ad Example
+    </div>
+    <img src=img/voice1.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Dan R.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Lively, precise, and clear. Dan’s voice is great for commercial and explainer videos. #Male #Middle-Aged #Ad #Cheerful #Powerful #Hard Sell</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio0.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        Film Trailer
+    </div>
+    <img src=img/voice2.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">John M.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Deep, mellow, and resonant - pick John for storytelling. #Male #Middle-Aged #Ad #Hard Sell #Low-Pitched #Powerful</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio1.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        AudioBook Example
+    </div>
+    <img src=img/voice3.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Renee W.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Deep mellow and soft. Renee’s voice is great for podcasts. #Female #Middle-Aged #Documentary #News #Gentle #Hard Sell</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio9.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        AudioBook Example
+    </div>
+    <img src=img/voice4.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Mary S.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Mellow mature and bright, Mary has an inviting voice. #Australian #Female #Middle-Aged #E-Learning #Narration #Classy #Informative</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio3.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        Radio Advertisment Example
+    </div>
+    <img src=img/voice5.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Alicia M.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Friendly, Cheerful, excited, and easy-going. Choose Alicia for your narration. #UK #Female #Young Adult #Ad #E-Learning</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio23.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        Audiobook Example
+    </div>
+    <img src=img/voice6.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Deborah D.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Artistic clear and expressive. Deborah is perfect for games. #Female #Child #Ad #Games #Cheerful #Excited</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio10.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        TV Commercial
+    </div>
+    <img src=img/voice7.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Beatrice J.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Poised and expressive, choose Beatrice for your ad campaigns. #Female #Young Adult #Ad #Cheerful #Engaging #Excited</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio00.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        Storytelling
+    </div>
+    <img src=img/voice8.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Edmund L.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Good-natured and lively, Edmund is great for e-learning. Audiobooks narration. #Male #Middle-Aged #Ad #Audiobooks #Powerful #Warm</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/private-offer/images/audios/audio5.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!--------------- Meet Your All-Star Cast End -->
+
         <section class="py-30">
             <div class="container px-28">
                 <ul class="check-list text-blue">
                     <li class="mb-13">
                         <div class="flex">
-                            <svg class="-ml-11 mr-5" width="22" height="23" fill="none" viewBox="0 0 22 23">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 11.08V12a10 10 0 11-5.93-9.14M21 4L11 14.01l-3-3" class="icon-check" />
+                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                                <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">No Experience Necessary</div>
                         </div>
@@ -152,9 +280,8 @@
                     </li>
                     <li class="mb-13">
                         <div class="flex">
-                            <svg class="-ml-11 mr-5" width="22" height="23" fill="none" viewBox="0 0 22 23">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 11.08V12a10 10 0 11-5.93-9.14M21 4L11 14.01l-3-3" class="icon-check" />
+                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                                <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">Share Your New Corporate Voice</div>
                         </div>
@@ -162,9 +289,8 @@
                     </li>
                     <li class="mb-0">
                         <div class="flex">
-                            <svg class="-ml-11 mr-5" width="22" height="23" fill="none" viewBox="0 0 22 23">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 11.08V12a10 10 0 11-5.93-9.14M21 4L11 14.01l-3-3" class="icon-check" />
+                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                                <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">Meet Your New Voice</div>
                         </div>
@@ -174,14 +300,199 @@
             </div>
         </section>
 
+        <!---------------------- Reviews section start --------------------------------------->
+<section id="reviews" class="bg-black pt-38 pb-36" style="color: var(--color-blue-accent)">
+    <div class="container">
+        <div class="flex justify-between">
+            <div class="w-4/12">
+
+                <div class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-16 before:border-blue before:w-12 before:border-t-3">
+                    Reviews</div>
+                <div class="text-current text-xl leading-relaxed mt-3">from our customers</div>
+
+                <div class="reviews-nav flex relative mt-22 h-20 space-x-5">
+
+                    <!-- Navigation buttons -->
+                    <div class="reviews-prev text-current swiper-button-prev relative top-0 left-0 right-0 bottom-0 h-20 w-20 border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center"></div>
+                    <div class="reviews-next text-current swiper-button-next relative top-0 left-0 right-0 bottom-0 h-20 w-20 border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center"></div>
+
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="reviews-slider swiper flex justify-end min-h-[350px] w-7/12" >
+
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+
+                    <div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            All previous 'text to speech' apps are suddenly obsolete. The real-human quality of Synthesys is so good, that I am honestly feeling like my days as a voice-over artist are numbered! The Interface is so easy to use as well. This is a must-have for every marketer and video creator.
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/ToddGross.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Todd Gross</div>
+                    <div class="author-position text-base text-bodycopy mt-1">http://toddgross.rocks/70k</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            I am so happy to have access to this revolutionary software! It is going to disrupt the video creation world forever!!! This software is mind blowing, and I love it. It will save me a huge amount of money on voice over actresses and actors. Oliver is really making a difference in the video world, and I can't say enough about this product. This is totally awesome!!
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/Dalphine.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Dalphine</div>
+                    <div class="author-position text-base text-bodycopy mt-1">Dreaming 4Newlife</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            Wow! The voices in Synthesys are so natural I could have saved a fortune on all the voice overs I’ve paid for. No other text to speech app has been good enough before, but now my head is spinning with the possibilities for my business.
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/ChrissyWithers.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Chrissy Withers</div>
+                    <div class="author-position text-base text-bodycopy mt-1">ProVideoVault.com</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            I am SO blown away by the quality of Synthesys. As a digital consultant who sells services to local business clients, I can't tell you how much money I've spent on voiceovers over the years. I've stayed away from using AI generated speech because the quality has never competed with the real thing. That has all changed. I LOVE THIS!
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/MattBush.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Matt Bush</div>
+                    <div class="author-position text-base text-bodycopy mt-1">http://ezmagicvideo.com</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            Synthesys is mind blowing. The voices are as good as I usually get from professional voiceover artist on Fiverr after paying big bucks. The fact that it beats voices from Google and Amazon is extraordinary. I highly recommend Synthesys, you'll never go wrong with it.
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/RohitShah.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Rohit Shah</div>
+                    <div class="author-position text-base text-bodycopy mt-1">CommerceMojo.com</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            The Synthesys voices are extremely lifelike and much better then the ones found in other text-to-speech programs. It gives us a great tool to create professional voice-overs without incurring the time and huge expense of hiring voice-over specialists.
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/SpencerWhite.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Spencer White</div>
+                    <div class="author-position text-base text-bodycopy mt-1">President Owner Only Benefits & Consultants</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            I use YouTube video marketing for my dive center in Thailand, and for that I use Todd Gross' Human Synthesys Studio. This tool is really wonderful, it is easy to use and it gives me an exceptional rendering. My clientele is 60% French-speaking and this language translation service is simply the best. We would say from real life. Since I tried it, I can't do without it. I use it in the content in the creation of my sales video, promotion and tutorial. Thank you very much to Todd.
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/Bruno.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Bruno</div>
+                    <div class="author-position text-base text-bodycopy mt-1">Thailand Diving Asia</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------- Reviews section end --------------------------------------->
+
+
         <section class="py-20 bg-blue">
             <div class="container flex">
                 <div class="w-3/12 pr-12">
-                    <img src="img/need-developer-tools.svg" width="90" height="82" alt="">
+                    <img src="img/developer-tools.svg" width="90" height="82" alt="" loading="lazy">
                     <div class="text-black uppercase text-xl font-bold mt-5">Are you a developer?</div>
                 </div>
                 <div class="w-px bg-white h-40 mx-auto relative">
-                    <div class="absolute top-1/2 -mt-3 -ml-1 bg-black w-2.5 h-5" style="clip-path: polygon(0 0, 0% 100%, 100% 50%);"></div>
+                    <div class="absolute top-1/2 bg-black w-2.5 h-5" style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-2px, -12px, 0);"></div>
                 </div>
                 <div class="w-7/12">
                     <header class="text-2xl text-black font-bold tracking-wider mt-6">Use of TTS API</header>
@@ -191,14 +502,17 @@
                     <div class="flex items-center mt-14">
                         <a href="#" class="text-black bg-transparent border-3 border-white px-10 py-5 uppercase font-semibold hover:border-bodycopy-darker transition-colors">Sign Up Today</a>
                         <a href="#" class="text-black text-xl ml-15 flex items-center transition-opacity hover:opacity-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="">
-                                <path id="Icon_material-play-circle-filled" data-name="Icon material-play-circle-filled" d="M15,3A12,12,0,1,0,27,15,12,12,0,0,0,15,3ZM12.6,20.4V9.6L19.8,15Z" transform="translate(-3 -3)" fill="currentColor" />
+                            <svg class="w-6 h-6">
+                                <use xlink:href="img/icons/sprite.svg#icon-play"></use>
                             </svg>
                             <span class="ml-2.5 border-b border-dotted border-current">Need Text to Video?</span></a>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
 
         <!---------------- Frequently Asked Questions -->
         <section class="pt-38 pb-30 frequently-asked-questions max-w-4xl mx-auto" style='color: var(--color-blue-accent)'>
@@ -260,70 +574,13 @@
         <!---------------- Frequently Asked Questions End -->
 
 
-        <!---------------------- Voice Examples start --------------------------------------->
-        <hr class="container border-t border-dashed border-bodycopy"></hr>
-        <section id="voice-examples" class="py-38 text-blue">
-            <div class="container">
-                <div class="flex justify-between">
-                    <div class="w-4/12">
-
-                        <div class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-16 before:border-blue before:w-12 before:border-t-3">Voice Examples</div>
-                        <div class="text-current text-xl leading-relaxed mt-3">from our customers</div>
-
-                        <div class="reviews-nav flex relative mt-22 h-20">
-
-                            <!-- Navigation buttons -->
-                            <div class="voice-examples-prev swiper-button-prev text-current"></div>
-                            <div class="voice-examples-next swiper-button-next ml-5 text-current"></div>
-                        </div>
-                    </div>
-                    <!-- Slider main container -->
-                    <div class="voice-examples-slider swiper flex justify-end min-h-[350px] w-7/12 mr-0 ml-auto">
-
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-
-                                <div class="voice-example flex flex-col items-center max-w-sm bg-[#0d1924] px-7.5 py-10">
-                                    <header class="text-white font-bold text-xl">Video Ad Example</header>
-                                    <img src="img/JohnDoe_100.webp" alt="" width="100" height="100" class="mt-10">
-                                    <div class="text-white mt-5">John Doe</div>
-                                    <div class="text-bodycopy mt-11 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptates, facere nisi id provident fugiat nesciunt sequi debitis asperiores porro.</div>
-                                    <div class="audio-player mt-12.5"><img src="img/audio-player.webp" alt="" width="330" height="38"></div>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-
-                                <div class="voice-example flex flex-col items-center max-w-sm bg-[#0d1924] px-7.5 py-10">
-                                    <header class="text-white font-bold text-xl">AudioBook Example</header>
-                                    <img src="img/JohnDoe_100.webp" alt="" width="100" height="100" class="mt-10">
-                                    <div class="text-white mt-5">John Doe</div>
-                                    <div class="text-bodycopy mt-11 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                                        voluptates, facere nisi id provident fugiat nesciunt sequi debitis asperiores porro.</div>
-                                    <div class="audio-player mt-12.5"><img src="img/audio-player.webp" alt="" width="330" height="38"></div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!---------------------- Voice Examples end --------------------------------------->
-
-
     </main>
 
 
     <footer class="bg-black pt-16 pb-10">
     <div class="container">
         <div class="text-center">
-            <a href="#" class="logo inline-block"><img src="img/logo.svg" alt="" width="131" height="29"></a>
+            <a href="#" class="logo inline-block"><img src="img/logo.svg" alt="Logo" width="131" height="29" loading="lazy"></a>
             <ul class="footer-nav flex items-center justify-center mt-14">
                 <li class="mr-6"><a href="#" class="text-white transition-colors hover:text-green">Contact</a></li>
                 <li class="mx-6 before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="about.html" class="text-white transition-colors hover:text-green">About Us</a></li>
@@ -340,25 +597,25 @@
             </div>
             <div class="social-share flex mx-auto">
                 <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="7.225" height="13.489" viewBox="0 0 7.225 13.489">
-                        <path d="M8.361,7.588l.375-2.441H6.393V3.562A1.221,1.221,0,0,1,7.769,2.243H8.834V.165A12.986,12.986,0,0,0,6.944,0a2.98,2.98,0,0,0-3.19,3.286V5.146H1.609V7.588H3.754v5.9H6.393v-5.9Z" transform="translate(-1.609)" fill="currentColor" />
+                    <svg class="w-3 h-3">
+                        <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
                     </svg>
                 </a>
                 <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13.416" height="10.896" viewBox="0 0 13.416 10.896" class="mt-0.5 ml-0.5">
-                        <path d="M12.037,6.1c.009.119.009.238.009.358a7.769,7.769,0,0,1-7.823,7.823A7.77,7.77,0,0,1,0,13.043a5.688,5.688,0,0,0,.664.034A5.507,5.507,0,0,0,4.078,11.9,2.754,2.754,0,0,1,1.507,10a3.467,3.467,0,0,0,.519.043,2.908,2.908,0,0,0,.724-.094,2.75,2.75,0,0,1-2.2-2.7V7.211a2.769,2.769,0,0,0,1.243.349A2.754,2.754,0,0,1,.936,3.883,7.816,7.816,0,0,0,6.606,6.76a3.1,3.1,0,0,1-.068-.63A2.752,2.752,0,0,1,11.3,4.249a5.413,5.413,0,0,0,1.745-.664A2.742,2.742,0,0,1,11.832,5.1a5.512,5.512,0,0,0,1.583-.426A5.911,5.911,0,0,1,12.037,6.1Z" transform="translate(0 -3.381)" fill="currentColor" />
-                    </svg>
-
-                </a>
-                <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12.389" height="12.389" viewBox="0 0 12.389 12.389">
-                        <path d="M2.773,12.389H.2V4.118H2.773ZM1.488,2.99a1.495,1.495,0,1,1,1.488-1.5A1.5,1.5,0,0,1,1.488,2.99Zm10.9,9.4H9.823V8.363c0-.96-.019-2.19-1.335-2.19-1.335,0-1.54,1.043-1.54,2.121v4.1H4.382V4.118H6.845V5.246h.036a2.7,2.7,0,0,1,2.43-1.336c2.6,0,3.077,1.712,3.077,3.935v4.544Z" transform="translate(0 0)" fill="currentColor" />
+                    <svg class="w-3 h-3">
+                        <use xlink:href="img/icons/sprite.svg#icon-twitter"></use>
                     </svg>
 
                 </a>
                 <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12.766" height="12.761" viewBox="0 0 12.766 12.761">
-                        <path d="M3.75,12.716a3.788,3.788,0,0,1-2.674-1.031A3.748,3.748,0,0,1,.045,9.011c-.06-1.058-.06-4.207,0-5.265A3.766,3.766,0,0,1,1.076,1.073,3.77,3.77,0,0,1,3.75.045C4.238.017,5.247,0,6.383,0S8.528.017,9.016.045A3.777,3.777,0,0,1,11.69,1.076a3.748,3.748,0,0,1,1.031,2.674c.06,1.057.06,4.2,0,5.262a3.775,3.775,0,0,1-1.031,2.674,3.752,3.752,0,0,1-2.674,1.031c-.488.028-1.5.045-2.633.045S4.238,12.743,3.75,12.716ZM3.014,6.583A3.443,3.443,0,1,0,6.456,3.141,3.446,3.446,0,0,0,3.014,6.583ZM9.028,2.975a.763.763,0,1,0,.763-.763A.764.764,0,0,0,9.028,2.975Zm-5.2,3.608A2.633,2.633,0,1,1,6.456,9.215,2.632,2.632,0,0,1,3.824,6.583Z" fill="currentColor" />
+                    <svg class="w-3 h-3">
+                        <use xlink:href="img/icons/sprite.svg#icon-linkedin"></use>
+                    </svg>
+
+                </a>
+                <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors text-white">
+                    <svg class="w-3 h-3">
+                        <use xlink:href="img/icons/sprite.svg#icon-insta"></use>
                     </svg>
                 </a>
             </div>

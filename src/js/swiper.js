@@ -24,46 +24,46 @@ const reviewsSwiper = new Swiper('.reviews-slider', {
 
 });
 
-const voiceExamplesSwiper = new Swiper('.voice-examples-slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  slidesPerView: 2,
-  spaceBetween: 30,
-  breakpoints: {
-    1536: {
-      spaceBetween: 70,
-    }
-  },
-  loop: true,
-  speed: 400,
+// const voiceExamplesSwiper = new Swiper('.voice-examples-slider', {
+//   // Optional parameters
+//   direction: 'horizontal',
+//   slidesPerView: 2,
+//   spaceBetween: 30,
+//   breakpoints: {
+//     1536: {
+//       spaceBetween: 70,
+//     }
+//   },
+//   loop: true,
+//   speed: 400,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.voice-examples-next',
-    prevEl: '.voice-examples-prev',
-  }
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.voice-examples-next',
+//     prevEl: '.voice-examples-prev',
+//   }
 
-});
+// });
 
-const videoExamplesSwiper = new Swiper('.video-examples-slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  slidesPerView: 2,
-  spaceBetween: 30,
-  breakpoints: {
-    1536: {
-      spaceBetween: 70,
-    }
-  },
-  loop: true,
-  speed: 400,
+// const videoExamplesSwiper = new Swiper('.video-examples-slider', {
+//   // Optional parameters
+//   direction: 'horizontal',
+//   slidesPerView: 2,
+//   spaceBetween: 30,
+//   breakpoints: {
+//     1536: {
+//       spaceBetween: 70,
+//     }
+//   },
+//   loop: true,
+//   speed: 400,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.video-examples-next',
-    prevEl: '.video-examples-prev',
-  }
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.video-examples-next',
+//     prevEl: '.video-examples-prev',
+//   }
 
-});
+// });
 
 
