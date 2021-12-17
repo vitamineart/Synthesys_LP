@@ -67,7 +67,7 @@ function devHTML(){
 }
 
 //svg sprite task
-function devSvgSprites(){
+function svgSprites(){
   return src(`${options.paths.src.img}/icons/*.svg`)
     .pipe(plumber())
     .pipe(svgSprite({
@@ -85,7 +85,7 @@ function devSvgSprites(){
                 { collapseGroups: true },
                 {
                   removeAttrs: {
-                    attrs: 'class|data-name|fill:none|fill:currentColor'
+                    attrs: 'class|data-name|fill|stroke'
                   }
                 }
               ]
@@ -135,6 +135,7 @@ function watchFiles(){
   watch([options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`],series(devStyles, previewReload));
   watch(`${options.paths.src.js}/**/*.js`,series(devScripts, previewReload));
   watch(`${options.paths.src.img}/**/*`,series(devImages, previewReload));
+  watch(`${options.paths.src.img}/icons/*`,series(svgSprites, previewReload));
   watch(`${options.paths.src.fonts}/**/*`,series(devFonts, previewReload));
   console.log("\n\t" + logSymbols.info,"Watching for Changes..\n");
 }
@@ -217,7 +218,7 @@ function criticalCSS () {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devSvgSprites, devFonts, devHTML), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, svgSprites, devFonts, devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
@@ -228,3 +229,5 @@ exports.prod = series(
   // criticalCSS,
   buildFinish
 );
+
+exports.svgSprites = svgSprites;
