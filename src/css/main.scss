@@ -36,7 +36,7 @@
         > span {@apply text-bodycopy;}
         &::before {
             content: '';
-            mask: url(../img/icon-check-filled.svg);
+            mask: url(../img/icons/sprite#icon-check-filled);
             background-color: currentColor;
             width: 20px;
             height: 20px;

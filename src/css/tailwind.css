@@ -3,6 +3,10 @@
   :root {
     --color-green-accent: #00f1d7;
     --color-blue-accent: #00CCFA; }
+  html {
+    @apply scroll-smooth; }
+  body {
+    @apply bg-dark-surface text-bodycopy font-montserrat; }
   .container {
     max-width: 1320px !important; } }
 

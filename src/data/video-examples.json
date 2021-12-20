@@ -1,52 +1,47 @@
 [
     {
         "title" : "Online Courses",
-        "url" : "https://player.vimeo.com/video/551685852"
+        "id" : "551685852"
 
     },
     {
         "title" : "Customer Success Videos",
-        "url" : "https://player.vimeo.com/video/544511394"
+        "id" : "544511394"
 
     },
     {
         "title" : "Abandoned Shopping Cart Videos",
-        "url" : "https://player.vimeo.com/video/546045031"
+        "id" : "546045031"
 
     },
     {
         "title" : "Saas Video Walkthrough",
-        "url" : "https://player.vimeo.com/video/536838240"
+        "id" : "536838240"
 
     },
     {
         "title" : "Corporate Communications",
-        "url" : "https://player.vimeo.com/video/551670138"
+        "id" : "551670138"
 
     },
     {
         "title" : "Automobiles And Dealerships",
-        "url" : "https://player.vimeo.com/video/549401045"
+        "id" : "549401045"
 
     },
     {
         "title" : "Cycling Related Video",
-        "url" : "https://player.vimeo.com/video/549441586"
+        "id" : "549441586"
 
     },
     {
         "title" : "Tutorial Video (In Spanish)",
-        "url" : "https://player.vimeo.com/video/552117726"
+        "id" : "552117726"
 
     },
     {
         "title" : "1-2 Local Business Examples",
-        "url" : "https://player.vimeo.com/video/549502795"
-
-    },
-    {
-        "title" : "Real Estate Videos",
-        "url" : "https://player.vimeo.com/video/546043677?loop=0&controls=1&muted=0&autoplay=0"
+        "id" : "549502795"
 
     }
 

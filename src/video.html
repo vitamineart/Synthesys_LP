@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthesys Landing Page | Video</title>
 
+    <link rel="preload" as="image" href="img/TTV.png" width="652" height="583">
+    <script src="https://cdn.jsdelivr.net/npm/@slightlyoff/lite-vimeo@0.1.2/lite-vimeo.min.js" type="module" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
     @@include('./includes/sections/head.html')
 </head>
 
-<body class="bg-dark-surface text-bodycopy font-montserrat">
+<body>
     @@include('includes/sections/header.html', {
         'page': 'video'
     })
@@ -170,16 +172,12 @@
                             style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-3px, -12px, 0);"></div>
                     </div>
                     <div class="w-7/12">
-                        <p class="mt-7.5 leading-loose text-bodycopy-darker">row of 6 – 9 avatars, each with player button. Use
-                            these samples to showcase different uses. Podcasts, E-learning, Marketing, Documentary, Audio Book, On
-                            Hold, Animation, Smart Building, Explainer Video</p>
+                        <p class="mt-7.5 leading-loose text-bodycopy-darker">Human Synthesys Studio creates completely life-like human spokespeople, that say exactly what you want them to say. They are not avatars. Instead, we’re calling them ‘Humatars’ and they are the new standard for spokespeople in video.</p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-3 md:gap-4 xl:gap-6 2xl:gap-10 mt-20">
-
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 mt-20">
                     @@loop('includes/partials/video-example.html', 'data/video-examples.json')
-
                 </div>
 
             </div>
@@ -235,9 +233,13 @@
                     <div class="w-5/12 max-w-lg">
                         <div class="border-[10px] border-green p-16">
                             <div class="uppercase text-green text-3xl leading-relaxed font-bold">
-                                no obligation, <br> no credit needed, <br> no lengthy registration.
+                                NO PRIOR SKILLS OR
+                                EXPERIENCE NEEDED,
+                                FULLY WEB-BASED,
+                                ACCESS FROM ANYWHERE
+                                CANCEL ANYTIME
                             </div>
-                            <div class="mt-15 text-white leading-loose">
+                            <div class="mt-12 text-white leading-loose">
                                 Synthesys Human Studio sells itself so what better way to see the power of virtual video than to create yours, free of
                                 charge.
                             </div>
@@ -246,7 +248,7 @@
                     <div class="w-7/12 pl-16 lg:pl-20 xl:pl-30 2xl:pl-36">
                         <div class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-16 before:border-green before:w-12 before:border-t-3">Why synthesys human studio ai video generator?</div>
 
-                        <ul class="check-list text-green mt-14 space-y-4">
+                        <ul class="check-list text-green mt-14 space-y-5">
 
                             @@loop('includes/partials/checklist-li.html', [
                                 {"li-content":"Extensive choice of AI actors, voices, and backgrounds"},

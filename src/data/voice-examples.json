@@ -54,5 +54,12 @@
         "image" : "img/voice8.png",
         "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio5.wav",
         "description" : "Good-natured and lively, Edmund is great for e-learning. Audiobooks narration. #Male #Middle-Aged #Ad #Audiobooks #Powerful #Warm"
+    },
+    {
+        "title" : "Example #1",
+        "name" : "Darryl T.",
+        "image" : "img/voice9.png",
+        "audio" : "https://meetsynthesys.com/pro/images/audios/audio0.wav",
+        "description" : "Gentle and trustworthy. Darryl’s voice is great for training. #UK #Male #Middle-Aged #Ad #News #Gentle #Trustworthy"
     }
 ]

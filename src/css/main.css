@@ -25,7 +25,7 @@
       @apply text-bodycopy; }
     .subscription-plan-features-list li::before {
       content: '';
-      mask: url(../img/icon-check-filled.svg);
+      mask: url(../img/icons/sprite#icon-check-filled);
       background-color: currentColor;
       width: 20px;
       height: 20px;

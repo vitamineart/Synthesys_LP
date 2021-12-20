@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthesys Landing Page | Audio</title>
 
+    <link rel="preload" as="image" href="img/TTS.png" alt="" width="546" height="700">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
     @@include('./includes/sections/head.html')
 </head>
 
-<body class="bg-dark-surface text-bodycopy font-montserrat">
+<body>
     @@include('includes/sections/header.html', {
         'page': 'audio'
     })
@@ -29,7 +30,7 @@
                 <div class="text-blue text-xl mt-8 leading-relaxed">Convert Your Text into an Effective, Realistic Audio Message. . . with Synthesys</div>
                 <div class="flex items-center mt-14">
                     <a href="#" class="border-blue border-3 inline-block uppercase py-4 px-11  text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Create Your Free Sample</a>
-                    <a href="#" class="text-blue inline-flex ml-16 transition-opacity hover:opacity-75">
+                    <a href="#voice-examples" class="text-blue inline-flex ml-16 transition-opacity hover:opacity-75">
                         <svg class="w-6 h-6 fill-current">
                             <use xlink:href="img/icons/sprite.svg#icon-audiowave"></use>
                         </svg>
@@ -109,7 +110,7 @@
         </section>
 
         <!--------------- Meet Your All-Star Cast Start -->
-        <section class="py-20 bg-blue">
+        <section class="py-20 bg-blue" id="voice-examples">
             <div class="container">
                 <div class="flex">
                     <div class="w-3/12 pr-12">
@@ -121,11 +122,10 @@
                             style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-3px, -12px, 0);"></div>
                     </div>
                     <div class="w-7/12">
-                        <!-- <header class="text-2xl text-black font-bold tracking-wider mt-6">Synthesys API</header> -->
-                        <p class="mt-7.5 leading-loose text-bodycopy-darker">row of 6 – 9 avatars, each with player button. Use these samples to showcase different uses. Podcasts, E-learning, Marketing, Documentary, Audio Book, On Hold, Animation, Smart Building, Explainer Video</p>
+                        <p class="mt-7.5 leading-loose text-bodycopy-darker">SYNTHESYS Gives You TOTAL CONTROL Over Your Voice-Overs. Choose Artists Depending On What You Need A Voice-Over For:</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 md:gap-4 xl:gap-6 2xl:gap-10 mt-20">
+                <div class="grid justify-center sm:grid-cols-2 md:grid-cols-3 gap-6 2xl:gap-10 mt-20 m-auto">
 
                     @@loop('includes/partials/voice-example.html', 'data/voice-examples.json')
 
@@ -140,7 +140,7 @@
                 <ul class="check-list text-blue">
                     <li class="mb-13">
                         <div class="flex">
-                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                            <svg class="fill-transparent stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">No Experience Necessary</div>
@@ -149,7 +149,7 @@
                     </li>
                     <li class="mb-13">
                         <div class="flex">
-                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                            <svg class="fill-transparent stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">Share Your New Corporate Voice</div>
@@ -158,12 +158,12 @@
                     </li>
                     <li class="mb-0">
                         <div class="flex">
-                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                            <svg class="fill-transparent stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
-                            <div class="font-bold text-white text-2xl leading-6">Meet Your New Voice</div>
+                            <div class="font-bold text-white text-2xl leading-6">Everything You Need Has a Voice</div>
                         </div>
-                        <p class="mt-6 leading-loose text-bodycopy">(row of 6 – 9 avatars, each with player button. Use these samples to showcase different uses. Podcasts, E-learning, Marketing, Documentary, Audio Book, On Hold, Animation, Smart Building, Explainer Video)</p>
+                        <p class="mt-6 leading-loose text-bodycopy">Create engaging learning experiences, training, real estate videos, advertising audio promotion materials, product tours, and more. Nothing can stop you except your imagination!</p>
                     </li>
                 </ul>
             </div>

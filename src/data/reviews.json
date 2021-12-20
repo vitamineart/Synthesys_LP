@@ -1,11 +1,10 @@
 [
-
     {
-        "reviewer" : "Todd Gross",
-        "photo" : "img/ToddGross.png",
+        "reviewer" : "Spencer White",
+        "photo" : "img/SpencerWhite.png",
         "date" : "Oct 2021",
-        "role" : "http://toddgross.rocks/70k",
-        "review-content" : "All previous 'text to speech' apps are suddenly obsolete. The real-human quality of Synthesys is so good, that I am honestly feeling like my days as a voice-over artist are numbered! The Interface is so easy to use as well. This is a must-have for every marketer and video creator."
+        "role" : "President Owner Only Benefits & Consultants",
+        "review-content" : "The Synthesys voices are extremely lifelike and much better then the ones found in other text-to-speech programs. It gives us a great tool to create professional voice-overs without incurring the time and huge expense of hiring voice-over specialists."
     },
     {
         "reviewer" : "Dalphine",
@@ -13,6 +12,13 @@
         "date" : "Oct 2021",
         "role" : "Dreaming 4Newlife",
         "review-content" : "I am so happy to have access to this revolutionary software! It is going to disrupt the video creation world forever!!! This software is mind blowing, and I love it. It will save me a huge amount of money on voice over actresses and actors. Oliver is really making a difference in the video world, and I can't say enough about this product. This is totally awesome!!"
+    },
+    {
+        "reviewer" : "Todd Gross",
+        "photo" : "img/ToddGross.png",
+        "date" : "Oct 2021",
+        "role" : "http://toddgross.rocks/70k",
+        "review-content" : "All previous 'text to speech' apps are suddenly obsolete. The real-human quality of Synthesys is so good, that I am honestly feeling like my days as a voice-over artist are numbered! The Interface is so easy to use as well. This is a must-have for every marketer and video creator."
     },
     {
         "reviewer" : "Chrissy Withers",
@@ -34,13 +40,6 @@
         "date" : "Oct 2021",
         "role" : "CommerceMojo.com",
         "review-content" : "Synthesys is mind blowing. The voices are as good as I usually get from professional voiceover artist on Fiverr after paying big bucks. The fact that it beats voices from Google and Amazon is extraordinary. I highly recommend Synthesys, you'll never go wrong with it."
-    },
-    {
-        "reviewer" : "Spencer White",
-        "photo" : "img/SpencerWhite.png",
-        "date" : "Oct 2021",
-        "role" : "President Owner Only Benefits & Consultants",
-        "review-content" : "The Synthesys voices are extremely lifelike and much better then the ones found in other text-to-speech programs. It gives us a great tool to create professional voice-overs without incurring the time and huge expense of hiring voice-over specialists."
     },
     {
         "reviewer" : "Bruno",

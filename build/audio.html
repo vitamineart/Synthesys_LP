@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthesys Landing Page | Audio</title>
 
+    <link rel="preload" as="image" href="img/TTS.webp" alt="" width="546" height="700">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +18,7 @@
 
 </head>
 
-<body class="bg-dark-surface text-bodycopy font-montserrat">
+<body>
     <!------------------------ Header Start -->
 <header class="h-20 flex items-center">
     <div class="container flex items-center min-h-[46px]">
@@ -30,7 +31,7 @@
             <a href="video.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 ">AI Video</a>
             <a href="about.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 ">About Us</a>
         </nav>
-        <a href="#" class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
+        <a href="https://app.synthesys.io/" class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
     </div>
 </header>
 <!------------------------ Header End -->
@@ -48,7 +49,7 @@
                 <div class="text-blue text-xl mt-8 leading-relaxed">Convert Your Text into an Effective, Realistic Audio Message. . . with Synthesys</div>
                 <div class="flex items-center mt-14">
                     <a href="#" class="border-blue border-3 inline-block uppercase py-4 px-11  text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Create Your Free Sample</a>
-                    <a href="#" class="text-blue inline-flex ml-16 transition-opacity hover:opacity-75">
+                    <a href="#voice-examples" class="text-blue inline-flex ml-16 transition-opacity hover:opacity-75">
                         <svg class="w-6 h-6 fill-current">
                             <use xlink:href="img/icons/sprite.svg#icon-audiowave"></use>
                         </svg>
@@ -128,7 +129,7 @@
         </section>
 
         <!--------------- Meet Your All-Star Cast Start -->
-        <section class="py-20 bg-blue">
+        <section class="py-20 bg-blue" id="voice-examples">
             <div class="container">
                 <div class="flex">
                     <div class="w-3/12 pr-12">
@@ -140,13 +141,12 @@
                             style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-3px, -12px, 0);"></div>
                     </div>
                     <div class="w-7/12">
-                        <!-- <header class="text-2xl text-black font-bold tracking-wider mt-6">Synthesys API</header> -->
-                        <p class="mt-7.5 leading-loose text-bodycopy-darker">row of 6 – 9 avatars, each with player button. Use these samples to showcase different uses. Podcasts, E-learning, Marketing, Documentary, Audio Book, On Hold, Animation, Smart Building, Explainer Video</p>
+                        <p class="mt-7.5 leading-loose text-bodycopy-darker">SYNTHESYS Gives You TOTAL CONTROL Over Your Voice-Overs. Choose Artists Depending On What You Need A Voice-Over For:</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 md:gap-4 xl:gap-6 2xl:gap-10 mt-20">
+                <div class="grid justify-center sm:grid-cols-2 md:grid-cols-3 gap-6 2xl:gap-10 mt-20 m-auto">
 
-                    <div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+                    <div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         Video Ad Example
     </div>
@@ -160,7 +160,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         Film Trailer
     </div>
@@ -174,7 +174,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         AudioBook Example
     </div>
@@ -188,7 +188,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         AudioBook Example
     </div>
@@ -202,7 +202,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         Radio Advertisment Example
     </div>
@@ -216,7 +216,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         Audiobook Example
     </div>
@@ -230,7 +230,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         TV Commercial
     </div>
@@ -244,7 +244,7 @@
         </audio>
     </div>
 </div>
-<div class="text-center bg-dark-blue p-12 flex items-center flex-col">
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
     <div class="text-white font-bold text-2xl" style="min-height: 60px;">
         Storytelling
     </div>
@@ -254,6 +254,20 @@
     <div class="mt-auto">
         <audio controls="true">
             <source src=https://meetsynthesys.com/private-offer/images/audios/audio5.wav type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<div class="text-center bg-dark-blue p-6 lg:p-12 flex items-center flex-col sm:last:hidden md:last:flex max-w-md">
+    <div class="text-white font-bold text-2xl" style="min-height: 60px;">
+        Example #1
+    </div>
+    <img src=img/voice9.webp class="mt-10" />
+    <div class="text-white font-semibold text-xl mt-3">Darryl T.</div>
+    <div class="text-bodycopy mt-5 flex-grow pb-4">Gentle and trustworthy. Darryl’s voice is great for training. #UK #Male #Middle-Aged #Ad #News #Gentle #Trustworthy</div>
+    <div class="mt-auto">
+        <audio controls="true">
+            <source src=https://meetsynthesys.com/pro/images/audios/audio0.wav type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
@@ -271,7 +285,7 @@
                 <ul class="check-list text-blue">
                     <li class="mb-13">
                         <div class="flex">
-                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                            <svg class="fill-transparent stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">No Experience Necessary</div>
@@ -280,7 +294,7 @@
                     </li>
                     <li class="mb-13">
                         <div class="flex">
-                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                            <svg class="fill-transparent stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
                             <div class="font-bold text-white text-2xl leading-6">Share Your New Corporate Voice</div>
@@ -289,12 +303,12 @@
                     </li>
                     <li class="mb-0">
                         <div class="flex">
-                            <svg class="stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
+                            <svg class="fill-transparent stroke-blue stroke-2 w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
-                            <div class="font-bold text-white text-2xl leading-6">Meet Your New Voice</div>
+                            <div class="font-bold text-white text-2xl leading-6">Everything You Need Has a Voice</div>
                         </div>
-                        <p class="mt-6 leading-loose text-bodycopy">(row of 6 – 9 avatars, each with player button. Use these samples to showcase different uses. Podcasts, E-learning, Marketing, Documentary, Audio Book, On Hold, Animation, Smart Building, Explainer Video)</p>
+                        <p class="mt-6 leading-loose text-bodycopy">Create engaging learning experiences, training, real estate videos, advertising audio promotion materials, product tours, and more. Nothing can stop you except your imagination!</p>
                     </li>
                 </ul>
             </div>
@@ -329,16 +343,16 @@
 
     <div class="reviews-item">
         <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
-            All previous 'text to speech' apps are suddenly obsolete. The real-human quality of Synthesys is so good, that I am honestly feeling like my days as a voice-over artist are numbered! The Interface is so easy to use as well. This is a must-have for every marketer and video creator.
+            The Synthesys voices are extremely lifelike and much better then the ones found in other text-to-speech programs. It gives us a great tool to create professional voice-overs without incurring the time and huge expense of hiring voice-over specialists.
         </div>
         <div class="reviews-item-meta flex justify-between items-end mt-7.5">
             <div class="flex items-center px-4">
                 <div class="author-avatar ml-15">
-                    <img src=img/ToddGross.webp alt="" width="60" height="60" loading="lazy">
+                    <img src=img/SpencerWhite.webp alt="" width="60" height="60" loading="lazy">
                 </div>
                 <div class="author ml-5">
-                    <div class="author-name text-white text-xl">Todd Gross</div>
-                    <div class="author-position text-base text-bodycopy mt-1">http://toddgross.rocks/70k</div>
+                    <div class="author-name text-white text-xl">Spencer White</div>
+                    <div class="author-position text-base text-bodycopy mt-1">President Owner Only Benefits & Consultants</div>
                 </div>
             </div>
             <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
@@ -360,6 +374,27 @@
                 <div class="author ml-5">
                     <div class="author-name text-white text-xl">Dalphine</div>
                     <div class="author-position text-base text-bodycopy mt-1">Dreaming 4Newlife</div>
+                </div>
+            </div>
+            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+
+    <div class="reviews-item">
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
+            All previous 'text to speech' apps are suddenly obsolete. The real-human quality of Synthesys is so good, that I am honestly feeling like my days as a voice-over artist are numbered! The Interface is so easy to use as well. This is a must-have for every marketer and video creator.
+        </div>
+        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
+            <div class="flex items-center px-4">
+                <div class="author-avatar ml-15">
+                    <img src=img/ToddGross.webp alt="" width="60" height="60" loading="lazy">
+                </div>
+                <div class="author ml-5">
+                    <div class="author-name text-white text-xl">Todd Gross</div>
+                    <div class="author-position text-base text-bodycopy mt-1">http://toddgross.rocks/70k</div>
                 </div>
             </div>
             <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
@@ -423,27 +458,6 @@
                 <div class="author ml-5">
                     <div class="author-name text-white text-xl">Rohit Shah</div>
                     <div class="author-position text-base text-bodycopy mt-1">CommerceMojo.com</div>
-                </div>
-            </div>
-            <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
-        </div>
-    </div>
-
-</div>
-<div class="swiper-slide">
-
-    <div class="reviews-item">
-        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
-            The Synthesys voices are extremely lifelike and much better then the ones found in other text-to-speech programs. It gives us a great tool to create professional voice-overs without incurring the time and huge expense of hiring voice-over specialists.
-        </div>
-        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
-            <div class="flex items-center px-4">
-                <div class="author-avatar ml-15">
-                    <img src=img/SpencerWhite.webp alt="" width="60" height="60" loading="lazy">
-                </div>
-                <div class="author ml-5">
-                    <div class="author-name text-white text-xl">Spencer White</div>
-                    <div class="author-position text-base text-bodycopy mt-1">President Owner Only Benefits & Consultants</div>
                 </div>
             </div>
             <div class="date text-bodycopy text-sm pb-1">Oct 2021</div>
@@ -581,13 +595,13 @@
     <div class="container">
         <div class="text-center">
             <a href="#" class="logo inline-block"><img src="img/logo.svg" alt="Logo" width="131" height="29" loading="lazy"></a>
-            <ul class="footer-nav flex items-center justify-center mt-14">
-                <li class="mr-6"><a href="#" class="text-white transition-colors hover:text-green">Contact</a></li>
-                <li class="mx-6 before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="about.html" class="text-white transition-colors hover:text-green">About Us</a></li>
-                <li class="mx-6 before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Credit Cards</a></li>
-                <li class="mx-6 before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Better Business</a></li>
-                <li class="mx-6 before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Bureau</a></li>
-                <li class="ml-6 before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Help Center</a></li>
+            <ul class="footer-nav flex items-center justify-center mt-14 space-x-6">
+                <li class=""><a href="#" class="text-white transition-colors hover:text-green">Contact</a></li>
+                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="about.html" class="text-white transition-colors hover:text-green">About Us</a></li>
+                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Credit Cards</a></li>
+                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Better Business</a></li>
+                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Bureau</a></li>
+                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="https://flipcast.freshdesk.com/support/home" class="text-white transition-colors hover:text-green">Help Center</a></li>
             </ul>
         </div>
         <div class="border-t border-t-dark-blue pt-9 mt-10 flex">
