@@ -1,16 +1,70 @@
 <!------------------------ Header Start -->
 <header class="h-20 flex items-center">
-    <div class="container flex items-center min-h-[46px]">
-        <a href="#" class="logo" style="height: 29px;">
+    <div class="container flex items-center justify-center">
+        <button id="mobile-nav-toggle" class="inline-block mr-auto lg:hidden cursor-pointer">
+            <svg class="stroke-green stroke-2 w-10 h-5 inline-block hover:stroke-blue transition-colors">
+                <use xlink:href="img/icons/sprite.svg#burger"></use>
+            </svg>
+        </button>
+        <a href="#" class="logo mr-auto lg:mr-0 -translate-x-5 lg:transform-none ">
             <img src="img/Logo.svg" alt="" width="131" height="29">
         </a>
-        <nav class="mx-auto grid grid-flow-col content-center items-center gap-16 main-nav">
-            <a href="index.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'home') {active}">Home</a>
-            <a href="audio.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'audio') {active}">AI Audio</a>
-            <a href="video.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'video') {active}">AI Video</a>
-            <a href="about.html" class="relative text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'about') {active}">About Us</a>
+        <nav class="mx-auto hidden lg:grid grid-flow-col content-center items-center gap-16 main-nav">
+            <a href="index.html" class="relative after:bg-blue after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'home') {active}">Home</a>
+            <a href="audio.html" class="relative after:bg-blue after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'audio') {active}">AI Audio</a>
+            <a href="video.html" class="relative after:bg-blue after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'video') {active}">AI Video</a>
+            <a href="about.html" class="relative after:bg-blue after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 text-green hover:text-bodycopy transition-colors duration-300 @@if (context.page === 'about') {active}">About Us</a>
         </nav>
-        <a href="https://app.synthesys.io/" class="inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
+        <a href="https://app.synthesys.io/" class=" hidden lg:inline-block login border-3 text-white border-green py-2 px-10 hover:border-bodycopy transition-colors duration-300">Login</a>
     </div>
 </header>
 <!------------------------ Header End -->
+
+<!------------------------ Mobile Nav Start -->
+<div class="lg:hidden fixed z-50 left-0 top-0 bottom-0 right-20 sm:right-1/4 md:right-1/3 transition-transform ease-out duration-200 bg-green min-h-full -translate-x-full overflow-auto py-1" id="mobile-nav-container">
+    <button id="mobile-nav-close" class="origin-center inline-block w-4 h-4 mt-6 ml-6 hover:opacity-60">
+        <svg class="w-5 h-5 inline-block stroke-black stroke-2">
+            <use xlink:href="img/icons/sprite.svg#close"></use>
+        </svg>
+    </button>
+    <nav id="mobile-nav" class="w-7/12 mx-auto flex flex-col justify-center items-center">
+        <a href="#" class="mt-10">
+            <svg class=" w-44 h-11">
+                <use xlink:href="img/icons/sprite.svg#logo-mono"></use>
+            </svg>
+        </a>
+
+        <menu class="flex flex-col justify-center items-center space-y-10 mt-20 main-nav">
+            <a href="index.html" class="text-black after:bg-white after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 relative hover:text-bodycopy-darker text-lg font-semibold transition-colors duration-300 @@if (context.page === 'home') {active}">Home</a>
+            <a href="audio.html" class="text-black after:bg-white after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 relative hover:text-bodycopy-darker text-lg font-semibold transition-colors duration-300 @@if (context.page === 'audio') {active}">Audio</a>
+            <a href="video.html" class="text-black after:bg-white after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 relative hover:text-bodycopy-darker text-lg font-semibold transition-colors duration-300 @@if (context.page === 'video') {active}">Video</a>
+            <a href="about.html" class="text-black after:bg-white after:w-1 after:h-1 after:rounded-full after:inline-block after:mt-1 after:absolute after:top-full after:left-1/2 relative hover:text-bodycopy-darker text-lg font-semibold transition-colors duration-300 @@if (context.page === 'about') {active}">About Us</a>
+        </menu>
+
+        <a href="https://app.synthesys.io/" class="login border-3 text-lg font-semibold w-full max-w-xs text-center text-black border-white py-2 px-10 mt-20 hover:border-bodycopy transition-colors duration-300">Login</a>
+
+        <div class="social-share flex mt-11 pt-11 border-t space-x-2 border-black/20">
+            @@loop('../partials/social-link.html', [
+                {
+                    "icon" : "facebook",
+                    "url" : "#"
+                },
+                {
+                    "icon" : "twitter",
+                    "url" : "#"
+                },
+                {
+                    "icon" : "linkedin",
+                    "url" : "#"
+                },
+                {
+                    "icon" : "insta",
+                    "url" : "#"
+                }
+            ])
+        </div>
+    </nav>
+</div>
+<!------------------------ Mobile Nav End -->
+
+

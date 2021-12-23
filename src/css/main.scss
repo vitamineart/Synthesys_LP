@@ -1,14 +1,20 @@
 .main-nav {
     a {
+        &::after {
+            @apply hidden;
+        }
         &.active {
             @apply text-white;
             &::after {
-                content: '';
-                @apply bg-blue w-1 h-1 rounded-full inline-block mt-1 absolute top-full left-1/2;
+                @apply inline-block;
                 transform: translateX(-2px);
             }
         }
     }
+}
+
+.check-list {
+    @apply text-sm leading-tight lg:text-base lg:leading-loose space-y-4 lg:space-y-5;
 }
 
 // Frequently Asked Questions
@@ -29,23 +35,6 @@
     }
 }
 
-.subscription-plan-features-list {
-    @apply mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15;
-    li {
-        @apply text-left text-lg flex flex-row items-start mt-4 first:mt-0;
-        > span {@apply text-bodycopy;}
-        &::before {
-            content: '';
-            mask: url(../img/icons/sprite#icon-check-filled);
-            background-color: currentColor;
-            width: 20px;
-            height: 20px;
-            margin-right: 20px;
-            margin-top: 3px;
-            flex: 0 0 20px;
-        }
-    }
-}
 .subscription-plans-container {
     & .subscription-price.monthly {display: block;}
     & .subscription-price.yearly {display: none;}

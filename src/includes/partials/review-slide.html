@@ -1,20 +1,24 @@
 <div class="swiper-slide">
 
     <div class="reviews-item">
-        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy text-lg leading-loose p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-16 after:bottom-0">
-            @@review-content
+        <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy p-8 lg:p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-11 lg:before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-4 lg:after:left-16 after:bottom-0">
+            <p>
+                @@review-content
+            </p>
         </div>
-        <div class="reviews-item-meta flex justify-between items-end mt-7.5">
-            <div class="flex items-center px-4">
-                <div class="author-avatar ml-15">
-                    <img src=@@photo alt="" width="60" height="60" loading="lazy">
+        <div class="reviews-item-meta mt-7.5">
+            <div class="flex justify-between items-end lg:px-4">
+                <div class="flex items-center">
+                    <div class="author-avatar ml-7.5 lg:ml-15 flex-none">
+                        <img src=@@photo alt="" width="60" height="60" loading="lazy" class="w-12 h-12 lg:w-15 lg:h-15">
+                    </div>
+                    <div class="author ml-5">
+                        <div class="author-name text-white text-base lg:text-xl">@@reviewer</div>
+                        <div class="author-position text-sm lg:text-base text-bodycopy lg:mt-1">@@role</div>
+                    </div>
                 </div>
-                <div class="author ml-5">
-                    <div class="author-name text-white text-xl">@@reviewer</div>
-                    <div class="author-position text-base text-bodycopy mt-1">@@role</div>
-                </div>
+                <div class="date text-bodycopy text-xs lg:text-sm pb-1">@@date</div>
             </div>
-            <div class="date text-bodycopy text-sm pb-1">@@date</div>
         </div>
     </div>
 

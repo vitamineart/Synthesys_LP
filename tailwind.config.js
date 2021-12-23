@@ -2,8 +2,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     container: {
-      center: true,
-      padding: '1rem'
+      center: true
     },
     extend: {
       borderWidth: {

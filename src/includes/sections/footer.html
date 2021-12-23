@@ -2,45 +2,46 @@
     <div class="container">
         <div class="text-center">
             <a href="#" class="logo inline-block"><img src="img/logo.svg" alt="Logo" width="131" height="29" loading="lazy"></a>
-            <ul class="footer-nav flex items-center justify-center mt-14 space-x-6">
-                <li class=""><a href="#" class="text-white transition-colors hover:text-green">Contact</a></li>
-                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="about.html" class="text-white transition-colors hover:text-green">About Us</a></li>
-                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Credit Cards</a></li>
-                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Better Business</a></li>
-                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="#" class="text-white transition-colors hover:text-green">Bureau</a></li>
-                <li class="before:bg-footer-border before:w-1 before:h-1 before:inline-block before:align-middle before:rounded-full before:-left-5 before:relative"><a href="https://flipcast.freshdesk.com/support/home" class="text-white transition-colors hover:text-green">Help Center</a></li>
-            </ul>
+            <nav class="footer-nav flex flex-col lg:flex-row items-center lg:items-baseline justify-center mt-8 lg:mt-14 space-y-6 lg:space-x-6">
+                @@loop('../partials/footer-nav-li.html', [
+                    {"link":"Contact", "url": "#"},
+                    {"link":"About Us", "url": "about.html"},
+                    {"link":"Credit Cards", "url": "#"},
+                    {"link":"Better Business", "url": "#"},
+                    {"link":"Help Center", "url": "https://flipcast.freshdesk.com/support/home"},
+                ])
+            </nav>
         </div>
-        <div class="border-t border-t-dark-blue pt-9 mt-10 flex">
-            <div class="text-xs">
+        <div class="border-t border-t-dark-blue pt-9 mt-10 flex justify-center items-center text-center lg:text-left flex-col lg:flex-row" id="footer-bottom">
+            <div class="text-xs flex-1">
                 <div class="uppercase text-white">NOOVEAU MEDIA LTD</div>
                 <div class="text-bodycopy mt-3">61 Ascot Walk, Newcastle Upon Tyne, United Kingdom, NE3 2UG</div>
             </div>
-            <div class="social-share flex mx-auto">
-                <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
+            <div class="social-share flex my-6 lg:my-0 space-x-3 lg:space-x-4">
+                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
                     <svg class="w-3 h-3 fill-white">
                         <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
                     </svg>
                 </a>
-                <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
+                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
                     <svg class="w-3 h-3 fill-white">
                         <use xlink:href="img/icons/sprite.svg#icon-twitter"></use>
                     </svg>
 
                 </a>
-                <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
+                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
                     <svg class="w-3 h-3 fill-white">
                         <use xlink:href="img/icons/sprite.svg#icon-linkedin"></use>
                     </svg>
 
                 </a>
-                <a href="#" class="mx-[10px] w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
+                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
                     <svg class="w-3 h-3 fill-white">
                         <use xlink:href="img/icons/sprite.svg#icon-insta"></use>
                     </svg>
                 </a>
             </div>
-            <div class="text-xs text-right">
+            <div class="text-xs text-right flex-1">
                 <div><a href="#" class="hover:opacity-70 transition-opacity text-white">Terms and Conditions</a><a href="#" class="hover:opacity-70 transition-opacity ml-8 text-white">Privacy Policy</a></div>
                 <div class="mt-3 text-bodycopy">© 2021 - Synthesys. All rights reserved</div>
             </div>

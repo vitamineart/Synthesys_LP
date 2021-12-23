@@ -1,0 +1,35 @@
+[
+    {
+        "color": "green",
+        "icon" : "human-studio-synthesys",
+        "title" : "Human Studio Synthesys",
+        "price-monthly" : "19",
+        "price-yearly" : "12",
+        "features" : [
+            { "feature" : "Billed Annually" },
+            { "feature" : "5 Videos per Month" }
+        ]
+    },
+    {
+        "color": "blue",
+        "icon" : "audio-synthesys",
+        "title" : "Audio Synthesys",
+        "price-monthly" : "29",
+        "price-yearly" : "22",
+        "features" : [
+            { "feature" : "Billed Annually" },
+            { "feature" : "5 Voiceovers per Month" }
+        ]
+    },
+    {
+        "color": "white",
+        "icon" : "audio-human-studio",
+        "title" : "Audio and Human Studio Synthesys",
+        "price-monthly" : "39",
+        "price-yearly" : "32",
+        "features" : [
+            { "feature" : "Billed Annually" },
+            { "feature" : "10 Videos or Voiceovers per Month" }
+        ]
+    }
+]

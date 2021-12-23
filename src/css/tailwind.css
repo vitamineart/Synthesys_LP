@@ -3,12 +3,13 @@
   :root {
     --color-green-accent: #00f1d7;
     --color-blue-accent: #00CCFA; }
-  html {
-    @apply scroll-smooth; }
   body {
     @apply bg-dark-surface text-bodycopy font-montserrat; }
+  p {
+    @apply text-sm leading-6 lg:text-base lg:leading-loose; }
   .container {
-    max-width: 1320px !important; } }
+    max-width: 1320px !important;
+    @apply px-6 sm:px-7 md:px-8 lg:px-10; } }
 
 @tailwind components;
 @tailwind utilities;
