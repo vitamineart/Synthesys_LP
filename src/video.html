@@ -20,163 +20,208 @@
     })
     <main>
 
-        <section class="container flex justify-between items-center mt-36 mb-24">
-            <div class="w-[53%]">
+        <section class="container flex flex-col lg:flex-row justify-between items-center my-12 lg:my-18 xl:mt-36 lg:mb-24">
+            <div class="lg:w-[55%] lg:pr-7 xl:pr-12">
 
-                <div class="rounded-full w-25 h-25 border-2 border-dark-green grid place-items-center">
-                    <svg class="fill-white w-7 h-9">
+                <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border border-dark-green grid place-items-center">
+                    <svg class="fill-white w-7 h-7 xl:w-9 xl:h-9">
                         <use xlink:href="img/icons/sprite.svg#icon-play"></use>
                     </svg>
 
                 </div>
-                <h1 class="text-5xl leading-tight text-white font-bold mt-7">The Power of AI Video is as Close as Your Imagination</h1>
-                <div class="text-green text-xl mt-8 leading-relaxed">Transform Your Text to a Realistic Virtual Video. . . with Synthesys Human Studio</div>
+                <h1 class="text-3xl xl:text-5xl leading-tight text-white font-bold mt-4 xl:mt-7">The Power of AI Video is as Close as Your Imagination</h1>
+                <div class="text-green text-xl xl:text-2xl mt-3 xl:mt-8 leading-relaxed">Transform Your Text to a Realistic Virtual Video. . . with Synthesys Human Studio</div>
                 <div class="flex items-center mt-14">
                     <a href="#" class="border-green border-3 inline-block uppercase py-4 px-11  text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Go Ahead, Try it for Free</a>
 
                 </div>
             </div>
-            <img src="img/TTV.png" alt="" width="652" height="583" class="w-[47%]">
+            <div class="lg:w-[45%] order-first lg:order-none lg:scale-110">
+                <img src="img/TTV.png" alt="" width="652" height="583">
+            </div>
         </section>
 
-        <div class="container flex items-center border-t border-dashed border-bodycopy pt-28 pb-28">
-           <img src="img/video-image.svg" width="161" height="144" alt="" loading="lazy">
-           <div class="w-9/12 ml-auto max-w-5xl pl-6 leading-9">
-                Want to move beyond TTS? Dive into SYNTHESES Human Studio, where you can produce your own text to video presentation in minutes. No cameras, third-party software, or prerecorded voiceover is needed. SYNTHESES Human Studio gives you all the tools you need right at your fingertips for text to ai video. Need Version B or multi-lingual TTV? No problem. Edit on the fly, change avatars, script, or voices in minutes. Add your logo and call to action for greater brand awareness and higher conversions.
+        <div class="container">
+            <svg class="w-full dotted-line stroke-bodycopy" height="1" fill="none">
+                <line x1="1" x2="100%" y1="2" y2="2" stroke-width="4" stroke-linecap="butt" stroke-dasharray="2 8" />
+            </svg>
+           <div class="lg:flex items-center py-12 lg:py-16 xl:py-28">
+               <img src="img/video-image.svg" width="161" height="144" alt="" loading="lazy" class="mx-auto w-20 sm:w-36 lg:w-44">
+               <div class="lg:w-9/12 lg:ml-auto max-w-5xl lg:pl-6 mt-8 lg:mt-0">
+                    <div class="leading-loose lg:leading-9 text-sm lg:text-xl">Want to move beyond TTS? Dive into SYNTHESES Human Studio, where you can produce your own text to video presentation in minutes. No cameras, third-party software, or prerecorded voiceover is needed. SYNTHESES Human Studio gives you all the tools you need right at your fingertips for text to ai video. Need Version B or multi-lingual TTV? No problem. Edit on the fly, change avatars, script, or voices in minutes. Add your logo and call to action for greater brand awareness and higher conversions.</div>
+               </div>
            </div>
         </div>
 
-        <section class="bg-black py-32">
+        <section class="bg-black py-12 lg:py-32">
             <div class="container">
-                <div
-                    class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-16 before:border-green before:w-12 before:border-t-3">
+                <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-5 lg:before:mb-16 before:border-green before:w-12 before:border-t-3">
                     Create your ai text-to-video in 5 easy steps</div>
 
-                <div class="grid gap-5 grid-cols-5 mt-20">
-                    <div class="col">
-                        <div class="flex items-center justify-between">
-                            <div
-                                class="rounded-full border border-dark-green w-32 h-32 grid place-items-center relative text-green">
-                                    <svg class="w-12 h-15 fill-white" style="transform: translate3d(1px, 1px, 0);">
-                                        <use xlink:href="img/icons/sprite.svg#icon-spokesperson"></use>
-                                    </svg>
-                                <div class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4">
-                                    <span class="text-black font-semibold text-[22px]">1</span></div>
+                <div class="grid gap-10 lg:gap-12 xl:gap-15 lg:grid-cols-5 mt-9 lg:mt-20">
+                    <div class="flex gap-5 lg:gap-0 lg:flex-col">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <div class="rounded-full border border-dark-green w-18 h-18 lg:w-24 lg:h-24 xl:w-32 xl:h-32 grid place-items-center relative text-green">
+                                <svg class="w-7 h-7 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-white" style="transform: translate3d(1px, 1px, 0);">
+                                    <use xlink:href="img/icons/sprite.svg#icon-spokesperson"></use>
+                                </svg>
+                                <div class="step-count bg-current w-8 h-8 lg:w-10 lg:h-10 xl:w-12.5 xl:h-12.5 rounded-full grid place-items-center absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4">
+                                <span class="text-black font-semibold text-sm lg:text-[22px]">1</span>
+                                </div>
                             </div>
-                            <div class="flex-1 pl-6 ml-auto hidden lg:block">
+                            <div class="flex-1 scale-125 xl:scale-150 xl:translate-x-4 pl-6 ml-auto hidden lg:block">
                                 <svg class="w-full h-6 stroke-white" style="transform: translate3d(0, 10px, 0);">
                                     <use xlink:href="img/icons/sprite.svg#round-arrow-short"></use>
                                 </svg>
                             </div>
+                            <div class="arrow-down relative opacity-20 lg:hidden flex-1 grid place-items-center mt-4 -bottom-3">
+                                <svg width="4" height="100%" class="stroke-white absolute h-full">
+                                    <line x1="2" x2="2" y1="2" y2="100%" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 6" />
+                                </svg>
+                                <svg class="place-self-end" width="17" height="10" viewBox="0 0 17 10">
+                                    <path d="M16 1L8.5 8L1 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
                         </div>
 
-                        <div class="text-[22px] font-semibold text-white mt-12.5">Choose Your Spokesperson</div>
-                        <div class="leading-9 mt-7.5">
-                            Select the best face (actor or actress) that fits YOUR business, brand, and story.
+                        <div class="flex flex-col">
+                            <div class="text-lg lg:text-[22px] font-semibold text-white lg:mt-12.5">Choose Your Spokesperson</div>
+                            <p class="lg:leading-9 mt-4 lg:mt-7.5 max-w-lg">
+                                Select the best face (actor or actress) that fits YOUR business, brand, and story.
+                            </p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="flex items-center justify-between">
-                            <div
-                                class="rounded-full border border-dark-green w-32 h-32 grid place-items-center relative  text-green">
-                                <svg class="w-12 h-15 fill-white" style="transform: translate3d(1px, 1px, 0);">
+                    <div class="flex gap-5 lg:gap-0 lg:flex-col">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <div class="rounded-full border border-dark-green w-18 h-18 lg:w-24 lg:h-24 xl:w-32 xl:h-32 grid place-items-center relative text-green">
+                                <svg class="w-7 h-7 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-white" style="transform: translate3d(1px, 1px, 0);">
                                     <use xlink:href="img/icons/sprite.svg#text-to-voiceover-step1"></use>
                                 </svg>
-                                <div
-                                    class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4">
-                                    <span class="text-black font-semibold text-[22px]">2</span></div>
+                                <div class="step-count bg-current w-8 h-8 lg:w-10 lg:h-10 xl:w-12.5 xl:h-12.5 rounded-full grid place-items-center absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4">
+                                    <span class="text-black font-semibold text-sm lg:text-[22px]">2</span>
+                                </div>
                             </div>
-                            <div class="flex-1 pl-6 ml-auto hidden lg:block ">
+                            <div class="flex-1 scale-125 xl:scale-150 xl:translate-x-4 pl-6 ml-auto hidden lg:block ">
                                 <svg class="w-full h-6 stroke-white" style="transform: translate3d(0, -10px, 0) scaleY(-1);">
                                     <use xlink:href="img/icons/sprite.svg#round-arrow-short"></use>
                                 </svg>
                             </div>
+                            <div class="arrow-down relative opacity-20 lg:hidden flex-1 grid place-items-center mt-4 -bottom-3">
+                                <svg width="4" height="100%" class="stroke-white absolute h-full">
+                                    <line x1="2" x2="2" y1="2" y2="100%" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 6" />
+                                </svg>
+                                <svg class="place-self-end" width="17" height="10" viewBox="0 0 17 10">
+                                    <path d="M16 1L8.5 8L1 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
                         </div>
 
-                        <div class="text-[22px] font-semibold text-white mt-12.5">Choose the voice of your AI Video</div>
-                        <div class="leading-9 mt-7.5">You have control over every aspect of voice and tone. </div>
+                        <div class="flex flex-col">
+                            <div class="text-lg lg:text-[22px] font-semibold text-white lg:mt-12.5">Choose the voice of your AI Video</div>
+                            <p class="lg:leading-9 mt-4 lg:mt-7.5 max-w-lg">You have control over every aspect of voice and tone. </p>
+                        </div>
                     </div>
-                    <div class="col">
-                        <div class="flex items-center justify-between">
-                            <div
-                                class="rounded-full border border-dark-green w-32 h-32 grid place-items-center relative  text-green">
-                                <svg class="w-12 h-12 fill-white">
+                    <div class="flex gap-5 lg:gap-0 lg:flex-col">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <div class="rounded-full border border-dark-green w-18 h-18 lg:w-24 lg:h-24 xl:w-32 xl:h-32 grid place-items-center relative text-green">
+                                <svg class="w-7 h-7 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-white">
                                     <use xlink:href="img/icons/sprite.svg#icon-script"></use>
                                 </svg>
-                                <div
-                                    class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4">
-                                    <span class="text-black font-semibold text-[22px]">3</span></div>
+                                <div class="step-count bg-current w-8 h-8 lg:w-10 lg:h-10 xl:w-12.5 xl:h-12.5 rounded-full grid place-items-center absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4">
+                                    <span class="text-black font-semibold text-sm lg:text-[22px]">3</span>
+                                </div>
                             </div>
-                            <div class="flex-1 pl-6 ml-auto hidden lg:block">
+                            <div class="flex-1 scale-125 xl:scale-150 xl:translate-x-4 pl-6 ml-auto hidden lg:block">
                                 <svg class="w-full h-6 stroke-white" style="transform: translate3d(0, 10px, 0);">
                                     <use xlink:href="img/icons/sprite.svg#round-arrow-short"></use>
                                 </svg>
                             </div>
+                            <div class="arrow-down relative opacity-20 lg:hidden flex-1 grid place-items-center mt-4 -bottom-3">
+                                <svg width="4" height="100%" class="stroke-white absolute h-full">
+                                    <line x1="2" x2="2" y1="2" y2="100%" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 6" />
+                                </svg>
+                                <svg class="place-self-end" width="17" height="10" viewBox="0 0 17 10">
+                                    <path d="M16 1L8.5 8L1 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
                         </div>
 
-                        <div class="text-[22px] font-semibold text-white mt-12.5">Add Your Script</div>
-                        <div class="leading-9 mt-7.5">Copy & paste (or type) your script into our interface. </div>
+                        <div class="flex flex-col">
+                            <div class="text-lg lg:text-[22px] font-semibold text-white lg:mt-12.5">Add Your Script</div>
+                            <p class="lg:leading-9 mt-4 lg:mt-7.5 max-w-lg">Copy & paste (or type) your script into our interface. </p>
+                        </div>
                     </div>
-                    <div class="col">
-                        <div class="flex items-center justify-between">
-                            <div
-                                class="rounded-full border border-dark-green w-32 h-32 grid place-items-center relative text-green">
+                    <div class="flex gap-5 lg:gap-0 lg:flex-col">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <div class="rounded-full border border-dark-green w-18 h-18 lg:w-24 lg:h-24 xl:w-32 xl:h-32 grid place-items-center relative text-green">
 
-                                <svg class="w-12 h-12 fill-white">
+                                <svg class="w-7 h-7 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-white">
                                     <use xlink:href="img/icons/sprite.svg#icon-image"></use>
                                 </svg>
-                                <div
-                                    class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4">
-                                    <span class="text-black font-semibold text-[22px]">4</span></div>
+                                <div class="step-count bg-current w-8 h-8 lg:w-10 lg:h-10 xl:w-12.5 xl:h-12.5 rounded-full grid place-items-center absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4">
+                                    <span class="text-black font-semibold text-sm lg:text-[22px]">4</span>
+                                </div>
                             </div>
-                            <div class="flex-1 pl-6 ml-auto hidden lg:block">
+                            <div class="flex-1 scale-125 xl:scale-150 xl:translate-x-4 pl-6 ml-auto hidden lg:block">
                                 <svg class="w-full h-6 stroke-white" style="transform: translate3d(0, -10px, 0) scaleY(-1);">
                                     <use xlink:href="img/icons/sprite.svg#round-arrow-short"></use>
                                 </svg>
                             </div>
+                            <div class="arrow-down relative opacity-20 lg:hidden flex-1 grid place-items-center mt-4 -bottom-3">
+                                <svg width="4" height="100%" class="stroke-white absolute h-full">
+                                    <line x1="2" x2="2" y1="2" y2="100%" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 6" />
+                                </svg>
+                                <svg class="place-self-end" width="17" height="10" viewBox="0 0 17 10">
+                                    <path d="M16 1L8.5 8L1 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
                         </div>
 
-                        <div class="text-[22px] font-semibold text-white mt-12.5">Select Your Background</div>
-                        <div class="leading-9 mt-7.5">Choose from a wide range of Synthesys backgrounds or upload your own.
+                        <div class="flex flex-col">
+                            <div class="text-lg lg:text-[22px] font-semibold text-white lg:mt-12.5">Select Your Background</div>
+                            <p class="lg:leading-9 mt-4 lg:mt-7.5 max-w-lg">Choose from a wide range of Synthesys backgrounds or upload your own.
+                            </p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div
-                            class="rounded-full border border-dark-green w-32 h-32 grid place-items-center relative text-green">
-                            <svg class="w-12 h-12 fill-white">
-                                <use xlink:href="img/icons/sprite.svg#text-to-voiceover-step3"></use>
-                            </svg>
-
-                            <div
-                                class="step-count bg-current w-12.5 h-12.5 rounded-full grid place-items-center absolute -bottom-4 -left-4">
-                                <span class="text-black font-semibold text-[22px]">5</span></div>
+                    <div class="flex gap-5 lg:gap-0 lg:flex-col">
+                        <div class="flex flex-col lg:flex-row items-center justify-between">
+                            <div class="rounded-full border border-dark-green w-18 h-18 lg:w-24 lg:h-24 xl:w-32 xl:h-32 grid place-items-center relative text-green">
+                                <svg class="w-7 h-7 lg:w-10 lg:h-10 xl:w-14 xl:h-14 fill-white">
+                                    <use xlink:href="img/icons/sprite.svg#text-to-voiceover-step3"></use>
+                                </svg>
+                                <div class="flex-none step-count bg-current w-8 h-8 lg:w-10 lg:h-10 xl:w-12.5 xl:h-12.5 rounded-full grid place-items-center absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4">
+                                    <span class="text-black font-semibold text-sm lg:text-[22px]">5</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="text-[22px] font-semibold text-white mt-12.5">Click “Create”</div>
-                        <div class="leading-9 mt-7.5">Rendering time will vary depending on the length of your video.</div>
+                        <div class="flex flex-col">
+                            <div class="text-lg lg:text-[22px] font-semibold text-white lg:mt-12.5">Click “Create”</div>
+                            <p class="lg:leading-9 mt-4 lg:mt-7.5 max-w-lg">Rendering time will vary depending on the length of your video.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-green">
+        <section class="py-12 lg:py-20 bg-green">
             <div class="container">
 
-                <div class="flex">
-                    <div class="w-3/12 pr-12">
+                <div class="lg:flex items-center justify-between">
+                    <div class="lg:w-3/12 lg:pr-12">
                         <img src="img/allstar-cast.svg" alt="" width="94" height="82" loading="lazy">
                         <div class="text-black uppercase text-xl font-bold mt-5">Meet Your All-Star Cast</div>
                     </div>
-                    <div class="w-px bg-white h-40 mx-auto relative">
-                        <div class="absolute top-1/2 bg-black w-2.5 h-5"
-                            style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-3px, -12px, 0);"></div>
+                    <div class="origin-center h-0 w-40 border-t lg:pt-24 border-white lg:-rotate-90 relative my-14 lg:my-0">
+                        <div class="bg-black w-5 h-5 absolute -top-1.5 left-1/2 -m-2"
+                            style="clip-path: polygon(0% 50%, 100% 50%, 50% 100%);"></div>
                     </div>
-                    <div class="w-7/12">
-                        <p class="mt-7.5 leading-loose text-bodycopy-darker">Human Synthesys Studio creates completely life-like human spokespeople, that say exactly what you want them to say. They are not avatars. Instead, we’re calling them ‘Humatars’ and they are the new standard for spokespeople in video.</p>
+                    <div class="lg:w-7/12">
+                        <p class="mt-4 lg:mt-8 leading-loose text-bodycopy-darker text-sm lg:text-lg">Human Synthesys Studio creates completely life-like human spokespeople, that say exactly what you want them to say. They are not avatars. Instead, we’re calling them ‘Humatars’ and they are the new standard for spokespeople in video.</p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 mt-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 mt-16 lg:mt-20">
                     @@loop('includes/partials/video-example.html', 'data/video-examples.json')
                 </div>
 
@@ -185,39 +230,37 @@
 
         </section>
 
-        <section class="py-30">
-            <div class="container px-28">
-                <ul class="check-list text-green">
-                    <li class="mb-13">
-                        <div class="flex">
-                            <svg class="stroke-green stroke-2 w-6 h-6 -ml-11 mr-5">
+        <section class="py-12 lg:py-30">
+            <div class="container">
+                <ul class="check-list ml-10 sm:mx-28 text-green space-y-7 lg:space-y-13">
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="stroke-current stroke-2 fill-transparent w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
-                            <div class="font-bold text-white text-2xl leading-6">Hi-Res Production Quality</div>
+                            <div class="font-bold text-white text-lg lg:text-2xl leading-6">Hi-Res Production Quality</div>
                         </div>
-                        <p class="mt-7.5 leading-loose text-bodycopy">Viewers expect a life-like digital experience. Synthesys
-                            Human Studio offers a choice of resolutions to meet your TV, monitor, YouTube, social platforms, and
-                            web embedded requirements.</p>
+                        <p class="mt-4 lg:mt-7.5 leading-loose text-bodycopy">Viewers expect a life-like digital experience. Synthesys Human Studio offers a choice of resolutions to meet your TV, monitor, YouTube, social platforms, and web embedded requirements.</p>
                     </li>
-                    <li class="mb-13">
-                        <div class="flex">
-                            <svg class="stroke-green stroke-2 w-6 h-6 -ml-11 mr-5">
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="stroke-current stroke-2 fill-transparent w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
-                            <div class="font-bold text-white text-2xl leading-6">Distinguish Your Messaging</div>
+                            <div class="font-bold text-white text-lg lg:text-2xl leading-6">Distinguish Your Messaging</div>
                         </div>
-                        <p class="mt-7.5 leading-loose text-bodycopy">Statistics show that viewers are 85% more likely to
+                        <p class="mt-4 lg:mt-7.5 leading-loose text-bodycopy">Statistics show that viewers are 85% more likely to
                             connect with and remember video content than reading text. Video
                             content is quickly becoming the new norm in omnichannel marketing.</p>
                     </li>
-                    <li class="mb-0">
-                        <div class="flex">
-                            <svg class="stroke-green stroke-2 w-6 h-6 -ml-11 mr-5">
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="stroke-current stroke-2 fill-transparent w-6 h-6 -ml-11 mr-5">
                                 <use xlink:href="img/icons/sprite.svg#icon-check"></use>
                             </svg>
-                            <div class="font-bold text-white text-2xl leading-6">Pivot Quickly</div>
+                            <div class="font-bold text-white text-lg lg:text-2xl leading-6">Pivot Quickly</div>
                         </div>
-                        <p class="mt-7.5 leading-loose text-bodycopy">Answer the call for new content at a moment’s notice.
+                        <p class="mt-4 lg:mt-7.5 leading-loose text-bodycopy">Answer the call for new content at a moment’s notice.
                             Address current events, product promotions, daily specials, and unplanned needs with our on-demand,
                             24/7 video production service.</p>
                     </li>
@@ -227,28 +270,28 @@
 
         @@include('./includes/sections/reviews.html', {"color":"green"})
 
-        <section class="bg-black py-30">
+        <section class="bg-black py-12 lg:py-30">
             <div class="container">
-                <div class="flex">
-                    <div class="w-5/12 max-w-lg">
-                        <div class="border-[10px] border-green p-16">
-                            <div class="uppercase text-green text-3xl leading-relaxed font-bold">
+                <div class="lg:flex">
+                    <div class="lg:w-5/12 lg:max-w-lg">
+                        <div class="border-[10px] border-green p-10 lg:p-16">
+                            <div class="uppercase text-white lg:text-green text-2xl leading-loose lg:text-3xl lg:leading-relaxed font-bold">
                                 NO PRIOR SKILLS OR
                                 EXPERIENCE NEEDED,
                                 FULLY WEB-BASED,
                                 ACCESS FROM ANYWHERE,<br>
                                 CANCEL ANYTIME
                             </div>
-                            <div class="mt-12 text-white leading-loose">
+                            <div class="mt-4 lg:mt-12 lg:text-white text-sm lg:text-lg leading-loose">
                                 Synthesys Human Studio sells itself so what better way to see the power of virtual video than to create yours, free of
                                 charge.
                             </div>
                         </div>
                     </div>
-                    <div class="w-7/12 pl-16 lg:pl-20 xl:pl-30 2xl:pl-36">
-                        <div class="uppercase text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-16 before:border-green before:w-12 before:border-t-3">Why synthesys human studio ai video generator?</div>
+                    <div class="lg:w-7/12 lg:pl-20 xl:pl-30 2xl:pl-36">
+                        <div class="mt-15 lg:mt-0 uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-5 lg:before:mb-16 before:border-green before:w-12 before:border-t-3">Why synthesys human studio ai video generator?</div>
 
-                        <ul class="check-list text-green mt-14 space-y-5">
+                        <ul class="check-list text-green mt-7 lg:mt-14 space-y-5">
 
                             @@loop('includes/partials/checklist-li.html', [
                                 {"li-content":"Extensive choice of AI actors, voices, and backgrounds"},
@@ -268,29 +311,30 @@
             </div>
         </section>
 
-        <section class="py-20 bg-green">
-            <div class="container flex">
-                <div class="w-2/12 2xl:w-3/12 2xl:pr-12">
+
+        <section class="py-12 lg:py-20 bg-green">
+            <div class="container lg:flex items-center">
+                <div class="lg:w-3/12 lg:pr-12">
                     <img src="img/developer-tools.svg" width="90" height="82" alt="" loading="lazy">
                     <div class="text-black uppercase text-xl font-bold mt-5">Are you a developer?</div>
                 </div>
-                <div class="w-px bg-white h-40 mx-auto relative">
-                    <div class="absolute top-1/2 bg-black w-2.5 h-5"
-                        style="clip-path: polygon(0 0, 0% 100%, 100% 50%); transform: translate3d(-3px, -12px, 0);"></div>
+                <div class="origin-center h-0 w-40 border-t lg:pt-24 border-white lg:-rotate-90 relative my-14 lg:my-0">
+                    <div class="bg-black w-5 h-5 absolute -top-1.5 left-1/2 -m-2"
+                        style="clip-path: polygon(0% 50%, 100% 50%, 50% 100%);"></div>
                 </div>
-                <div class="w-8/12 2xl:w-7/12">
-                    <header class="text-2xl text-black font-bold tracking-wider mt-6">AI Text to Video API</header>
-                    <p class="mt-7.5 leading-loose text-bodycopy-darker">Integrate Synthesys Human Studio API to your product or marketing message. Text-to-video technology is ideal for instructions or variable prompted messaging. Contact our technical team for more information.</p>
+                <div class="lg:w-7/12">
+                    <header class="text-2xl lg:text-3xl text-black font-bold tracking-wider">AI Text to Video API</header>
+                    <p class="mt-4 lg:mt-8 leading-loose text-bodycopy-darker text-sm lg:text-lg">Integrate Synthesys Human Studio API to your product or marketing message. Text-to-video technology is ideal for instructions or variable prompted messaging. Contact our technical team for more information.</p>
 
-                    <div class="flex items-center mt-14">
-                        <a href="#"
-                            class="text-black bg-transparent border-3 border-white px-10 py-5 uppercase font-semibold hover:border-bodycopy-darker transition-colors">Sign
+                    <div class="md:flex items-center mt-10 lg:mt-14">
+                        <a href="#" class="text-black inline-block bg-transparent border-3 border-white px-10 py-5 uppercase font-semibold hover:border-bodycopy-darker transition-colors">Sign
                             Up Today</a>
-                        <a href="#" class="text-black text-xl ml-15 flex items-center transition-opacity hover:opacity-50">
+                        <a href="#" class="text-black text-xl mt-8 md:mt-0 md:ml-15 flex items-center transition-opacity hover:opacity-50">
                             <svg class="w-6 h-6">
                                 <use xlink:href="img/icons/sprite.svg#icon-play"></use>
                             </svg>
-                            <span class="ml-2.5 border-b border-dotted border-current">Need a Quick Text-to-Speech Voiceover?</span></a>
+                            <span class="ml-2.5 border-b border-dotted border-current">Need a Quick Text-to-Speech Voiceover?</span>
+                        </a>
                     </div>
                 </div>
             </div>
