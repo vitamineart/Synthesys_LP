@@ -166,40 +166,26 @@
         <section class="py-12 lg:py-30">
             <div class="container">
                 <ul class="check-list ml-10 sm:mx-28 text-blue space-y-7 lg:space-y-13">
-                    <li>
-                        <div class="flex items-center">
-                            <svg class="stroke-current stroke-2 fill-transparent w-6 h-6 -ml-11 mr-5">
-                                <use xlink:href="img/icons/sprite.svg#icon-check"></use>
-                            </svg>
-                            <div class="font-bold text-white text-lg lg:text-2xl leading-6">No Experience Necessary</div>
-                        </div>
-                        <p class="mt-4 lg:mt-7.5 leading-loose text-bodycopy">Unlike booking studio time and scheduling conference calls, Synthesys requires no media or production experience. You can create your voiceover 24/7 using our simple interface. Your voiceover and narration production is faster, more convenient, and more cost-effective, too. Get started.</p>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <svg class="stroke-current stroke-2 fill-transparent w-6 h-6 -ml-11 mr-5">
-                                <use xlink:href="img/icons/sprite.svg#icon-check"></use>
-                            </svg>
-                            <div class="font-bold text-white text-lg lg:text-2xl leading-6">Share Your New Corporate Voice</div>
-                        </div>
-                        <p class="mt-4 lg:mt-7.5 leading-loose text-bodycopy">Your chosen voice, or voices, becomes a valuable brand asset you can share with your associates to ensure continuity in your corporate communication. Like a logo or photography, your voices can be identified in your brand guidelines and made available in your marketing library.</p>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <svg class="stroke-current stroke-2 fill-transparent w-6 h-6 -ml-11 mr-5">
-                                <use xlink:href="img/icons/sprite.svg#icon-check"></use>
-                            </svg>
-                            <div class="font-bold text-white text-lg lg:text-2xl leading-6">Everything You Need Has a Voice</div>
-                        </div>
-                        <p class="mt-4 lg:mt-7.5 leading-loose text-bodycopy">Create engaging learning experiences, training, real estate videos, advertising audio promotion materials, product tours, and more. Nothing can stop you except your imagination!</p>
-                    </li>
+
+                    @@loop('includes/partials/checklist-li.html', [
+                        {
+                            "header":"No Experience Necessary",
+                            "li-content":"Unlike booking studio time and scheduling conference calls, Synthesys requires no media or production experience. You can create your voiceover 24/7 using our simple interface. Your voiceover and narration production is faster, more convenient, and more cost-effective, too. Get started."
+                        },
+                        {
+                            "header":"Share Your New Corporate Voice",
+                            "li-content":"Your chosen voice, or voices, becomes a valuable brand asset you can share with your associates to ensure continuity in your corporate communication. Like a logo or photography, your voices can be identified in your brand guidelines and made available in your marketing library."
+                        },
+                        {
+                            "header":"Everything You Need Has a Voice",
+                            "li-content":"Create engaging learning experiences, training, real estate videos, advertising audio promotion materials, product tours, and more. Nothing can stop you except your imagination!"
+                        }
+                    ])
                 </ul>
             </div>
         </section>
 
-        @@include('./includes/sections/reviews.html', {
-        'color': 'blue'
-        })
+        @@include('./includes/sections/reviews.html', { 'color': 'blue' })
 
         <section class="py-12 lg:py-20 bg-blue">
             <div class="container">
