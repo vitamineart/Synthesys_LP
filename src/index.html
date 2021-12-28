@@ -7,8 +7,7 @@
     <title>Synthesys Landing Page | Main</title>
 
     <link rel="preload" as="image" href="img/Hero_image_1.png" width="816" height="646">
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
     @@include('./includes/sections/head.html')
 </head>
@@ -72,7 +71,7 @@
                         <p class="mt-3 lg:mt-8">With only 3 simple clicks, you can rapidly grow your business using the authority and trustworthy text-to-voiceovers your clients will appreciate. This unique ai voice generator eliminates the robotic and strange-sounding voices of the past and shifts your business into high gear with clear and natural delivery, just like a real human being!</p>
 
                         <div class="text-white font-semibold text-lg lg:text-xl mt-6 lg:mt-12">Features Include:</div>
-                        <ul class="check-list text-blue mt-4 lg:mt-7">
+                        <ul class="check-list text-blue mt-4 lg:mt-7 text-sm leading-tight lg:text-base lg:leading-loose space-y-4 lg:space-y-5">
 
                             @@loop('includes/partials/checklist-li.html', [
                                 { "header":"", "li-content": "Cloud-based application to do work from anywhere in the world" },
@@ -134,6 +133,7 @@
             'color': 'green'
         })
 
+        <!-- Good Digital Content Start -->
         <section class="py-12 lg:py-38">
             <div class="container lg:flex items-start">
                 <div class="lg:w-5/12 lg:pr-20">
@@ -167,22 +167,20 @@
             </div>
 
         </section>
+        <!-- Good Digital Content End -->
 
+        <!-- CTA start -->
         <section class="py-12 lg:py-20 bg-green">
-            <div class="container lg:flex items-center justify-between">
-                <div class="lg:w-3/12 lg:pr-12">
-                    <img src="img/developer-tools.svg" alt="" width="90" height="82">
-                    <div class="text-black uppercase text-xl font-bold mt-5">need developer tools?</div>
-                </div>
-                <div class="origin-center h-0 w-40 border-t lg:pt-24 border-white lg:-rotate-90 relative my-14 lg:my-0">
-                    <div class="bg-black w-5 h-5 absolute -top-1.5 left-1/2 -m-2" style="clip-path: polygon(0% 50%, 100% 50%, 50% 100%);"></div>
-                </div>
-                <div class="lg:w-7/12">
-                    <header class="text-2xl lg:text-3xl text-black font-bold tracking-wider">Synthesys API</header>
-                    <p class="mt-4 lg:mt-8 leading-loose text-bodycopy-darker text-sm lg:text-lg">Our teams will work with you to integrate Synthesys TTS and TTV APIs into your software build. Contact our technical team for more information.</p>
-                </div>
-            </div>
+            @@include('includes/sections/cta.html', {
+                "icon": "developer-tools",
+                "section-title": "Are you a developer?",
+                "content-title": "Synthesys API",
+                "description": "Our teams will work with you to integrate Synthesys TTS and TTV APIs into your software build. Contact our technical team for more information.",
+                "link-text": "",
+                "button": "false"
+            })
         </section>
+        <!-- CTA end -->
 
         <!---------------------- subscription section start --------------------------------------->
         <section class="pt-12 lg:pt-30" id="subscription-plans" style="background-image: url(img/PricingPlansBg.png); background-repeat: repeat-x; background-position: 0 75%;">
@@ -227,40 +225,16 @@
 
 
     </main>
-
-
     @@include('./includes/sections/footer.html')
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    @@include('./includes/sections/footer-scripts.html')
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- build:js js/home.js -->
+    <script src="js/faq.js"></script>
+    <script src="js/prices.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/nav.js"></script>
+    <!-- endbuild -->
 
-    <script>
-        const togglePrices = document.querySelector('#prices-toggle');
-        const pricesContainer = document.querySelectorAll('.subscription-plans-container');
-        togglePrices.addEventListener('click', function({target}){
-            pricesContainer.forEach(function(item){
-                item.classList.toggle('yearly');
-                target.closest('#toggle-container').classList.toggle('yearly');
-            })
-        });
-        const subscriptionPlansSwiper = new Swiper('.subscription-plans-container', {
-            centeredSlides: true,
-            pagination: {
-                el: '.swiper-paination',
-                type: 'bullets'
-            },
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            loop: false,
-            speed: 400,
-            initialSlide: 1,
-            breakpoints: {
-                375: { spaceBetween: 20 },
-                420: { spaceBetween: 30 },
-                640: { spaceBetween: 50 },
-                768: { spaceBetween: 100 }
-            }
-        });
-    </script>
+
 </body>
 </html>

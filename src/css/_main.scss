@@ -13,16 +13,13 @@
     }
 }
 
-.check-list {
-    @apply text-sm leading-tight lg:text-base lg:leading-loose space-y-4 lg:space-y-5;
-}
 
 // Frequently Asked Questions
 .faq-status-indicator {
     .active &::after {@apply rotate-180 opacity-0}
 }
 .faq-item {
-    &.active {@apply border-current};
+    &.active {@apply border-current pointer-events-none};
 }
 .faq-question {
     .active & > span {
@@ -36,13 +33,12 @@
 }
 
 .subscription-plans-container {
-    & .subscription-price.monthly {display: block;}
-    & .subscription-price.yearly {display: none;}
+    .monthly {display: block;}
+    .yearly {display: none;}
 }
 .subscription-plans-container.yearly {
-    & .subscription-price.monthly {display: none;}
-    & .subscription-price.yearly {display: block;}
-
+    .monthly {display: none;}
+    .yearly {display: block;}
 }
 #toggle-container {
     #text-label-monthly {@apply text-white;}

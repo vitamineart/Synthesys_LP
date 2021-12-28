@@ -22,7 +22,7 @@ const sass = require('gulp-sass'); //For Compiling SASS files
 const postcss = require('gulp-postcss'); //For Compiling tailwind utilities with tailwind config
 const concat = require('gulp-concat'); //For Concatinating js,css files
 const minifyJS = require('gulp-terser');//To Minify JS files
-const htmlmin = require('gulp-htmlmin');//To Minify JS files
+const htmlmin = require('gulp-htmlmin');//To Minify HTML files
 const imagemin = require('gulp-imagemin'); //To Optimize Images
 const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
@@ -30,6 +30,7 @@ const critical = require('critical').stream;
 const minifyInline = require('gulp-minify-inline');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
+const useref = require('gulp-useref');
 
 
 
@@ -64,6 +65,7 @@ function devHTML(){
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(useref())
     .pipe(dest(options.paths.dist.base));
 }
 
@@ -118,10 +120,13 @@ function devStyles(){
 
 function devScripts(){
   return src([
-    `${options.paths.src.js}/libs/**/*.js`,
+    // `${options.paths.src.js}/libs/**/*.js`,
     `${options.paths.src.js}/**/*.js`,
-    `!${options.paths.src.js}/**/external/*`
-  ]).pipe(concat({ path: 'scripts.js'})).pipe(dest(options.paths.dist.js));
+    // `!${options.paths.src.js}/**/external/*`
+  ])
+  // .pipe(minifyJS())
+  // .pipe(concat({ path: 'scripts.js'}))
+  .pipe(dest(options.paths.dist.js))
 }
 
 function devImages(){
@@ -152,8 +157,9 @@ function prodHTML(){
   .pipe(replace('.png', '.webp'))
   .pipe(replace('.jpg', '.webp'))
   .pipe(replace('.jpeg', '.webp'))
-  .pipe(minifyInline())
+  .pipe(plumber())
   .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(plumber.stop())
   .pipe(dest(options.paths.build.base));
 }
 
@@ -172,11 +178,8 @@ function prodStyles(){
 }
 
 function prodScripts(){
-  return src([
-    `${options.paths.src.js}/libs/**/*.js`,
-    `${options.paths.src.js}/**/*.js`
-  ])
-  .pipe(concat({ path: 'scripts.js'}))
+  return src(`${options.paths.dist.js}/**/*.js`)
+  // .pipe(concat({ path: 'scripts.js'}))
   .pipe(minifyJS())
   .pipe(dest(options.paths.build.js));
 }
@@ -208,7 +211,9 @@ function criticalCSS () {
         base: 'build/',
         inline: true,
         css: ['build/css/style.css'],
-        extract: true
+        extract: true,
+        width: 1300,
+        height: 900
       })
     )
     .on('error', err => {
@@ -220,7 +225,7 @@ function criticalCSS () {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, svgSprites, devFonts, devHTML), //Run All tasks in parallel
+  parallel(devStyles,  devImages, svgSprites, devFonts, devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

@@ -3,33 +3,48 @@
         "color": "green",
         "icon" : "human-studio-synthesys",
         "title" : "Human Studio Synthesys",
-        "price-monthly" : "19",
-        "price-yearly" : "12",
+        "price": {
+            "monthly": "39",
+            "yearly": "374"
+        },
         "features" : [
-            { "feature" : "Billed Annually" },
-            { "feature" : "5 Videos per Month" }
-        ]
+            { "feature" : "Unlimited Videos" },
+            { "feature" : "Access to 73 Humatars (Extra Outfits included)" },
+            { "feature" : "Access to 66 Languages & 254 General Voices" },
+            { "feature" : "Full Video Customization" },
+            { "feature" : "Fully Web-Based" }
+        ],
+        "link":"https://app.paykickstart.com/checkout/RwKP1dNXLGorAWPqg5k4mO3x70JZy2MY"
     },
     {
         "color": "blue",
         "icon" : "audio-synthesys",
         "title" : "Audio Synthesys",
-        "price-monthly" : "29",
-        "price-yearly" : "22",
+        "price": {
+            "monthly": "29",
+            "yearly": "279"
+        },
         "features" : [
-            { "feature" : "Billed Annually" },
-            { "feature" : "5 Voiceovers per Month" }
-        ]
+            { "feature" : "Unlimited voice-overs downloads" },
+            { "feature" : "Access to 30 Real Human Voices" },
+            { "feature" : "Access to 66 Languages & 254 General Voices" },
+            { "feature" : "Fully Web-Based" }
+        ],
+        "link":"https://app.paykickstart.com/checkout/6yK2GVrEARPLgzQQgNzl5Yb4oO38Zwpd"
     },
     {
         "color": "white",
         "icon" : "audio-human-studio",
         "title" : "Audio and Human Studio Synthesys",
-        "price-monthly" : "39",
-        "price-yearly" : "32",
+        "price": {
+            "monthly": "59",
+            "yearly": "566"
+        },
         "features" : [
-            { "feature" : "Billed Annually" },
-            { "feature" : "10 Videos or Voiceovers per Month" }
-        ]
+            { "feature" : "Access to both Software" },
+            { "feature" : "Everything both software include" },
+            { "feature" : "20% OFF" }
+        ],
+        "link":"https://app.paykickstart.com/checkout/DL34Re7XowpanW6xqYjdVMAx1JZv5y9K"
     }
 ]

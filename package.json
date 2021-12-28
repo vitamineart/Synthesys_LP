@@ -3,7 +3,10 @@
   "version": "1.2.0",
   "description": "TailwindCSS StarterKit with Gulp 4",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "tailwindcss": "^3.0.0",
+    "swiper": "^7.4.1"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.5",
@@ -23,11 +26,11 @@
     "gulp-sass": "^4.1.1",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-terser": "^2.0.1",
+    "gulp-useref": "^5.0.0",
     "gulp-webp": "^4.0.1",
     "log-symbols": "^4.1.0",
     "node-sass": "^5.0.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^3.0.0"
+    "postcss": "^8.4.4"
   },
   "scripts": {
     "dev": "gulp",

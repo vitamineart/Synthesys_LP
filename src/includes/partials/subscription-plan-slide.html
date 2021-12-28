@@ -9,22 +9,29 @@
         </div>
         <header class="subscription-plan-header h-14 px-4 text-center flex flex-col justify-center text-lg font-bold leading-normal text-white mt-6">
             @@title</header>
-        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
-            $@@price-monthly
-            <small class="text-bodycopy font-normal text-base block">per month</small>
+        <div class="monthly">
+            <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
+                $@@price.monthly
+                <small class="text-bodycopy font-normal text-base block">per month</small>
+            </div>
+            <ul class="subscription-plan-features-list mt-15 flex-1 px-0 space-y-3">
+                @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
+                    `+(JSON.stringify(features[i]))+`) }
+            </ul>
         </div>
-        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
-            $@@price-yearly
-            <small class="text-bodycopy font-normal text-base block">per month</small>
+        <div class="yearly">
+            <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
+                $@@price.yearly
+                <small class="text-bodycopy font-normal text-base block">yearly</small>
+            </div>
+            <ul class="subscription-plan-features-list mt-15 flex-1 px-0 space-y-3">
+                @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
+                    `+(JSON.stringify(features[i]))+`) }
+                </ul>
         </div>
 
-        <ul class="subscription-plan-features-list mt-15 flex-1 px-0 space-y-3">
-            @@for (var i = 0; i < features.length; i++) {
-                @@include('../partials/subscription-plan-features-li.html', `+(JSON.stringify(features[i]))+`)
-            }
-        </ul>
 
-        <a href="#" class="border-3 border-current w-full max-w-xs py-5 uppercase text-center font-semibold mt-15 hover:text-bodycopy transition-colors duration-300">
+        <a href="@@url" class="border-3 border-current w-full max-w-xs py-5 uppercase text-center font-semibold mt-15 hover:text-bodycopy transition-colors duration-300">
             <span class="text-white">Get Started</span>
         </a>
     </div>

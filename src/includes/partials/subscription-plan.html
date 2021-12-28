@@ -6,21 +6,28 @@
         </svg>
     </div>
     <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center text-lg font-bold lg:text-xl leading-normal text-white mt-7">@@title</header>
-    <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
-        $@@price-monthly
-        <small class="text-bodycopy font-normal text-base block">per month</small>
+    <div class="monthly">
+        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 monthly">
+            $@@price.monthly
+            <small class="text-bodycopy font-normal text-base block">per month</small>
+        </div>
+        <ul class="subscription-plan-features-list mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15 space-y-4">
+            @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
+                `+(JSON.stringify(features[i]))+` )}
+        </ul>
     </div>
-    <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
-        $@@price-yearly
-        <small class="text-bodycopy font-normal text-base block">per month</small>
+    <div class="yearly">
+        <div class="subscription-price text-center text-current text-5xl font-bold mt-10 yearly">
+            $@@price.yearly
+            <small class="text-bodycopy font-normal text-base block">yearly</small>
+        </div>
+        <ul class="subscription-plan-features-list mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15 space-y-4">
+            @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
+                `+(JSON.stringify(features[i]))+`) }
+        </ul>
     </div>
 
-    <ul class="subscription-plan-features-list mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15 space-y-4">
-        @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
-            `+(JSON.stringify(features[i]))+`) }
-    </ul>
-
-    <a href="#" class="border-3 border-current w-64 py-5 uppercase text-center font-semibold mt-15 hover:text-bodycopy transition-colors duration-300">
+    <a href="@@link" class="border-3 border-current w-64 py-5 uppercase text-center font-semibold mt-15 hover:text-bodycopy transition-colors duration-300">
         <span class="text-white">Get Started</span>
     </a>
 </div>
