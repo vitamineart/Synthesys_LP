@@ -15,8 +15,8 @@
                 <small class="text-bodycopy font-normal text-base block">per month</small>
             </div>
             <ul class="subscription-plan-features-list mt-15 flex-1 px-0 space-y-3">
-                @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
-                    `+(JSON.stringify(features[i]))+`) }
+                @@for (var i = 0; i < features.monthly.length; i++) { @@include('../partials/subscription-plan-features-li.html',
+                    `+(JSON.stringify(features.monthly[i]))+`) }
             </ul>
         </div>
         <div class="yearly">
@@ -25,8 +25,8 @@
                 <small class="text-bodycopy font-normal text-base block">yearly</small>
             </div>
             <ul class="subscription-plan-features-list mt-15 flex-1 px-0 space-y-3">
-                @@for (var i = 0; i < features.length; i++) { @@include('../partials/subscription-plan-features-li.html',
-                    `+(JSON.stringify(features[i]))+`) }
+                @@for (var i = 0; i < features.yearly.length; i++) { @@include('../partials/subscription-plan-features-li.html',
+                    `+(JSON.stringify(features.yearly[i]))+`) }
                 </ul>
         </div>
 
