@@ -20,6 +20,7 @@
 
                 <p class="mt-5 lg:mt-15">Synthesys platform was developed by season voice and video actors together with linguistic and AI professionals who recognized the need for an on-demand TTS and TTV production platform. Their goal was simple: create a solution that offers:</p>
 
+                <!-- Features List Start -->
                 <ul class="check-list text-green max-w-sm sm:max-w-md md:max-w-full my-11 ml-0 sm:ml-16 lg:ml-28 space-y-5">
 
                     @@loop('includes/partials/checklist-li.html', [
@@ -54,6 +55,8 @@
                     ])
 
                 </ul>
+                <!-- Features List End -->
+
 
                 <p> Today, Syntheses Audio and Human Studio play an essential role in digital content creation worldwide, delivering improved e-training, more effective social and digital marketing, stronger branding, better entertainment, and so much more.</p>
 
@@ -65,11 +68,12 @@
             </div>
         </section>
 
+        <!-- Frequently Asked Questions Start -->
         <div class="bg-black mt-12 lg:mt-30">
-            @@include('./includes/sections/frequently-asked-questions.html', {
-                'color': 'green'
-            })
+            @@include('./includes/sections/frequently-asked-questions.html', { 'color': 'green' })
         </div>
+        <!-- Frequently Asked Questions End -->
+
     </main>
     @@include('./includes/sections/footer.html')
 

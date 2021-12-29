@@ -27,7 +27,6 @@ const imagemin = require('gulp-imagemin'); //To Optimize Images
 const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 const critical = require('critical').stream;
-const minifyInline = require('gulp-minify-inline');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
 const useref = require('gulp-useref');
@@ -158,7 +157,7 @@ function prodHTML(){
   .pipe(replace('.jpg', '.webp'))
   .pipe(replace('.jpeg', '.webp'))
   .pipe(plumber())
-  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
   .pipe(plumber.stop())
   .pipe(dest(options.paths.build.base));
 }
@@ -233,7 +232,6 @@ exports.default = series(
 exports.prod = series(
   prodClean, // Clean Build Folder
   parallel(prodStyles, prodScripts, prodImages, prodFonts, prodHTML), //Run All tasks in parallel
-  // criticalCSS,
   buildFinish
 );
 

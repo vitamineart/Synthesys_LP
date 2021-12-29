@@ -9,8 +9,8 @@ module.exports = {
         '3': '3px'
       },
       colors: {
-        'green': 'var(--color-green-accent)',
-        'blue': 'var(--color-blue-accent)',
+        'green': '#00f1d7',
+        'blue': '#00CCFA',
         'dark-surface': '#0A141D',
         'bodycopy': '#939EB4',
         'bodycopy-darker': '#616D86',

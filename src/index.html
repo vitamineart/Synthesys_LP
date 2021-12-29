@@ -17,6 +17,7 @@
     })
 
     <main>
+        <!-- Hero Section Start -->
         <section class="mt-4 mb-12 lg:mt-16 lg:mb-24 ">
             <div class="container">
                 <div class="flex flex-col lg:flex-row justify-between items-center ">
@@ -31,7 +32,9 @@
                 </div>
             </div>
         </section>
+        <!-- Hero Section End -->
 
+        <!-- Synthesys AI Virtual Avatars Start -->
         <section class="bg-black py-12 lg:pt-32 lg:pb-28 ">
             <div class="container">
                 <div class="lg:flex items-start">
@@ -58,7 +61,9 @@
                 </div>
             </div>
         </section>
+        <!-- Synthesys AI Virtual Avatars End -->
 
+        <!-- Synthesys AI Features Start -->
         <section class="py-12 lg:pt-40 lg:pb-38">
             <div class="container">
                 <div id="tts-section" class="lg:flex items-center">
@@ -71,7 +76,7 @@
                         <p class="mt-3 lg:mt-8">With only 3 simple clicks, you can rapidly grow your business using the authority and trustworthy text-to-voiceovers your clients will appreciate. This unique ai voice generator eliminates the robotic and strange-sounding voices of the past and shifts your business into high gear with clear and natural delivery, just like a real human being!</p>
 
                         <div class="text-white font-semibold text-lg lg:text-xl mt-6 lg:mt-12">Features Include:</div>
-                        <ul class="check-list text-blue mt-4 lg:mt-7 text-sm leading-tight lg:text-base lg:leading-loose space-y-4 lg:space-y-5">
+                        <ul class="check-list text-blue mt-4 lg:mt-7 space-y-4 lg:space-y-5">
 
                             @@loop('includes/partials/checklist-li.html', [
                                 { "header":"", "li-content": "Cloud-based application to do work from anywhere in the world" },
@@ -96,7 +101,7 @@
                         <p class="mt-3 lg:mt-8">Never struggle again with finding acting talent to finish your sales videos. Now you can easily create videos of your own using our revolutionary lip-synching AI video technology. You can create a unique spokesperson virtual spokesperson to deliver visual that elevates your messaging.</p>
 
                         <div class="text-white font-semibold text-lg lg:text-xl mt-6 lg:mt-12">Features Include:</div>
-                        <ul class="check-list text-green mt-4 lg:mt-7">
+                        <ul class="check-list text-green mt-4 lg:mt-7 space-y-4 lg:space-y-5">
 
                             @@loop('includes/partials/checklist-li.html', [
                                 {
@@ -128,10 +133,14 @@
                 </div>
             </div>
         </section>
+        <!-- Synthesys AI Features End -->
 
+        <!-- Reviews Start -->
         @@include('./includes/sections/reviews.html', {
             'color': 'green'
         })
+        <!-- Reviews End -->
+
 
         <!-- Good Digital Content Start -->
         <section class="py-12 lg:py-38">
@@ -142,7 +151,7 @@
                     <p class="mt-5 lg:mt-15">Used by thousands of marketers around the globe, Synthesys AI text-to-speech and text-to-video productions good digital content into great digital content. You’ll enhance your customer experience and convert more sales.</p>
                 </div>
                 <div class="lg:w-7/12 mt-6 lg:mt-0">
-                    <ul class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                         @@loop('includes/partials/good-digital-content-li.html', [
                             {"text": "Explainer Videos", "icon": "explainer-videos"},
                             {"text": "Gaming", "icon": "gaming"},
@@ -182,7 +191,7 @@
         </section>
         <!-- CTA end -->
 
-        <!---------------------- subscription section start --------------------------------------->
+        <!--- Subscription Plans Start --->
         <section class="pt-12 lg:pt-30" id="subscription-plans" style="background-image: url(img/PricingPlansBg.png); background-repeat: repeat-x; background-position: 0 75%;">
             <div class="container">
                 <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col lg:items-center before:block before:mb-5 lg:before:mb-16 before:border-green before:w-12 before:border-t-3">Choose the synthesys subscription</div>
@@ -216,12 +225,13 @@
                 <!--------------- subscription plans grid end --->
             </div>
         </section>
-        <!---------------------- subscription section start --------------------------------------->
+        <!--- Subscription Plans End --->
 
-
+        <!--- Frequently Asked Questions Start --->
         @@include('./includes/sections/frequently-asked-questions.html', {
             'color': 'green'
         })
+        <!--- Frequently Asked Questions End --->
 
 
     </main>

@@ -1,7 +1,7 @@
 {
-  "name": "gulp-with-tailwindcss",
-  "version": "1.2.0",
-  "description": "TailwindCSS StarterKit with Gulp 4",
+  "name": "Synthesys LP",
+  "version": "1",
+  "description": "Synthesys LP",
   "main": "gulpfile.js",
   "dependencies": {
     "tailwindcss": "^3.0.0",
@@ -18,7 +18,6 @@
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-minify-inline": "^1.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-purgecss": "^3.1.3",

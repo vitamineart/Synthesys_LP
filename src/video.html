@@ -19,11 +19,11 @@
         'page': 'video'
     })
     <main>
-
+        <!-- Hero Section Start -->
         <section class="container flex flex-col lg:flex-row justify-between items-center my-12 lg:my-18 xl:mt-36 lg:mb-24">
             <div class="lg:w-[55%] lg:pr-7 xl:pr-12">
 
-                <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border border-dark-green grid place-items-center">
+                <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border-2 border-green/20 grid place-items-center">
                     <svg class="fill-white w-7 h-7 xl:w-9 xl:h-9">
                         <use xlink:href="img/icons/sprite.svg#icon-play"></use>
                     </svg>
@@ -32,7 +32,7 @@
                 <h1 class="text-3xl xl:text-5xl leading-tight text-white font-bold mt-4 xl:mt-7">The Power of AI Video is as Close as Your Imagination</h1>
                 <div class="text-green text-xl xl:text-2xl mt-3 xl:mt-8 leading-relaxed">Transform Your Text to a Realistic Virtual Video. . . with Synthesys Human Studio</div>
                 <div class="flex items-center mt-14">
-                    <a href="#" class="border-green border-3 inline-block uppercase py-4 px-11  text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Go Ahead, Try it for Free</a>
+                    <a href="#" class="border-green border-3 inline-block uppercase py-4 px-11  text-white text-center tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Go Ahead, Try it for Free</a>
 
                 </div>
             </div>
@@ -40,7 +40,9 @@
                 <img src="img/TTV.png" alt="" width="652" height="583">
             </div>
         </section>
+        <!-- Hero Section End -->
 
+        <!-- Video Description Start -->
         <div class="container">
             <svg class="w-full dotted-line stroke-bodycopy" height="1" fill="none">
                 <line x1="1" x2="100%" y1="2" y2="2" stroke-width="4" stroke-linecap="butt" stroke-dasharray="2 8" />
@@ -52,7 +54,9 @@
                </div>
            </div>
         </div>
+        <!-- Video Description End -->
 
+        <!-- Text-to-Video Steps Start -->
         <section class="bg-black py-12 lg:py-32">
             <div class="container">
                 <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-5 lg:before:mb-16 before:border-green before:w-12 before:border-t-3">
@@ -203,7 +207,9 @@
                 </div>
             </div>
         </section>
+        <!-- Text-to-Video Steps End -->
 
+        <!-- CalltoAction Start -->
         <section class="py-12 lg:py-20 bg-green">
             <div class="container">
                 @@include('includes/sections/cta.html', {
@@ -216,16 +222,16 @@
                 })
 
 
-
+                <!-- Video Examples Start -->
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 mt-16 lg:mt-20">
                     @@loop('includes/partials/video-example.html', 'data/video-examples.json')
                 </div>
-
+                <!-- Video Examples End -->
             </div>
-
-
         </section>
+        <!-- CalltoAction End -->
 
+        <!-- Features List Start -->
         <section class="py-12 lg:py-30">
             <div class="container">
                 <ul class="check-list ml-10 sm:mx-28 text-green space-y-7 lg:space-y-13 text-sm leading-tight lg:text-base lg:leading-loose">
@@ -248,9 +254,12 @@
                 </ul>
             </div>
         </section>
+        <!-- Features List End -->
 
+        <!-- Reviews -->
         @@include('./includes/sections/reviews.html', {"color":"green"})
 
+        <!-- Why AI Video Start -->
         <section class="bg-black py-12 lg:py-30">
             <div class="container">
                 <div class="lg:flex">
@@ -311,8 +320,10 @@
                 </div>
             </div>
         </section>
+        <!-- Why AI Video End -->
 
 
+        <!-- Call to Action Start -->
         <section class="py-12 lg:py-20 bg-green">
             @@include('includes/sections/cta.html', {
                 "icon": "developer-tools",
@@ -322,10 +333,10 @@
                 "link-text": "Need a Quick Text-to-Speech Voiceover?"
             })
         </section>
+        <!-- Call to Action End -->
 
-        @@include('./includes/sections/frequently-asked-questions.html', {
-            'color': 'green'
-        })
+        <!-- Frequently Asked Questions -->
+        @@include('./includes/sections/frequently-asked-questions.html', { 'color': 'green' })
     </main>
     @@include('./includes/sections/footer.html')
 

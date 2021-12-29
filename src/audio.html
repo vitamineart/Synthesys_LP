@@ -18,9 +18,10 @@
         'page': 'audio'
     })
     <main>
+        <!-- Hero Section Start -->
         <section class="container flex flex-col lg:flex-row justify-between items-center my-12 lg:my-18 xl:mt-36 lg:mb-24">
             <div class="lg:w-[55%] lg:pr-7 xl:pr-12">
-                <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border border-dark-blue grid place-items-center">
+                <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border-2 border-blue/20 grid place-items-center">
                     <svg class="fill-white w-7 h-7 xl:w-9 xl:h-9">
                         <use xlink:href="img/icons/sprite.svg#icon-microphone"></use>
                     </svg>
@@ -41,6 +42,9 @@
                 <img src="img/TTS.png" alt="" width="546" height="700" >
             </div>
         </section>
+        <!-- Hero Section End -->
+
+        <!-- Audio Description Start -->
         <div class="container">
             <svg class="w-full dotted-line stroke-bodycopy" height="1" fill="none"><line x1="1" x2="100%" y1="2" y2="2" stroke-width="4" stroke-linecap="butt" stroke-dasharray="2 8" /></svg>
 
@@ -51,6 +55,9 @@
                </div>
             </div>
         </div>
+        <!-- Audio Description End -->
+
+        <!-- Text-to-VoiceOver Steps Start -->
         <section class="bg-black py-12 lg:py-32">
             <div class="container">
                 <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-5 lg:before:mb-16 before:border-blue before:w-12 before:border-t-3">Text-to-Voiceover in 1,2,3</div>
@@ -137,6 +144,7 @@
                 </div>
             </div>
         </section>
+        <!-- Text-to-VoiceOver Steps End -->
 
         <!--------------- Meet Your All-Star Cast Start -->
         <section class="py-12 lg:py-20 bg-blue" id="voice-examples">
@@ -159,6 +167,7 @@
         </section>
         <!--------------- Meet Your All-Star Cast End -->
 
+        <!-- Features List Start -->
         <section class="py-12 lg:py-30">
             <div class="container">
                 <ul class="check-list ml-10 sm:mx-28 text-blue space-y-7 lg:space-y-13 text-sm leading-tight lg:text-base lg:leading-loose">
@@ -180,9 +189,12 @@
                 </ul>
             </div>
         </section>
+        <!-- Features List End -->
 
+        <!-- Reviews -->
         @@include('./includes/sections/reviews.html', { 'color': 'blue' })
 
+        <!-- Call to Action Start -->
         <section class="py-12 lg:py-20 bg-blue">
             <div class="container">
                 @@include('includes/sections/cta.html', {
@@ -194,15 +206,11 @@
                 })
             </div>
         </section>
-
-
+        <!-- Call to Action Start -->
 
 
         <!---------------- Frequently Asked Questions -->
-        @@include('./includes/sections/frequently-asked-questions.html', {
-        'color': 'blue'
-        })
-        <!---------------- Frequently Asked Questions End -->
+        @@include('./includes/sections/frequently-asked-questions.html', { 'color': 'blue' })
 
 
     </main>
