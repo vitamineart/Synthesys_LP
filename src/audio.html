@@ -1,8 +1,10 @@
-@@include('./includes/sections/doctype-head.html', {'title':'Audio'})
+@@include('./includes/sections/doctype-head.html', { "title":"Audio" })
 
 
     <link rel="preload" as="image" imagesrcset="img/TTS_small.png 400w, img/TTS_medium.png 700w, img/TTS.png 1000w" imagesizes="84vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" src="img/TTS.png" width="700" height="546">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />
 
     @@include('./includes/sections/head.html')
 </head>
@@ -152,7 +154,7 @@
                     "link-text": "",
                     "button": "false"
                 })
-                <div class="grid justify-center sm:grid-cols-2 md:grid-cols-3 gap-6 2xl:gap-10 mt-20 m-auto">
+                <div class="grid justify-center sm:grid-cols-2 md:grid-cols-3 gap-6 2xl:gap-10 mt-20">
 
                     @@loop('includes/partials/voice-example.html', 'data/voice-examples.json')
 

@@ -214,7 +214,10 @@ function criticalCSS () {
         css: ['build/css/style.css'],
         extract: true,
         width: 1300,
-        height: 900
+        height: 900,
+        ignore: {
+          rule: [/swiper-button/, /subscription-plans-container/, /toggle-container/]
+        }
       })
     )
     .on('error', err => {
@@ -234,7 +237,7 @@ exports.default = series(
 exports.prod = series(
   prodClean, // Clean Build Folder
   parallel(prodStyles, prodScripts, prodImages, prodFonts, prodHTML), //Run All tasks in parallel
+  // criticalCSS,
   buildFinish
 );
-
 exports.svgSprites = svgSprites;
