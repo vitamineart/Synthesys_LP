@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@@include('./includes/sections/doctype-head.html', {'title':'Video'})
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthesys Landing Page | Video</title>
 
-    <link rel="preload" as="image" href="img/TTV.png" width="652" height="583">
+    <link rel="preload" as="image" imagesrcset="img/TTV_small.png 400w, img/TTV_medium.png 700w, img/TTV.png 1000w" imagesizes="88vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" href="img/TTV.png" width="652" height="583">
     <script src="https://cdn.jsdelivr.net/npm/@slightlyoff/lite-vimeo@0.1.2/lite-vimeo.min.js" type="module" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
@@ -32,12 +26,12 @@
                 <h1 class="text-3xl xl:text-5xl leading-tight text-white font-bold mt-4 xl:mt-7">The Power of AI Video is as Close as Your Imagination</h1>
                 <div class="text-green text-xl xl:text-2xl mt-3 xl:mt-8 leading-relaxed">Transform Your Text to a Realistic Virtual Video. . . with Synthesys Human Studio</div>
                 <div class="flex items-center mt-14">
-                    <a href="#" class="border-green border-3 inline-block uppercase py-4 px-11  text-white text-center tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Go Ahead, Try it for Free</a>
+                    <a href="#" class="border-green border-3 inline-block uppercase py-4 px-11  text-white text-center tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Go Ahead, <br class="sm:hidden">Try it for Free</a>
 
                 </div>
             </div>
             <div class="lg:w-[45%] order-first lg:order-none lg:scale-110">
-                <img src="img/TTV.png" alt="" width="652" height="583">
+                <img srcset="img/TTV_small.png 400w, img/TTV_medium.png 700w, img/TTV.png 1000w" sizes="88vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" src="img/TTV.png" alt="" width="652" height="583">
             </div>
         </section>
         <!-- Hero Section End -->

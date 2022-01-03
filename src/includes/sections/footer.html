@@ -17,30 +17,12 @@
                 <div class="uppercase text-white">NOOVEAU MEDIA LTD</div>
                 <div class="text-bodycopy mt-3">61 Ascot Walk, Newcastle Upon Tyne, United Kingdom, NE3 2UG</div>
             </div>
-            <div class="social-share flex my-6 lg:my-0 space-x-3 lg:space-x-4">
-                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
-                    <svg class="w-3 h-3 fill-white">
-                        <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
-                    </svg>
-                </a>
-                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
-                    <svg class="w-3 h-3 fill-white">
-                        <use xlink:href="img/icons/sprite.svg#icon-twitter"></use>
-                    </svg>
-
-                </a>
-                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
-                    <svg class="w-3 h-3 fill-white">
-                        <use xlink:href="img/icons/sprite.svg#icon-linkedin"></use>
-                    </svg>
-
-                </a>
-                <a href="#" class="w-10 h-10 grid place-items-center border-2 border-dark-blue p-2 rounded-full hover:border-green transition-colors ">
-                    <svg class="w-3 h-3 fill-white">
-                        <use xlink:href="img/icons/sprite.svg#icon-insta"></use>
-                    </svg>
-                </a>
+            <div class="my-6 lg:my-0 text-white">
+                <div class="social-share flex space-x-2 lg:space-x-3">
+                    @@loop('../partials/social-link-footer.html', 'data/social.json')
+                </div>
             </div>
+
             <div class="text-xs text-right flex-1">
                 <div><a href="#" class="hover:opacity-70 transition-opacity text-white">Terms and Conditions</a><a href="#" class="hover:opacity-70 transition-opacity ml-8 text-white">Privacy Policy</a></div>
                 <div class="mt-3 text-bodycopy">© 2021 - Synthesys. All rights reserved</div>

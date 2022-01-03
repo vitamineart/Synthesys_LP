@@ -28,6 +28,7 @@ const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 const critical = require('critical').stream;
 const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
 const plumber = require('gulp-plumber');
 const useref = require('gulp-useref');
 
@@ -138,7 +139,7 @@ function devFonts(){
 function watchFiles(){
   watch(`${options.paths.src.base}/**/*.{html,json}`,series(devHTML, devStyles, previewReload));
   watch([options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`],series(devStyles, previewReload));
-  watch(`${options.paths.src.js}/**/*.js`,series(devScripts, previewReload));
+  watch(`${options.paths.src.js}/**/*.js`,series(devHTML, previewReload));
   watch(`${options.paths.src.img}/**/*`,series(devImages, previewReload));
   watch(`${options.paths.src.img}/icons/*`,series(svgSprites, previewReload));
   watch(`${options.paths.src.fonts}/**/*`,series(devFonts, previewReload));
@@ -186,8 +187,9 @@ function prodScripts(){
 function prodImages(){
   return src(options.paths.dist.img + '/**/*')
   .pipe(webp())
-  .pipe(dest(options.paths.build.img));
+  .pipe(dest(options.paths.build.img))
 }
+
 function prodFonts(){
   return src(options.paths.src.fonts + '/**/*').pipe(dest(options.paths.build.fonts));
 }
@@ -224,7 +226,7 @@ function criticalCSS () {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles,  devImages, svgSprites, devFonts, devHTML), //Run All tasks in parallel
+  parallel(devStyles, devImages, svgSprites, devFonts, devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

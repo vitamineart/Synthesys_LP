@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthesys Landing Page | Main</title>
-
-    <link rel="preload" as="image" href="img/Hero_image_1.png" width="816" height="646">
+@@include('./includes/sections/doctype-head.html', {'title':'Home'})
+    <link rel="preload" as="image" href="img/Hero_image.png" imagesrcset="img/Hero_image_small.png 400w, img/Hero_image_medium.png 600w, img/Hero_image.png 1000w" imagesizes="(max-width:640px) 84vw, (min-width:640px) 55vw, (min-width: 1024px) 38vw" >
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.media='all'" />
-
     @@include('./includes/sections/head.html')
+
+
 </head>
 <body>
     @@include('includes/sections/header.html', {
@@ -27,7 +21,7 @@
                         <a href="#subscription-plans" class="border-green border-3 block w-full text-center max-w-xs lg:inline-block lg:w-auto uppercase py-4 px-11 mt-7 lg:mt-14 text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">Get Started</a>
                     </div>
                     <div class="lg:scale-110 sm:w-3/5 lg:w-5/12 order-first lg:order-none">
-                        <img src="img/Hero_image_1.png" alt="" width="816" height="646">
+                        <img srcset="img/Hero_image_small.png 400w, img/Hero_image_medium.png 700w, img/Hero_image.png 1000w" sizes="(max-width:640px) 84vw, (min-width:640px) 55vw, (min-width: 1024px) 38vw" src="img/Hero_image.png"  alt="" width="816" height="646">
                     </div>
                 </div>
             </div>
@@ -68,7 +62,7 @@
             <div class="container">
                 <div id="tts-section" class="lg:flex items-center">
                     <div class="lg:w-[53%] lg:pr-10">
-                        <img src="img/TTS.png" alt="" width="700" height="546" loading="lazy" class="mx-auto">
+                        <img srcset="img/TTS_small.png 400w, img/TTS_medium.png 700w, img/TTS.png 1000w" sizes="88vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" src="img/TTS.png" alt="" width="700" height="546" loading="lazy" class="mx-auto">
                     </div>
                     <div class="lg:w-[47%]">
                         <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white mt-10 lg:mt-0">Synthesys ai voice generator</div>
@@ -127,7 +121,7 @@
 
                     </div>
                     <div class="lg:w-[47%] lg:pr-10 order-first mb-10 lg:mb-0 lg:order-none">
-                        <img src="img/TTV.png" alt="" width="652" height="583" loading="lazy" class="mx-auto">
+                        <img srcset="img/TTV_small.png 400w, img/TTV_medium.png 700w, img/TTV.png 1000w" sizes="88vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" src="img/TTV.png" alt="" width="652" height="583" loading="lazy" class="mx-auto">
                     </div>
 
                 </div>
@@ -192,7 +186,8 @@
         <!-- CTA end -->
 
         <!--- Subscription Plans Start --->
-        <section class="pt-12 lg:pt-30" id="subscription-plans" style="background-image: url(img/PricingPlansBg.png); background-repeat: repeat-x; background-position: 0 75%;">
+        <section class="pt-12 lg:pt-30 relative" id="subscription-plans">
+
             <div class="container">
                 <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col lg:items-center before:block before:mb-5 lg:before:mb-16 before:border-green before:w-12 before:border-t-3">Choose the synthesys subscription</div>
                 <div class="text-green lg:text-center text-base lg:text-xl leading-relaxed mt-4 lg:mt-5">Best for Your Production Needs</div>
@@ -224,6 +219,10 @@
                 </div>
                 <!--------------- subscription plans grid end --->
             </div>
+            <div class="absolute inset-0 m-auto -z-10">
+                <img srcset="img/PricingPlansBg_small.png 500w, img/PricingPlansBg_medium.png 1000w" src="img/PricingPlansBg_medium.png" alt="" width="100%" height="500" loading="lazy" class="lg:hidden absolute top-1/2 sm:-translate-y-20 lg:-translate-y-12 xl:-translate-y-30">
+                <img srcset="img/PricingPlansBg_lg.png 1200w, img/PricingPlansBg_xl.png 2000w" src="img/PricingPlansBg_xl.png" alt="" width="1920" height="500" loading="lazy" class="hidden lg:block absolute top-1/2 lg:-translate-y-30 xl:-translate-y-34 ">
+            </div>
         </section>
         <!--- Subscription Plans End --->
 
@@ -245,6 +244,14 @@
     <script src="js/nav.js"></script>
     <!-- endbuild -->
 
+    <script>
+        // window.onload = function (e) {
+        //     setTimeout(() => {
+        //         const pricePlans = document.querySelector('#subscription-plans');
+        //         pricePlans.style.backgroundImage = pricePlans.dataset.bg;
+        //     }, 500);
+        // };
+        </script>
 
 </body>
 </html>
