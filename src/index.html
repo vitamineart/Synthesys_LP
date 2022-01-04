@@ -235,7 +235,7 @@
 
     </main>
     @@include('./includes/sections/footer.html')
-
+    @@include('./includes/sections/mobile-nav.html', {'page':'home'})
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- build:js js/home.js -->
     <script src="js/faq.js"></script>
@@ -243,15 +243,6 @@
     <script src="js/reviews.js"></script>
     <script src="js/nav.js"></script>
     <!-- endbuild -->
-
-    <script>
-        // window.onload = function (e) {
-        //     setTimeout(() => {
-        //         const pricePlans = document.querySelector('#subscription-plans');
-        //         pricePlans.style.backgroundImage = pricePlans.dataset.bg;
-        //     }, 500);
-        // };
-        </script>
 
 </body>
 </html>
