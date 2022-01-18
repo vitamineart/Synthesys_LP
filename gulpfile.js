@@ -28,7 +28,6 @@ const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 const critical = require('critical').stream;
 const svgSprite = require('gulp-svg-sprite');
-const svgmin = require('gulp-svgmin');
 const plumber = require('gulp-plumber');
 const useref = require('gulp-useref');
 
@@ -204,7 +203,7 @@ function buildFinish(done){
   done();
 }
 
-// Generate & Inline Critical-path CSS
+// Generate & Inline Critical-path CSS. Works with 1 style.css only in <head>
 function criticalCSS () {
     return src('build/*.html')
     .pipe(

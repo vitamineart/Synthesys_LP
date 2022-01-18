@@ -9,6 +9,9 @@
     @apply bg-dark-surface text-bodycopy font-montserrat; }
   p {
     @apply text-sm leading-6 lg:text-base lg:leading-loose; }
+  h2 {
+    font-size: inherit;
+    margin: inherit; }
   .container {
     max-width: 1320px !important;
     @apply px-6 sm:px-7 md:px-8 lg:px-10; } }
