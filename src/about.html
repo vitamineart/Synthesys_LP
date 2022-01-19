@@ -3,6 +3,10 @@
     'canonicalURL':'https://synthesys.io/about',
     'metaDescription':''
 })
+<!-- build:js js/about.js defer -->
+<script src="js/faq.js"></script>
+<script src="js/nav.js"></script>
+<!-- endbuild -->
 @@include('./includes/sections/head.html')
 </head>
 <body>
@@ -74,9 +78,6 @@
     </main>
     @@include('./includes/sections/footer.html')
     @@include('./includes/sections/mobile-nav.html', {'page':'about'})
-    <!-- build:js js/about.js -->
-    <script src="js/faq.js"></script>
-    <script src="js/nav.js"></script>
-    <!-- endbuild -->
+
 </body>
 </html>

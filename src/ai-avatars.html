@@ -3,22 +3,26 @@
     'canonicalURL':'https://synthesys.io/ai-avatars',
     'metaDescription':''
 })
+<!-- build:js js/avatars.js defer  -->
+<script src="js/faq.js"></script>
+<script src="js/nav.js"></script>
+<!-- endbuild -->
 @@include('./includes/sections/head.html')
 </head>
 
 <body>
     @@include('includes/sections/header.html', {
-    'page': 'about'
+    'page': 'ai-avatars'
     })
     <main>
         <section>
             <div class="container">
 
-                <h1 class="text-white font-bold text-3xl text-center lg:text-5xl !leading-tight mt-6 lg:mt-20"> Synthesys AI Avatars </h1>
-
-                <div class="ai-avatars-grid grid mt-10" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: max(1rem, 2vw);">
+                <h1 class="text-white font-bold text-3xl text-center lg:text-5xl !leading-tight mt-6 lg:mt-20 h-max"> Synthesys AI Avatars </h1>
+                <div class="ai-avatars-grid grid mt-14 lg:mt-20" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: max(1rem, 2vw);">
                     @@loop('includes/partials/ai-avatar.html', 'data/ai-avatars.json')
                 </div>
+
 
             </div>
         </section>
@@ -31,11 +35,11 @@
 
     </main>
     @@include('./includes/sections/footer.html')
-    @@include('./includes/sections/mobile-nav.html', {'page':'about'})
-    <!-- build:js js/about.js -->
-    <script src="js/faq.js"></script>
-    <script src="js/nav.js"></script>
-    <!-- endbuild -->
+    @@include('./includes/sections/mobile-nav.html', {'page':'ai avatars'})
+
+
+
+
 </body>
 
 </html>

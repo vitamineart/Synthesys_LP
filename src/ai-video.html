@@ -3,15 +3,18 @@
     'canonicalURL':'https://synthesys.io/ai-video',
     'metaDescription':'Lifelike AI Video Generator. Real Humans & Real Voices helps you create multi-lingual videos without having to hire actors, cameras, or audio equipment.'
 })
-
-
     <link rel="preload" as="image" imagesrcset="img/TTV_small.png 400w, img/TTV_medium.png 700w, img/TTV.png 1000w" imagesizes="88vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" href="img/TTV.png" width="652" height="583">
-    <script src="https://cdn.jsdelivr.net/npm/@slightlyoff/lite-vimeo@0.1.2/lite-vimeo.min.js" type="module" defer></script>
 
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+    <!-- build:js js/video.js defer -->
+    <script src="js/faq.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/nav.js"></script>
+    <!-- endbuild -->
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />
 
+    <script src="https://cdn.jsdelivr.net/npm/@slightlyoff/lite-vimeo@0.1.2/lite-vimeo.min.js" type="module" defer></script>
     @@include('./includes/sections/head.html')
 </head>
 
@@ -234,7 +237,7 @@
         <!-- Features List Start -->
         <section class="py-12 lg:py-30">
             <div class="container">
-                <ul class="check-list ml-10 sm:mx-28 text-green space-y-7 lg:space-y-13 text-sm leading-tight lg:text-base lg:leading-loose">
+                <ul class="check-list sm:ml-10 sm:mx-28 text-green space-y-7 lg:space-y-13 text-sm leading-tight lg:text-base lg:leading-loose">
 
                     @@loop('includes/partials/checklist-li.html', [
                         {
@@ -341,12 +344,7 @@
     @@include('./includes/sections/footer.html')
     @@include('./includes/sections/mobile-nav.html', {'page':'video'})
 
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <!-- build:js js/video.js -->
-    <script src="js/faq.js"></script>
-    <script src="js/reviews.js"></script>
-    <script src="js/nav.js"></script>
-    <!-- endbuild -->
+
 </body>
 
 </html>

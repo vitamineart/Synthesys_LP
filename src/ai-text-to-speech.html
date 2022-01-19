@@ -6,7 +6,12 @@
 
 
     <link rel="preload" as="image" imagesrcset="img/TTS_small.png 400w, img/TTS_medium.png 700w, img/TTS.png 1000w" imagesizes="84vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw" src="img/TTS.png" width="700" height="546">
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+    <!-- build:js js/audio.js defer -->
+    <script src="js/faq.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/nav.js"></script>
+    <!-- endbuild -->
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />
 
@@ -217,12 +222,7 @@
     </main>
     @@include('./includes/sections/footer.html')
     @@include('./includes/sections/mobile-nav.html', {'page':'audio'})
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <!-- build:js js/audio.js -->
-    <script src="js/faq.js"></script>
-    <script src="js/reviews.js"></script>
-    <script src="js/nav.js"></script>
-    <!-- endbuild -->
+
 </body>
 
 </html>
