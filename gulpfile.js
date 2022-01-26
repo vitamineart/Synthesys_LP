@@ -30,6 +30,11 @@ const critical = require('critical').stream;
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
 const useref = require('gulp-useref');
+const gulpif = require('gulp-if');
+const path = require("path");
+const rename = require('gulp-rename');
+
+
 
 
 
@@ -65,6 +70,13 @@ function devHTML(){
       basepath: '@file'
     }))
     .pipe(useref())
+    .pipe(rename(function(file) {
+      if(file.extname === '.html' && file.basename !== 'index') {
+        file.dirname = path.join(file.dirname, file.basename);
+        file.basename = 'index';
+        file.extname = '.html';
+      }
+    }))
     .pipe(dest(options.paths.dist.base));
 }
 
@@ -156,7 +168,7 @@ function devClean(){
 
 //Production Tasks (Optimized Build for Live/Production Sites)
 function prodHTML(){
-  return src(`${options.paths.dist.base}/*.html`)
+  return src(`${options.paths.dist.base}/**/*.html`)
   .pipe(replace('.png', '.webp'))
   .pipe(replace('.jpg', '.webp'))
   .pipe(replace('.jpeg', '.webp'))
