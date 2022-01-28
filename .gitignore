@@ -3,3 +3,4 @@ dist
 *.workspace
 .DS_Store
 *.txt
+_headers
