@@ -193,7 +193,7 @@ function prodStyles(){
       return broadMatches.concat(innerMatches)
     }
   }))
-  .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(cleanCSS())
   .pipe(dest(options.paths.build.css));
 }
 
