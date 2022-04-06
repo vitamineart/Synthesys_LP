@@ -61,8 +61,9 @@
     },
     "features": {
       "monthly": [
+        { "feature": "Unlimited Videos & Voice Overs" },
         { "feature": "Access to both Software" },
-        { "feature": "Everything both software include" },
+        { "feature": "All features included" },
         { "feature": "20% OFF" }
       ],
       "yearly": [
