@@ -173,12 +173,12 @@ function prodHTML(){
   .pipe(replace('.jpg', '.webp'))
   .pipe(replace('.jpeg', '.webp'))
   .pipe(plumber())
-  .pipe(htmlmin({
-    collapseWhitespace: true,
-    removeComments: true,
-    minifyCSS: true,
-    minifyJS: true
-  }))
+  // .pipe(htmlmin({
+  //   collapseWhitespace: true,
+  //   removeComments: true,
+  //   minifyCSS: true,
+  //   minifyJS: true
+  // }))
   .pipe(plumber.stop())
   .pipe(dest(options.paths.build.base));
 }
