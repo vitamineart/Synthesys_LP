@@ -3,7 +3,6 @@
     'canonicalURL':'https://synthesys.io',
     'metaDescription':'AI Voiceover and AI Video Generator. Produce Your Next Professional audiovisual content without spending money on hiring actors, cameras, or audio equipment.'
 })
-    <!-- <link rel="preload" as="image" href="img/Hero_image.png" imagesrcset="img/Hero_image_small.png 400w, img/Hero_image_medium.png 600w, img/Hero_image.png 1000w" imagesizes="(max-width:640px) 84vw, (min-width:640px) 55vw, (min-width: 1024px) 38vw" > -->
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
     <!-- build:js js/home.js defer -->
@@ -16,7 +15,46 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />
     @@include('./includes/sections/head.html')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM2KVKXQE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XDM2KVKXQE');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Synthesys AI Studio",
+      "url": "https://synthesys.io/",
+      "logo": "https://synthesys.io/img/Logo.svg",
+      "description": "AI Voiceover and AI Video Generator. Produce Your Next Professional audiovisual content without spending money on hiring actors, cameras, or audio equipment.
+        .
+      ",
+      "founders": [{
+        "@type": "Person",
+        "name": "Oliver Goodwin",
+        "jobTitle": "CEO & Founder",
+        "sameAs": "https://www.linkedin.com/in/oliver-goodwin-464a15b4/"
+      }],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@synthesys.io",
+        "contactType": "technical support"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100076575441886",
+        "https://www.linkedin.com/company/synthesys-studio/",
+        "https://www.trustpilot.com/review/synthesys.io"
+      ]
+    }
+  </script>
 </head>
 <body>
     @@include('includes/sections/header.html', {
