@@ -1,0 +1,242 @@
+---
+import { Picture } from "astro:assets"
+import PricingPlansBg_small from "../assets/PricingPlansBg_small.png"
+import PricingPlansBg_medium from "../assets/PricingPlansBg_medium.png"
+import PricingPlansBg_lg from "../assets/PricingPlansBg_lg.png"
+import PricingPlansBg_xl from "../assets/PricingPlansBg_xl.png"
+
+// Load subscription plans data from JSON
+import subscriptionPlansData from '../../public/data/subscription-plans.json';
+
+interface SubscriptionPlan {
+  color: string;
+  icon: string;
+  title: string;
+  price: {
+    monthly: string;
+    yearly: string;
+  };
+  features: Array<{ feature: string }>;
+  link: string;
+}
+
+const subscriptionPlans: SubscriptionPlan[] = subscriptionPlansData as SubscriptionPlan[];
+---
+
+<section class="pt-12 lg:pt-30 pb-10 relative" id="subscription-plans">
+    <div class="container">
+        <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col lg:items-center before:block before:mb-5 lg:before:mb-16 before:border-green before:w-12 before:border-t-3">Choose the synthesys subscription</div>
+        <div class="text-green lg:text-center text-base lg:text-xl leading-relaxed mt-4 lg:mt-5">Best for Your Production Needs</div>
+    </div>
+
+    <div class="flex justify-center items-center container mt-10 lg:mt-20">
+        <label for="prices-toggle" class="flex items-center cursor-pointer" id="toggle-container">
+            <div class="text-sm" id="text-label-monthly">Monthly</div>
+            <div class="relative mx-4">
+                <input type="checkbox" id="prices-toggle" class="sr-only">
+                <div class="toggle-bg bg-blue h-7 w-13 rounded-full after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition duration-500 after:shadow-lg"></div>
+            </div>
+            <div class="text-sm" id="text-label-yearly">Yearly</div>
+        </label>
+    </div>
+
+    <div class="lg:container mx-auto">
+        <!-- subscription plans mobile start -->
+        <div class="swiper subscription-plans-container mobile lg:hidden! mt-14 relative w-full">
+            <div class="swiper-wrapper h-max">
+                {subscriptionPlans.map((plan: SubscriptionPlan, index: number) => (
+                    <div class="swiper-slide max-w-[72vw] sm:max-w-sm">
+                        <div class={`subscription-plan flex flex-col items-center mx-auto px-6 sm:px-8 pt-10 pb-12 border-t-[5px] border-t-current text-${plan.color}`} style="background-color: #0D1924;" data-plan-index={index}>
+                            <div class="h-24 flex flex-col justify-end">
+                                <svg class="w-18 h-16 fill-current">
+                                    <use xlink:href={`/icons/sprite.svg#${plan.icon}`}></use>
+                                </svg>
+                            </div>
+                            <header class="subscription-plan-header h-14 px-4 text-center flex flex-col justify-center text-lg font-bold leading-normal text-white mt-6">
+                                {plan.title}
+                            </header>
+                            <div class="subscription-price-container">
+                                <div class="subscription-price text-center text-current text-5xl font-bold mt-10" data-price-monthly={plan.price.monthly} data-price-yearly={plan.price.yearly}>
+                                    ${plan.price.monthly}
+                                    <small class="text-bodycopy font-normal text-base block subscription-period" data-period-monthly="per month" data-period-yearly="yearly">per month</small>
+                                </div>
+                                <ul class="subscription-plan-features-list mt-15 flex-1 px-0 space-y-3">
+                                    {plan.features.map((feature: { feature: string }, featureIndex: number) => (
+                                        <li class="text-left flex">
+                                            <svg class="fill-current w-4 h-4 lg:w-5 lg:h-5 flex-none mt-0.5 mr-5">
+                                                <use xlink:href="/icons/sprite.svg#icon-check-filled"></use>
+                                            </svg>
+                                            <p class="text-bodycopy leading-relaxed">{feature.feature}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <a href={plan.link} class="border-3 border-current w-full max-w-xs py-5 uppercase text-center font-semibold mt-15 hover:text-bodycopy transition-colors duration-300">
+                                <span class="text-white">Get Started</span>
+                            </a>
+                            <p class="text-bodycopy text-xs mt-5">♥️ <span>3-day money back guarantee</span></p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+        <!-- subscription plans mobile end -->
+
+        <!-- subscription plans grid -->
+        <div class="hidden subscription-plans-container lg:grid! lg:grid-cols-3 lg:gap-8 xl:gap-10 2xl:gap-15 mt-14">
+            {subscriptionPlans.map((plan: SubscriptionPlan, index: number) => (
+                <div class={`subscription-plan flex xs:max-w-xs sm:max-w-lg flex-col items-center pt-10 pb-12 border-t-[5px] border-t-current text-${plan.color}`} style="background-color: #0D1924;" data-plan-index={index}>
+                    <div class="h-24 flex flex-col justify-end">
+                        <svg class="w-18 h-16 lg:w-24 lg:h-20 fill-current">
+                            <use xlink:href={`/icons/sprite.svg#${plan.icon}`}></use>
+                        </svg>
+                    </div>
+                    <header class="subscription-plan-header h-14 px-14 text-center flex flex-col justify-center text-lg font-bold lg:text-xl leading-normal text-white mt-7">
+                        {plan.title}
+                    </header>
+                    <div class="subscription-price-container">
+                        <div class="subscription-price text-center text-current text-5xl font-bold mt-10" data-price-monthly={plan.price.monthly} data-price-yearly={plan.price.yearly}>
+                            ${plan.price.monthly}
+                            <small class="text-bodycopy font-normal text-base block subscription-period" data-period-monthly="per month" data-period-yearly="yearly">per month</small>
+                        </div>
+                        <ul class="subscription-plan-features-list mt-15 flex-1 px-5 md:px-8 xl:px-12 2xl:px-15 space-y-4">
+                            {plan.features.map((feature: { feature: string }, featureIndex: number) => (
+                                <li class="text-left flex">
+                                    <svg class="fill-current w-4 h-4 lg:w-5 lg:h-5 flex-none mt-0.5 mr-5">
+                                        <use xlink:href="/icons/sprite.svg#icon-check-filled"></use>
+                                    </svg>
+                                    <p class="text-bodycopy leading-relaxed">{feature.feature}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <a href={plan.link} class="border-3 border-current w-64 py-5 uppercase text-center font-semibold mt-15 hover:text-bodycopy transition-colors duration-300">
+                        <span class="text-white">Get Started</span>
+                    </a>
+                    <p class="text-bodycopy text-xs mt-5">♥️ <span>3-day money back guarantee</span></p>
+                </div>
+            ))}
+        </div>
+        <!-- subscription plans grid end -->
+    </div>
+    <div class="absolute inset-0 m-auto -z-10">
+        <!-- @ts-ignore - Picture component supports sources prop -->
+        <Picture
+            src={PricingPlansBg_small}
+            sources={[
+                {
+                    media: "(min-width: 640px)",
+                    srcset: PricingPlansBg_medium
+                }
+            ]}
+            alt=""
+            width={100}
+            height={500}
+            loading="lazy"
+            class="lg:hidden absolute top-1/2 sm:-translate-y-20 lg:-translate-y-12 xl:-translate-y-30"
+        />
+        <!-- @ts-ignore - Picture component supports sources prop -->
+        <Picture
+            src={PricingPlansBg_lg}
+            sources={[
+                {
+                    media: "(min-width: 1280px)",
+                    srcset: PricingPlansBg_xl
+                }
+            ]}
+            alt=""
+            width={1920}
+            height={500}
+            loading="lazy"
+            class="hidden lg:block absolute top-1/2 lg:-translate-y-30 xl:-translate-y-34"
+        />
+    </div>
+</section>
+
+<script is:inline>
+  (function() {
+    const togglePrices = document.querySelector('#prices-toggle');
+    const toggleContainer = document.querySelector('#toggle-container');
+
+    // Function to update plan data based on billing period
+    function updatePlansData(isYearly) {
+      const plans = document.querySelectorAll('.subscription-plan');
+
+      plans.forEach(function(plan) {
+        const priceElement = plan.querySelector('.subscription-price');
+        const periodElement = plan.querySelector('.subscription-period');
+
+        if (!priceElement || !periodElement) return;
+
+        const priceMonthly = priceElement.getAttribute('data-price-monthly');
+        const priceYearly = priceElement.getAttribute('data-price-yearly');
+        const periodMonthly = periodElement.getAttribute('data-period-monthly');
+        const periodYearly = periodElement.getAttribute('data-period-yearly');
+
+        // Update price and period only (features are the same for both)
+        const price = isYearly ? priceYearly : priceMonthly;
+        const period = isYearly ? periodYearly : periodMonthly;
+        priceElement.innerHTML = `$${price}<small class="text-bodycopy font-normal text-base block subscription-period" data-period-monthly="${periodMonthly}" data-period-yearly="${periodYearly}">${period}</small>`;
+      });
+    }
+
+    if (togglePrices) {
+      togglePrices.addEventListener('change', function(event) {
+        const isYearly = event.target.checked;
+
+        // Update toggle visual state
+        if (toggleContainer) {
+          if (isYearly) {
+            toggleContainer.classList.add('yearly');
+          } else {
+            toggleContainer.classList.remove('yearly');
+          }
+        }
+
+        // Update all plan data
+        updatePlansData(isYearly);
+      });
+    }
+
+    // Initialize Swiper for mobile
+    function initSwiper() {
+      if (typeof Swiper !== 'undefined') {
+        const swiperElement = document.querySelector('.subscription-plans-container.mobile');
+        if (swiperElement && !swiperElement.swiper) {
+          const subscriptionPlansSwiper = new Swiper('.subscription-plans-container.mobile', {
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            speed: 400,
+            initialSlide: 1,
+            touchEventsTarget: 'container',
+            simulateTouch: true,
+            allowTouchMove: true,
+            touchRatio: 1,
+            touchAngle: 45,
+            grabCursor: true,
+            watchOverflow: true,
+            // resistance: true,
+            // resistanceRatio: 0.85,
+            breakpoints: {
+              375: { spaceBetween: 30 },
+              420: { spaceBetween: 40 },
+              640: { spaceBetween: 50 },
+              768: { spaceBetween: 100 }
+            }
+          });
+        }
+      } else {
+        // Retry if Swiper is not loaded yet
+        setTimeout(initSwiper, 100);
+      }
+    }
+
+    // Wait for DOM and Swiper to be ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSwiper);
+    } else {
+      initSwiper();
+    }
+  })();
+</script>

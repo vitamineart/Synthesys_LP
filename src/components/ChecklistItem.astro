@@ -1,0 +1,20 @@
+---
+export interface Props {
+  header?: string;
+  content: string;
+}
+
+const { header = '', content } = Astro.props;
+---
+
+<li class="flex items-start">
+  <svg class="w-6 h-6 fill-transparent stroke-current stroke-2 flex-shrink-0 mt-1 mr-4">
+    <use xlink:href="/icons/sprite.svg#icon-check"></use>
+  </svg>
+  <div>
+    {header && (
+      <h3 class="font-bold text-white mb-2 text-lg lg:text-2xl leading-6">{header}</h3>
+    )}
+    <p class="text-bodycopy">{content}</p>
+  </div>
+</li>

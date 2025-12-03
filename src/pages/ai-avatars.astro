@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FAQ from '../components/FAQ.astro';
+
+// JSON data imports
+import faqData from '../../public/data/faq.json';
+import allAvatars from '../../public/data/ai-avatars.json';
+
+const pageTitle = 'Meet Our AI Avatars | Synthesys';
+const canonicalURL = 'https://synthesys.io/ai-avatars';
+const metaDescription = 'All AI avatars have been selected to meet the specific needs of each business. You could use our AI generated avatar to represent your brand.';
+---
+
+<Layout title={pageTitle} description={metaDescription} canonicalURL={canonicalURL} currentPage="avatars">
+  <main>
+    <section>
+      <div class="container">
+        <h1 class="text-white font-bold text-3xl text-center lg:text-5xl !leading-tight mt-6 lg:mt-20 h-max">
+          Synthesys AI Avatars
+        </h1>
+
+        <div class="ai-avatars-grid grid mt-14 lg:mt-20" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: max(1rem, 2vw);">
+          {allAvatars.map((avatar, index) => (
+            <div class={`ai-avatar-card bg-dark-blue rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 ${index >= 8 ? 'lazyload' : ''}`}>
+              <div class="aspect-w-4 aspect-h-5 relative pt-8">
+                <img
+                  src={avatar.image}
+                  alt={avatar.name}
+                  loading={index < 8 ? 'eager' : 'lazy'}
+                  class="w-full h-full object-cover"
+                  width="250"
+                  height="312"
+                />
+
+              </div>
+              <div class="p-8 border-t border-bodycopy-darker">
+                <h3 class="text-white font-bold text-base lg:text-lg mb-3">{avatar.name}</h3>
+                <p class="text-bodycopy text-sm leading-relaxed">{avatar.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Start -->
+    <div class="bg-black mt-12 lg:mt-30">
+      <FAQ color="green" faqData={faqData} />
+    </div>
+    <!-- Frequently Asked Questions End -->
+  </main>
+</Layout>

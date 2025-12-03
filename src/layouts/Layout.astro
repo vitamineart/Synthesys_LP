@@ -1,0 +1,60 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileNav from '../components/MobileNav.astro';
+import '../css/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  canonicalURL?: string;
+  currentPage?: string;
+}
+
+const {
+  title,
+  description = "AI Voiceover and AI Video Generator",
+  canonicalURL,
+  currentPage = 'home'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <Header currentPage={currentPage} />
+
+    <!-- Main Content -->
+    <slot />
+
+    <!-- Footer -->
+    <Footer />
+
+    <!-- Mobile Navigation -->
+    <MobileNav currentPage={currentPage} />
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.js" defer></script>
+  </body>
+</html>

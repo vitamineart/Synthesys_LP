@@ -1,0 +1,99 @@
+---
+export interface Props {
+  color?: 'green' | 'blue';
+  reviewsData: Array<{
+    "review-content": string;
+    "reviewer": string;
+    "role"?: string;
+    "photo"?: string;
+    "date"?: string;
+  }>;
+}
+
+const { color = 'green', reviewsData } = Astro.props;
+---
+
+<section id="reviews" class={`bg-black py-12 lg:pt-38 lg:pb-36 text-${color}`}>
+  <div class="container">
+    <div class="lg:flex justify-between">
+      <div class="lg:w-4/12">
+        <div class={`uppercase text-2xl lg:text-3xl leading-normal font-bold text-white heading-accent flex flex-col items-start before:block before:mb-5 lg:before:mb-16 mt-0 before:border-${color} before:w-12 before:border-t-3`}>
+          Reviews
+        </div>
+        <div class="text-current text-base lg:text-xl leading-relaxed mt-4 lg:mt-5">from our customers</div>
+
+        <div class="hidden lg:flex reviews-nav relative mt-22 h-20 gap-10">
+          <div class="swiper-button-prev reviews-prev text-current relative! size-20! border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center"></div>
+          <div class="swiper-button-next reviews-next text-current relative! size-20! border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center"></div>
+        </div>
+      </div>
+
+      <div class="lg:w-7/12 reviews-slider swiper mt-10 flex justify-end lg:min-h-[350px]">
+        <div class="swiper-wrapper">
+          {reviewsData.map((review) => (
+            <div class="swiper-slide">
+              <div class="reviews-item">
+                <div class="reviews-item-content border-4 border-[#2a3541] text-bodycopy p-8 lg:p-14 relative before:absolute before:w-4 before:h-4 before:border-[#2a3541] before:bg-black before:-bottom-2 before:rotate-45 before:left-11 lg:before:left-24 before:border-4 before:border-l-0 before:border-t-0 before:z-0 z-10 bg-black after:bg-black after:absolute after:w-20 after:h-2 after:left-4 lg:after:left-16 after:bottom-0 leading-loose">
+                  <p>{review['review-content']}</p>
+                </div>
+                <div class="reviews-item-meta mt-7.5">
+                  <div class="flex justify-between items-end lg:px-4">
+                    <div class="flex items-center">
+                      {review.photo && (
+                        <div class="author-avatar ml-7.5 lg:ml-15 flex-none">
+                          <img src={review.photo} alt="" width="60" height="60" loading="lazy" class="w-12 h-12 lg:w-15 lg:h-15" />
+                        </div>
+                      )}
+                      <div class="author ml-5">
+                        <div class="author-name text-white text-base lg:text-xl">{review.reviewer}</div>
+                        {review.role && (
+                          <div class="author-position text-sm lg:text-base text-bodycopy lg:mt-1">{review.role}</div>
+                        )}
+                      </div>
+                    </div>
+                    {review.date && (
+                      <div class="hidden sm:block date text-bodycopy text-xs lg:text-sm pb-1">{review.date}</div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="reviews-nav flex justify-center lg:hidden relative mt-10 gap-10">
+        <div class="swiper-button-prev reviews-prev text-current relative! size-16!  border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center"></div>
+        <div class="swiper-button-next reviews-next text-current relative! size-16!  border-2 border-bodycopy bg-transparent hover:bg-current hover:border-current grid place-items-center"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Swiper for reviews carousel
+    const reviewsSwiper = new Swiper('.reviews-slider', {
+      direction: 'horizontal',
+      loop: true,
+      speed: 500,
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          translate: [0, 0, -1000],
+          opacity: 0
+        },
+        next: {
+          translate: ['100%', 0, 0],
+          opacity: 1
+        },
+      },
+      navigation: {
+        nextEl: '.reviews-next',
+        prevEl: '.reviews-prev',
+      },
+      preloadImages: false,
+      watchSlidesProgress: true
+    });
+  });
+</script>

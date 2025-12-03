@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/Hero_image.png';
+
+export interface Props {
+  subtitle?: string;
+  title: string;
+  ctaText?: string;
+  ctaLink?: string;
+  heroImage: any;
+  heroImageAlt?: string;
+  heroImageSrcset?: string;
+  heroImageSizes?: string;
+  heroImageWidth?: number;
+  heroImageHeight?: number;
+  className?: string;
+}
+
+const {
+  subtitle = "Produce Your Next Professional AI Voiceover or AI Video in just a Few Clicks.",
+  title,
+  ctaText = "Get Started",
+  ctaLink = "#subscription-plans",
+  heroImage,
+  heroImageAlt = "Hero Image",
+
+} = Astro.props;
+---
+
+<section class="my-16 lg:my-24" id="hero-section">
+  <div class="container">
+    <div class="flex flex-col lg:flex-row justify-between items-center ">
+      <div class="lg:w-1/2 lg:pr-8 flex flex-col justify-center items-center lg:items-start h-max text-balance">
+        <div class="text-green text-xl xl:text-2xl text-center lg:text-left mt-8 lg:mt-0 lg:leading-relaxed">
+          {subtitle}
+        </div>
+        <h1 class="text-center text-3xl lg:text-4xl xl:text-5xl lg:text-left leading-tight text-white font-bold mt-3 lg:mt-7 lg:leading-tight">
+          {title}
+        </h1>
+        <a
+          href={ctaLink}
+          class="border-green border-3 block w-full text-center max-w-xs lg:inline-block lg:w-auto uppercase py-4 px-11 mt-7 xl:mt-14 text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300"
+        >
+          {ctaText}
+        </a>
+      </div>
+      <div class="w-full lg:w-1/2 order-first lg:order-none" style="max-width: 570px;">
+          <Image
+            src={heroImage}
+            alt={heroImageAlt}
+            layout='constrained'
+            sizes="(max-width: 768px) 100vw, (min-width: 769px) 570px"
+            width={817}
+            height={646}
+          />
+      </div>
+    </div>
+  </div>
+</section>

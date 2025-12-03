@@ -1,0 +1,33 @@
+[
+  {
+    "href": "/",
+    "label": "Home",
+    "labelMobile": "Home",
+    "page": "home"
+  },
+  {
+    "href": "/ai-text-to-speech",
+    "label": "AI Audio",
+    "labelMobile": "Audio",
+    "page": "audio"
+  },
+  {
+    "href": "/ai-video",
+    "label": "AI Video",
+    "labelMobile": "Video",
+    "page": "video"
+  },
+  {
+    "href": "/ai-avatars",
+    "label": "AI Avatars",
+    "labelMobile": "Avatars",
+    "page": "avatars"
+  },
+  {
+    "href": "/about",
+    "label": "About Us",
+    "labelMobile": "About Us",
+    "page": "about"
+  }
+]
+

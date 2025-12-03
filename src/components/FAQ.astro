@@ -1,0 +1,79 @@
+---
+export interface Props {
+  color?: 'green' | 'blue';
+  faqData: Array<{
+    'faq-question': string;
+    'faq-content': string;
+  }>;
+}
+
+const { color = 'green', faqData } = Astro.props;
+---
+
+<section class={`py-12 lg:pt-38 lg:pb-30 frequently-asked-questions max-w-4xl mx-auto text-${color}`}>
+  <div class="container">
+    <div class="uppercase text-2xl lg:text-3xl leading-normal font-bold heading-accent flex flex-col lg:items-center before:block before:mb-5 lg:before:mb-16 before:border-current before:w-12 before:border-t-3">
+      <span class="text-white">frequently asked questions</span>
+    </div>
+    <div class="faq-container mt-8 lg:mt-16 space-y-4 lg:space-y-5">
+      {faqData.map((faq) => (
+        <div class="faq-item border border-dark-blue overflow-hidden cursor-pointer transition-all hover:border-bodycopy-darkefaq-item  px-4 lg:pl-6 lg:pr-7.5 py-4 lg:py-6 hover:border-bodycopy-darker group">
+          <div class="faq-toggle w-full text-left bg-transparent  transition-colors flex items-center gap-4">
+            <div class="relative w-6 h-6 shrink-0 grid place-items-center">
+              <div class="w-0.5 h-5 bg-current transition-all duration-300 ease-in-out m-auto absolute inset-0 group-[.active]:rotate-90"></div>
+              <div class="w-5 h-0.5 bg-current m-auto absolute inset-0 "></div>
+            </div>
+            <span class="text-white group-[.active]:text-current text-lg lg:text-xl flex-1">{faq['faq-question']}</span>
+          </div>
+          <div class="faq-content text-bodycopy max-h-0 overflow-hidden ml-11 transition-all duration-1000 ease-in-out group-[.active]:max-h-screen" style="max-height: 0;">
+            <p class="text-bodycopy leading-relaxed pt-3">{faq['faq-content']}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  // FAQ Component - Client-side JavaScript Island
+  document.addEventListener('DOMContentLoaded', function() {
+    const questions = document.querySelectorAll('.faq-item');
+
+    questions.forEach(function(question) {
+      question.addEventListener('click', function(this: HTMLElement) {
+        const $this = this;
+        const content = $this.querySelector('.faq-content') as HTMLElement;
+
+        if (!$this.classList.contains('active')) {
+          // Close all other FAQ items in this container
+          const container = $this.closest('.faq-container');
+          if (container) {
+            const siblingsItems = container.querySelectorAll('.faq-item');
+            siblingsItems.forEach(function(item: Element) {
+              item.classList.remove('active');
+              const siblingContent = item.querySelector('.faq-content') as HTMLElement;
+              if (siblingContent) {
+                siblingContent.style.maxHeight = '0';
+              }
+            });
+          }
+
+          // Open clicked FAQ item
+          $this.classList.add('active');
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        } else {
+          // Close clicked FAQ item (toggle behavior)
+          $this.classList.remove('active');
+          if (content) {
+            content.style.maxHeight = '0';
+          }
+        }
+      });
+    });
+  });
+</script>
