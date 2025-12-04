@@ -2,64 +2,64 @@
     {
         "title" : "Video Ad Example",
         "name" : "Dan R.",
-        "image" : "voice1.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio0.wav",
+        "image" : "/images/voice-examples/voice1.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Lively, precise, and clear. Dan’s voice is great for commercial and explainer videos. #Male #Middle-Aged #Ad #Cheerful #Powerful #Hard Sell"
     },
     {
         "title" : "Film Trailer",
         "name" : "John M.",
-        "image" : "voice2.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio1.wav",
+        "image" : "/images/voice-examples/voice2.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Deep, mellow, and resonant - pick John for storytelling. #Male #Middle-Aged #Ad #Hard Sell #Low-Pitched #Powerful"
     },
     {
         "title" : "AudioBook Example",
         "name" : "Renee W.",
-        "image" : "voice3.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio9.wav",
+        "image" : "/images/voice-examples/voice3.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Deep mellow and soft. Renee’s voice is great for podcasts. #Female #Middle-Aged #Documentary #News #Gentle #Hard Sell"
     },
     {
         "title" : "AudioBook Example",
         "name" : "Mary S.",
-        "image" : "voice4.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio3.wav",
+        "image" : "/images/voice-examples/voice4.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Mellow mature and bright, Mary has an inviting voice. #Australian #Female #Middle-Aged #E-Learning #Narration #Classy #Informative"
     },
     {
         "title" : "Radio Advertisment Example",
         "name" : "Alicia M.",
-        "image" : "voice5.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio23.wav",
+        "image" : "/images/voice-examples/voice5.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Friendly, Cheerful, excited, and easy-going. Choose Alicia for your narration. #UK #Female #Young Adult #Ad #E-Learning"
     },
     {
         "title" : "Audiobook Example",
         "name" : "Deborah D.",
-        "image" : "voice6.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio10.wav",
+        "image" : "/images/voice-examples/voice6.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Artistic clear and expressive. Deborah is perfect for games. #Female #Child #Ad #Games #Cheerful #Excited"
     },
     {
         "title" : "TV Commercial",
         "name" : "Beatrice J.",
-        "image" : "voice7.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio00.wav",
+        "image" : "/images/voice-examples/voice7.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Poised and expressive, choose Beatrice for your ad campaigns. #Female #Young Adult #Ad #Cheerful #Engaging #Excited"
     },
     {
         "title" : "Storytelling",
         "name" : "Edmund L.",
-        "image" : "voice8.png",
-        "audio" : "https://meetsynthesys.com/private-offer/images/audios/audio5.wav",
+        "image" : "/images/voice-examples/voice8.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Good-natured and lively, Edmund is great for e-learning. Audiobooks narration. #Male #Middle-Aged #Ad #Audiobooks #Powerful #Warm"
     },
     {
         "title" : "Example #1",
         "name" : "Darryl T.",
-        "image" : "voice9.png",
-        "audio" : "https://meetsynthesys.com/pro/images/audios/audio0.wav",
+        "image" : "/images/voice-examples/voice9.png",
+        "audio" : "https://synthesys.io/audio/voicePage/Vanessa.wav",
         "description" : "Gentle and trustworthy. Darryl’s voice is great for training. #UK #Male #Middle-Aged #Ad #News #Gentle #Trustworthy"
     }
 ]

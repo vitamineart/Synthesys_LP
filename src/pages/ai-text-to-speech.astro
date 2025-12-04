@@ -5,12 +5,14 @@ import Reviews from '../components/Reviews.astro';
 import CTA from '../components/CTA.astro';
 import ChecklistItem from '../components/ChecklistItem.astro';
 import VoiceExample from '../components/VoiceExample.astro';
+import { Image } from 'astro:assets';
 
 // JSON data imports
 import faqData from '../../public/data/faq.json';
 import voiceExamples from '../../public/data/voice-examples.json';
 import reviewsData from '../../public/data/reviews.json';
-
+import ttsImage from '../assets/TTS.png';
+import audioImage from '../../public/images/audio-image.svg';
 const pageTitle = 'AI Voice Generator - Text to Speech Software | Synthesys';
 const canonicalURL = 'https://synthesys.io/ai-text-to-speech';
 const metaDescription = 'With Synthesys Text-to-Speech technology, you can choose from a range of professional voices ideal for presentations and videos, while saving both time and money.';
@@ -60,13 +62,12 @@ const ttsFeatures = [
         </div>
       </div>
       <div class="lg:w-[45%] order-first lg:order-none lg:scale-110">
-        <img
-          srcset="TTS_small.png 400w, TTS_medium.png 700w, TTS.png 1000w"
-          sizes="84vw, (min-width: 1024px) 45vw, (min-width: 1320px) 617px, 50vw"
-          src="TTS.png"
+        <Image
+          layout='constrained'
+          src={ttsImage}
           alt="AI Text-to-Speech Interface"
-          width="700"
-          height="546"
+          width={700}
+          height={546}
         />
       </div>
     </section>
@@ -79,7 +80,7 @@ const ttsFeatures = [
       </svg>
 
       <div class="lg:flex items-center py-12 lg:py-16 xl:py-28">
-        <img src="audio-image.svg" width="176" height="148" alt="" loading="lazy" class="mx-auto w-20 sm:w-36 lg:w-44" />
+        <img src="/images/audio-image.svg" width="176" height="148" alt="Audio Image" class="mx-auto w-20 sm:w-36 lg:w-44" />
         <div class="lg:w-9/12 lg:ml-auto max-w-5xl lg:pl-6 mt-8 lg:mt-0">
           <div class="leading-loose lg:leading-9 text-sm lg:text-xl">
             Synthesys is the next generation text-to-speech realistic technology that generates a life-like human voice reading your text. Easy-to-use, Synthesys offers a wide range of male and female voices, tones, languages, and reading speeds, allowing you to produce enthusiast radio commercials, friendly greetings, documentary-style messages, tutorials, podcasts . . . anywhere you need text to voiceovers for your digital content.
