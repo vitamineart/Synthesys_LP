@@ -2,6 +2,5 @@ node_modules
 dist
 *.workspace
 .DS_Store
-*.txt
 _headers
 FTP_Files
