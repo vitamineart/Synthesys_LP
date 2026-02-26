@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MobileNav from '../components/MobileNav.astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 import '../css/global.css';
 
 export interface Props {
@@ -97,5 +98,8 @@ const {
 
     <!-- Scripts -->
     <script src="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.js" defer></script>
+
+    <!-- Vercel Speed Insights -->
+    <SpeedInsights />
   </body>
 </html>
