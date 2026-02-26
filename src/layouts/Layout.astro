@@ -29,12 +29,53 @@ const {
     <meta name="generator" content={Astro.generator} />
     {canonicalURL && <link rel="canonical" href={canonicalURL} />}
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <slot name="preload" />
+
+    <style>
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url('/public/fonts/montserrat300.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/public/fonts/montserrat400.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('/public/fonts/montserrat500.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('/public/fonts/montserrat600.woff2') format('woff2');
+      }
+
+
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/public/fonts/montserrat700.woff2') format('woff2');
+      }
+
+  </style>
+
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import FAQ from '../components/FAQ.astro';
 import Reviews from '../components/Reviews.astro';
 import CTA from '../components/CTA.astro';
+import Hero from '../components/Hero.astro';
 import ChecklistItem from '../components/ChecklistItem.astro';
 import { Image } from 'astro:assets';
 
@@ -45,37 +46,19 @@ const whyVideoFeatures = [
 <Layout title={pageTitle} description={metaDescription} canonicalURL={canonicalURL} currentPage="video">
   <script src="https://cdn.jsdelivr.net/npm/@slightlyoff/lite-vimeo@0.1.2/lite-vimeo.min.js" type="module" defer></script>
   <main>
-    <!-- Hero Section Start -->
-    <section class="container flex flex-col lg:flex-row justify-between items-center my-12 lg:my-18 xl:mt-36 lg:mb-24">
-      <div class="lg:w-[55%] lg:pr-7 xl:pr-12">
-        <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border-2 border-green/20 grid place-items-center">
-          <svg class="fill-white w-7 h-7 xl:w-9 xl:h-9">
-            <use xlink:href="/icons/sprite.svg#icon-play"></use>
-          </svg>
-        </div>
-        <h1 class="text-3xl xl:text-5xl leading-tight text-white font-bold mt-4 xl:mt-7">
-          The Power of AI Video is as Close as Your Imagination
-        </h1>
-        <div class="text-green text-xl xl:text-2xl mt-3 xl:mt-8 leading-relaxed">
-          Transform Your Text to a Realistic Virtual Video. . . with Synthesys Human Studio
-        </div>
-        <div class="flex items-center mt-14">
-          <a href="#my-stars" class="border-green border-3 inline-block uppercase py-4 px-11 text-white text-center tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">
-            Get Started
-          </a>
-        </div>
-      </div>
-      <div class="lg:w-[45%] order-first lg:order-none lg:scale-110">
-        <Image
-          layout='constrained'
-          src={ttvImage}
-          alt="Text to Video Interface"
-          width="652"
-          height="583"
-        />
-      </div>
-    </section>
-    <!-- Hero Section End -->
+
+    <Hero
+      icon="play"
+      subtitleOrder="after"
+      subtitle="Transform Your Text to a Realistic Virtual Video. . . with Synthesys Human Studio"
+      title="The Power of AI Video is as Close as Your Imagination"
+      heroImage={ttvImage}
+      heroImageAlt="Text to Video Interface"
+      heroImageWidth={652}
+      heroImageHeight={583}
+      ctaText="Get Started"
+      ctaLink="#my-stars"
+    />
 
     <!-- Video Description Start -->
     <div class="container">

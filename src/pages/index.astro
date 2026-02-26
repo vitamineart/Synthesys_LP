@@ -58,13 +58,22 @@ const digitalContentItems = [
   canonicalURL="https://synthesys.io"
   currentPage="home"
 >
+  <Fragment slot="preload">
+    <link rel="preload" as="image" href={heroImage.src} imagesrcset={heroImage.srcSet?.attribute} imagesizes="(max-width: 768px) 100vw, (min-width: 769px) 570px" fetchpriority="high" decoding="async" />
+  </Fragment>
 
   <main>
     <!-- Hero Section -->
     <Hero
+      subtitleOrder="before"
+      subtitle="Produce Your Next Professional AI Voiceover or AI Video in just a Few Clicks."
       title="On the Leading AI Virtual Media Platform"
       heroImage={heroImage}
       heroImageAlt="Synthesys Hero Image"
+      heroImageWidth={817}
+      heroImageHeight={646}
+      ctaText="Get Started"
+      ctaLink="#subscription-plans"
     />
 
     <!-- Synthesys AI Virtual Avatars Start -->
