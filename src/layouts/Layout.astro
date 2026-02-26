@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MobileNav from '../components/MobileNav.astro';
+import Analytics from '@vercel/analytics/astro';
 import '../css/global.css';
 
 export interface Props {
@@ -81,6 +82,7 @@ const {
     <link rel="stylesheet" href="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');" />
 
     <title>{title}</title>
+    <Analytics />
   </head>
   <body>
     <!-- Header -->
