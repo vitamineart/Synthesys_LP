@@ -35,6 +35,7 @@ const {
   heroImageWidth,
   heroImageHeight,
 } = Astro.props;
+
 ---
 
 <section class="my-16 lg:my-24" id="hero-section">
@@ -83,9 +84,9 @@ const {
             src={heroImage}
             alt={heroImageAlt || 'Hero Image'}
             layout='constrained'
-            sizes="(max-width: 768px) 100vw, (min-width: 769px) 570px"
-            width={heroImageWidth || 570}
-            height={heroImageHeight}
+            sizes="(max-width: 768px) 100vw, 570px"
+            width={heroImage.width}
+            height={heroImage.height}
             loading="eager"
             decoding="async"
             fetchpriority="high"
