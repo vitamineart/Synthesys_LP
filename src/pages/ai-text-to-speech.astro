@@ -33,9 +33,6 @@ const ttsFeatures = [
 ---
 
 <Layout title={pageTitle} description={metaDescription} canonicalURL={canonicalURL} currentPage="audio">
-  <Fragment slot="preload">
-    <link rel="preload" as="image" href={ttsImage.src} imagesrcset={ttsImage.srcSet?.attribute} imagesizes="(max-width: 768px) 100vw, (min-width: 769px) 570px" fetchpriority="high" />
-  </Fragment>
   <main>
     <Hero
       icon="microphone"

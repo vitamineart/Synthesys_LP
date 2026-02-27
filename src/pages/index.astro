@@ -58,10 +58,6 @@ const digitalContentItems = [
   canonicalURL="https://synthesys.io"
   currentPage="home"
 >
-  <Fragment slot="preload">
-    <link rel="preload" as="image" href={heroImage.src} imagesrcset={heroImage.srcSet?.attribute} imagesizes="(max-width: 768px) 100vw, (min-width: 769px) 570px" fetchpriority="high" decoding="async" />
-  </Fragment>
-
   <main>
     <!-- Hero Section -->
     <Hero
