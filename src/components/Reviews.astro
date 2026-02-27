@@ -71,29 +71,47 @@ const { color = 'green', reviewsData } = Astro.props;
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Swiper for reviews carousel
-    const reviewsSwiper = new Swiper('.reviews-slider', {
+  async function initReviewsSwiper() {
+    const [{ default: Swiper }, { Navigation, EffectCreative }] = await Promise.all([
+      import('swiper'),
+      import('swiper/modules'),
+    ]);
+    await Promise.all([
+      import('swiper/css'),
+      import('swiper/css/navigation'),
+      import('swiper/css/effect-creative'),
+    ]);
+
+    const el = document.querySelector('.reviews-slider');
+    if (!el || (el as any).swiper) return;
+
+    new Swiper('.reviews-slider', {
+      modules: [Navigation, EffectCreative],
       direction: 'horizontal',
       loop: true,
       speed: 500,
       effect: 'creative',
       creativeEffect: {
-        prev: {
-          translate: [0, 0, -1000],
-          opacity: 0
-        },
-        next: {
-          translate: ['100%', 0, 0],
-          opacity: 1
-        },
+        prev: { translate: [0, 0, -1000], opacity: 0 },
+        next: { translate: ['100%', 0, 0], opacity: 1 },
       },
       navigation: {
         nextEl: '.reviews-next',
         prevEl: '.reviews-prev',
       },
-      preloadImages: false,
-      watchSlidesProgress: true
     });
-  });
+  }
+
+  const target = document.querySelector('#reviews');
+  if (target && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        observer.disconnect();
+        initReviewsSwiper();
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(target);
+  } else {
+    initReviewsSwiper();
+  }
 </script>

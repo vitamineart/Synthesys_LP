@@ -153,90 +153,82 @@ const subscriptionPlans: SubscriptionPlan[] = subscriptionPlansData as Subscript
     </div>
 </section>
 
+<script>
+  async function initPlansSwiper() {
+    const { default: Swiper } = await import('swiper');
+    await import('swiper/css');
+
+    const el = document.querySelector('.subscription-plans-container.mobile');
+    if (!el || (el as any).swiper) return;
+
+    new Swiper('.subscription-plans-container.mobile', {
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      speed: 400,
+      initialSlide: 1,
+      touchEventsTarget: 'container',
+      simulateTouch: true,
+      allowTouchMove: true,
+      touchRatio: 1,
+      touchAngle: 45,
+      grabCursor: true,
+      watchOverflow: true,
+      breakpoints: {
+        375: { spaceBetween: 30 },
+        420: { spaceBetween: 40 },
+        640: { spaceBetween: 50 },
+        768: { spaceBetween: 100 },
+      },
+    });
+  }
+
+  const target = document.querySelector('#subscription-plans');
+  if (target && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        observer.disconnect();
+        initPlansSwiper();
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(target);
+  } else {
+    initPlansSwiper();
+  }
+</script>
+
 <script is:inline>
   (function() {
-    const togglePrices = document.querySelector('#prices-toggle');
-    const toggleContainer = document.querySelector('#toggle-container');
+    var togglePrices = document.querySelector('#prices-toggle');
+    var toggleContainer = document.querySelector('#toggle-container');
 
-    // Function to update plan data based on billing period
     function updatePlansData(isYearly) {
-      const plans = document.querySelectorAll('.subscription-plan');
-
+      var plans = document.querySelectorAll('.subscription-plan');
       plans.forEach(function(plan) {
-        const priceElement = plan.querySelector('.subscription-price');
-        const periodElement = plan.querySelector('.subscription-period');
-
+        var priceElement = plan.querySelector('.subscription-price');
+        var periodElement = plan.querySelector('.subscription-period');
         if (!priceElement || !periodElement) return;
 
-        const priceMonthly = priceElement.getAttribute('data-price-monthly');
-        const priceYearly = priceElement.getAttribute('data-price-yearly');
-        const periodMonthly = periodElement.getAttribute('data-period-monthly');
-        const periodYearly = periodElement.getAttribute('data-period-yearly');
+        var priceMonthly = priceElement.getAttribute('data-price-monthly');
+        var priceYearly = priceElement.getAttribute('data-price-yearly');
+        var periodMonthly = periodElement.getAttribute('data-period-monthly');
+        var periodYearly = periodElement.getAttribute('data-period-yearly');
 
-        // Update price and period only (features are the same for both)
-        const price = isYearly ? priceYearly : priceMonthly;
-        const period = isYearly ? periodYearly : periodMonthly;
-        priceElement.innerHTML = `$${price}<small class="text-bodycopy font-normal text-base block subscription-period" data-period-monthly="${periodMonthly}" data-period-yearly="${periodYearly}">${period}</small>`;
+        var price = isYearly ? priceYearly : priceMonthly;
+        var period = isYearly ? periodYearly : periodMonthly;
+        priceElement.innerHTML = '$' + price + '<small class="text-bodycopy font-normal text-base block subscription-period" data-period-monthly="' + periodMonthly + '" data-period-yearly="' + periodYearly + '">' + period + '</small>';
       });
     }
 
     if (togglePrices) {
       togglePrices.addEventListener('change', function(event) {
-        const isYearly = event.target.checked;
-
-        // Update toggle visual state
+        var isYearly = event.target.checked;
         if (toggleContainer) {
-          if (isYearly) {
-            toggleContainer.classList.add('yearly');
-          } else {
-            toggleContainer.classList.remove('yearly');
-          }
+          if (isYearly) { toggleContainer.classList.add('yearly'); }
+          else { toggleContainer.classList.remove('yearly'); }
         }
-
-        // Update all plan data
         updatePlansData(isYearly);
       });
-    }
-
-    // Initialize Swiper for mobile
-    function initSwiper() {
-      if (typeof Swiper !== 'undefined') {
-        const swiperElement = document.querySelector('.subscription-plans-container.mobile');
-        if (swiperElement && !swiperElement.swiper) {
-          const subscriptionPlansSwiper = new Swiper('.subscription-plans-container.mobile', {
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            speed: 400,
-            initialSlide: 1,
-            touchEventsTarget: 'container',
-            simulateTouch: true,
-            allowTouchMove: true,
-            touchRatio: 1,
-            touchAngle: 45,
-            grabCursor: true,
-            watchOverflow: true,
-            // resistance: true,
-            // resistanceRatio: 0.85,
-            breakpoints: {
-              375: { spaceBetween: 30 },
-              420: { spaceBetween: 40 },
-              640: { spaceBetween: 50 },
-              768: { spaceBetween: 100 }
-            }
-          });
-        }
-      } else {
-        // Retry if Swiper is not loaded yet
-        setTimeout(initSwiper, 100);
-      }
-    }
-
-    // Wait for DOM and Swiper to be ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initSwiper);
-    } else {
-      initSwiper();
     }
   })();
 </script>

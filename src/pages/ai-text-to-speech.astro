@@ -1,18 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 import FAQ from '../components/FAQ.astro';
 import Reviews from '../components/Reviews.astro';
 import CTA from '../components/CTA.astro';
 import ChecklistItem from '../components/ChecklistItem.astro';
 import VoiceExample from '../components/VoiceExample.astro';
-import { Image } from 'astro:assets';
 
 // JSON data imports
 import faqData from '../../public/data/faq.json';
 import voiceExamples from '../../public/data/voice-examples.json';
 import reviewsData from '../../public/data/reviews.json';
 import ttsImage from '../assets/TTS.png';
-import audioImage from '../../public/images/audio-image.svg';
 const pageTitle = 'AI Voice Generator - Text to Speech Software | Synthesys';
 const canonicalURL = 'https://synthesys.io/ai-text-to-speech';
 const metaDescription = 'With Synthesys Text-to-Speech technology, you can choose from a range of professional voices ideal for presentations and videos, while saving both time and money.';
@@ -34,44 +33,26 @@ const ttsFeatures = [
 ---
 
 <Layout title={pageTitle} description={metaDescription} canonicalURL={canonicalURL} currentPage="audio">
+  <Fragment slot="preload">
+    <link rel="preload" as="image" href={ttsImage.src} imagesrcset={ttsImage.srcSet?.attribute} imagesizes="(max-width: 768px) 100vw, (min-width: 769px) 570px" fetchpriority="high" />
+  </Fragment>
   <main>
-    <!-- Hero Section Start -->
-    <section class="container flex flex-col lg:flex-row justify-between items-center my-12 lg:my-18 xl:mt-36 lg:mb-24">
-      <div class="lg:w-[55%] lg:pr-7 xl:pr-12">
-        <div class="rounded-full w-20 h-20 xl:w-25 xl:h-25 border-2 border-blue/20 grid place-items-center">
-          <svg class="fill-white w-7 h-7 xl:w-9 xl:h-9">
-            <use xlink:href="/icons/sprite.svg#icon-microphone"></use>
-          </svg>
-        </div>
-        <h1 class="text-3xl xl:text-5xl leading-tight text-white font-bold mt-4 xl:mt-7">
-          Listen to the FUTURE of AI Text-to-Speech
-        </h1>
-        <div class="text-blue text-xl xl:text-2xl mt-3 xl:mt-8 leading-relaxed">
-          Convert Your Text into an Effective, Realistic Audio Message. . . with Synthesys
-        </div>
-        <div class="flex flex-col lg:flex-row items-center mt-14">
-          <a href="#subscription-plans" class="flex-none border-blue border-3 inline-block uppercase py-4 px-5 lg:px-8 xl:px-11 text-center text-white tracking-wide font-semibold hover:border-bodycopy transition-colors duration-300">
-            Get Started
-          </a>
-          <a href="#voice-examples" class="flex-none text-blue inline-flex mt-6 lg:mt-0 lg:ml-6 xl:ml-16 transition-opacity hover:opacity-75">
-            <svg class="w-5 h-5 lg:w-6 lg:h-6 fill-current">
-              <use xlink:href="/icons/sprite.svg#icon-audiowave"></use>
-            </svg>
-            <span class="text-base xl:text-xl text-current border-b border-dotted border-blue ml-3">Hear Our Voices</span>
-          </a>
-        </div>
-      </div>
-      <div class="lg:w-[45%] order-first lg:order-none lg:scale-110">
-        <Image
-          layout='constrained'
-          src={ttsImage}
-          alt="AI Text-to-Speech Interface"
-          width={700}
-          height={546}
-        />
-      </div>
-    </section>
-    <!-- Hero Section End -->
+    <Hero
+      icon="microphone"
+      subtitleOrder="after"
+      subtitle="Convert Your Text into an Effective, Realistic Audio Message. . . with Synthesys"
+      title="Listen to the FUTURE of AI Text-to-Speech"
+      color="blue"
+      heroImage={ttsImage}
+      heroImageAlt="AI Text-to-Speech Interface"
+      heroImageWidth={700}
+      heroImageHeight={546}
+      ctaText="Get Started"
+      ctaLink="#subscription-plans"
+      secondaryLinkText="Hear Our Voices"
+      secondaryLinkHref="#voice-examples"
+      secondaryLinkIcon="audiowave"
+    />
 
     <!-- Audio Description Start -->
     <div class="container">
