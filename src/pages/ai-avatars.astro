@@ -27,6 +27,7 @@ const metaDescription = 'All AI avatars have been selected to meet the specific 
                   src={avatar.image}
                   alt={avatar.name}
                   loading={index < 8 ? 'eager' : 'lazy'}
+                  decoding="async"
                   class="w-full h-full object-cover"
                   width="250"
                   height="312"
